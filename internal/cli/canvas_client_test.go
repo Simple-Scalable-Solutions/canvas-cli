@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net/http"
 	"net/http/httptest"
+	"net/url"
 	"testing"
 )
 
@@ -30,14 +31,15 @@ func TestGetAll_SinglePage(t *testing.T) {
 }
 
 func TestGetAll_Pagination(t *testing.T) {
-	page := 0
-	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		page++
+	var srv *httptest.Server
+	srv = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
-		if page == 1 {
-			w.Header().Set("Link", fmt.Sprintf(`<%s/next>; rel="next"`, "http://"+r.Host))
+		if r.URL.Path == "/courses" {
+			// first page — link to second
+			w.Header().Set("Link", fmt.Sprintf(`<%s/page2>; rel="next"`, srv.URL))
 			fmt.Fprint(w, `[{"id":1}]`)
 		} else {
+			// second page — no next link
 			fmt.Fprint(w, `[{"id":2}]`)
 		}
 	}))
@@ -85,6 +87,29 @@ func TestPost(t *testing.T) {
 	var result map[string]interface{}
 	if err := json.Unmarshal(b, &result); err != nil {
 		t.Fatalf("invalid JSON response: %v", err)
+	}
+}
+
+func TestPost_WithBody(t *testing.T) {
+	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if err := r.ParseForm(); err != nil {
+			http.Error(w, "bad form", http.StatusBadRequest)
+			return
+		}
+		if r.FormValue("enrollment[type]") != "StudentEnrollment" {
+			http.Error(w, "missing field", http.StatusBadRequest)
+			return
+		}
+		w.Header().Set("Content-Type", "application/json")
+		fmt.Fprint(w, `{"id":1}`)
+	}))
+	defer srv.Close()
+
+	cc := newCanvasClient("testtoken", srv.URL)
+	body := url.Values{"enrollment[type]": {"StudentEnrollment"}}
+	_, err := cc.post("/courses/1/enrollments", body)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
 	}
 }
 
