@@ -21,7 +21,7 @@ func newCoursesUpdateFinalGradeOverridesGradebooksCmd(flags *rootFlags) *cobra.C
 		Use:   "gradebooks <course_id>",
 		Aliases: []string{"update"},
 		Short: "Set multiple final grade override scores for a course. The course must have final grade override enabled, and the...",
-		Example: "  canvas-pp-cli courses update-final-grade-overrides gradebooks 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses update-final-grade-overrides gradebooks 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "update-final-grade-overrides.gradebooks", "pp:method": "PUT", "pp:path": "/courses/{course_id}/update_final_grade_overrides"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

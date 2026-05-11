@@ -37,7 +37,7 @@ func newAccountsExternalToolsTimingMetaCreateForAccountsCmd(flags *rootFlags) *c
 	cmd := &cobra.Command{
 		Use:   "timing-meta-create-for-accounts <account_id>",
 		Short: "Create an external tool in the specified course/account. The created tool will be returned, see the 'show' endpoint...",
-		Example: "  canvas-pp-cli accounts external-tools timing-meta-create-for-accounts 550e8400-e29b-41d4-a716-446655440000 --client-id 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts external-tools timing-meta-create-for-accounts 550e8400-e29b-41d4-a716-446655440000 --client-id 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-create-for-accounts", "pp:method": "POST", "pp:path": "/accounts/{account_id}/external_tools"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

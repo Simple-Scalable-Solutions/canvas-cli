@@ -19,7 +19,7 @@ func newAccountsCspSettingsSetForAccountsCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "set-for-accounts <account_id>",
 		Short: "Either explicitly sets CSP to be on or off for courses and sub-accounts, or clear the explicit settings to default...",
-		Example: "  canvas-pp-cli accounts csp-settings set-for-accounts 550e8400-e29b-41d4-a716-446655440000 --status example-value",
+		Example: "  canvas-cli accounts csp-settings set-for-accounts 550e8400-e29b-41d4-a716-446655440000 --status example-value",
 		Annotations: map[string]string{"pp:endpoint": "csp-settings.set-for-accounts", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/csp_settings"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

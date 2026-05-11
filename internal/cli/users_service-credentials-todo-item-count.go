@@ -17,7 +17,7 @@ func newUsersServiceCredentialsTodoItemCountCmd(flags *rootFlags) *cobra.Command
 	cmd := &cobra.Command{
 		Use:   "service-credentials-todo-item-count",
 		Short: "Counts of different todo items such as the number of assignments needing grading as well as the number of...",
-		Example: "  canvas-pp-cli users service-credentials-todo-item-count",
+		Example: "  canvas-cli users service-credentials-todo-item-count",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-todo-item-count", "pp:method": "GET", "pp:path": "/users/self/todo_item_count", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

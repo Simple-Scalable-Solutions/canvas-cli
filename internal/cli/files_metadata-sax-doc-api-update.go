@@ -27,7 +27,7 @@ func newFilesMetadataSaxDocApiUpdateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "metadata-sax-doc-api-update <id>",
 		Aliases: []string{"update"},
 		Short: "Update some settings on the specified file",
-		Example: "  canvas-pp-cli files metadata-sax-doc-api-update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli files metadata-sax-doc-api-update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "files.metadata-sax-doc-api-update", "pp:method": "PUT", "pp:path": "/files/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

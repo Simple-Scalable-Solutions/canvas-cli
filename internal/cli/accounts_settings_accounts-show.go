@@ -17,7 +17,7 @@ func newAccountsSettingsAccountsShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "accounts-show <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a JSON object containing a subset of settings for the specified account. It's possible an empty set will be...",
-		Example: "  canvas-pp-cli accounts settings accounts-show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts settings accounts-show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "settings.accounts-show", "pp:method": "GET", "pp:path": "/accounts/{account_id}/settings", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

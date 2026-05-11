@@ -16,7 +16,7 @@ func newCoursesAiExperiencesAiConversationsActiveConversationCmd(flags *rootFlag
 	cmd := &cobra.Command{
 		Use:   "ai-conversations-active-conversation <ai_experience_id> <course_id>",
 		Short: "Get the active conversation for the current user and AI experience",
-		Example: "  canvas-pp-cli courses ai-experiences ai-conversations-active-conversation 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses ai-experiences ai-conversations-active-conversation 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "ai-experiences.ai-conversations-active-conversation", "pp:method": "GET", "pp:path": "/courses/{course_id}/ai_experiences/{ai_experience_id}/conversations", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

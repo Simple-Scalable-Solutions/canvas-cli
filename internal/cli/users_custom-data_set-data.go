@@ -21,7 +21,7 @@ func newUsersCustomDataSetDataCmd(flags *rootFlags) *cobra.Command {
 		Use:   "set-data <user_id>",
 		Aliases: []string{"update"},
 		Short: "Store arbitrary user data as JSON. Arbitrary JSON data can be stored for a User. A typical scenario would be an...",
-		Example: "  canvas-pp-cli users custom-data set-data 550e8400-e29b-41d4-a716-446655440000 --data example-value",
+		Example: "  canvas-cli users custom-data set-data 550e8400-e29b-41d4-a716-446655440000 --data example-value",
 		Annotations: map[string]string{"pp:endpoint": "custom-data.set-data", "pp:method": "PUT", "pp:path": "/users/{user_id}/custom_data(/*scope)"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

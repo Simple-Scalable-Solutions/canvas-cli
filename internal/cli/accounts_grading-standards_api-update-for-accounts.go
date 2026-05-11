@@ -24,7 +24,7 @@ func newAccountsGradingStandardsApiUpdateForAccountsCmd(flags *rootFlags) *cobra
 		Use:   "api-update-for-accounts <account_id> <grading_standard_id>",
 		Aliases: []string{"update"},
 		Short: "Updates the grading standard with the given id If the grading standard has been used for grading, only the title can...",
-		Example: "  canvas-pp-cli accounts grading-standards api-update-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --grading-scheme-entry-value example-value",
+		Example: "  canvas-cli accounts grading-standards api-update-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --grading-scheme-entry-value example-value",
 		Annotations: map[string]string{"pp:endpoint": "grading-standards.api-update-for-accounts", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/grading_standards/{grading_standard_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

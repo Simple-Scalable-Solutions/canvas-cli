@@ -18,7 +18,7 @@ func newCoursesSyllabusApiAccessibilityScanCmd(flags *rootFlags) *cobra.Command 
 	cmd := &cobra.Command{
 		Use:   "api-accessibility-scan <course_id>",
 		Short: "Scans a course syllabus for accessibility issues and returns the results.",
-		Example: "  canvas-pp-cli courses syllabus api-accessibility-scan 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses syllabus api-accessibility-scan 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "syllabus.api-accessibility-scan", "pp:method": "POST", "pp:path": "/courses/{course_id}/syllabus/accessibility/scan"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

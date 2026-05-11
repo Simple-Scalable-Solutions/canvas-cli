@@ -20,7 +20,7 @@ func newGroupsDiscussionTopicsApiEntryListForGroupsCmd(flags *rootFlags) *cobra.
 	cmd := &cobra.Command{
 		Use:   "api-entry-list-for-groups <group_id> <topic_id>",
 		Short: "Retrieve a paginated list of discussion entries, given a list of ids. May require (depending on the topic) that the...",
-		Example: "  canvas-pp-cli groups discussion-topics api-entry-list-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups discussion-topics api-entry-list-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-entry-list-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/discussion_topics/{topic_id}/entry_list", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

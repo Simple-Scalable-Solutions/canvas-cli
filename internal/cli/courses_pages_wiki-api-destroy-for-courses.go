@@ -17,7 +17,7 @@ func newCoursesPagesWikiApiDestroyForCoursesCmd(flags *rootFlags) *cobra.Command
 		Use:   "wiki-api-destroy-for-courses <course_id> <url_or_id>",
 		Aliases: []string{"delete"},
 		Short: "Delete a wiki page",
-		Example: "  canvas-pp-cli courses pages wiki-api-destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses pages wiki-api-destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "pages.wiki-api-destroy-for-courses", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/pages/{url_or_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

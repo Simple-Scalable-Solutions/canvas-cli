@@ -26,7 +26,7 @@ func newAuditGradeChangeApiQueryCmd(flags *rootFlags) *cobra.Command {
 		Use:   "grade-change-api-query",
 		Aliases: []string{"list"},
 		Short: "List grade change events satisfying all given parameters. Teachers may query for events in courses they teach....",
-		Example: "  canvas-pp-cli audit grade-change-api-query",
+		Example: "  canvas-cli audit grade-change-api-query",
 		Annotations: map[string]string{"pp:endpoint": "audit.grade-change-api-query", "pp:method": "GET", "pp:path": "/audit/grade_change", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

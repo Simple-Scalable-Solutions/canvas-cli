@@ -16,7 +16,7 @@ func newGlobalOutcomeGroupsApiShowOtherCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "outcome-groups-api-show-other <id>",
 		Short: "Returns detailed information about a specific outcome group.",
-		Example: "  canvas-pp-cli global outcome-groups-api-show-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli global outcome-groups-api-show-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "global.outcome-groups-api-show-other", "pp:method": "GET", "pp:path": "/global/outcome_groups/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

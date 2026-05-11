@@ -17,7 +17,7 @@ func newAccountsAccountNotificationsShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "show <account_id> <id>",
 		Aliases: []string{"get"},
 		Short: "Returns a global notification for the current user A notification that has been closed by the user will not be returned",
-		Example: "  canvas-pp-cli accounts account-notifications show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts account-notifications show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "account-notifications.show", "pp:method": "GET", "pp:path": "/accounts/{account_id}/account_notifications/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

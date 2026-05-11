@@ -22,7 +22,7 @@ func newAccountsSelfRegistrationServiceCredentialsCreateSelfRegisteredUserCmd(fl
 		Use:   "service-credentials-create-self-registered-user <account_id>",
 		Aliases: []string{"create"},
 		Short: "Self register and return a new user and pseudonym for an account. If self-registration is enabled on the account,...",
-		Example: "  canvas-pp-cli accounts self-registration service-credentials-create-self-registered-user 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts self-registration service-credentials-create-self-registered-user 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "self-registration.service-credentials-create-self-registered-user", "pp:method": "POST", "pp:path": "/accounts/{account_id}/self_registration"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

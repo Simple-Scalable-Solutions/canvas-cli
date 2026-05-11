@@ -22,7 +22,7 @@ func newAccountsOutcomeGroupLinksOutcomeGroupsApiLinkIndexForAccountsCmd(flags *
 		Use:   "outcome-groups-api-link-index-for-accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a list of all outcome links in the specified context.",
-		Example: "  canvas-pp-cli accounts outcome-group-links outcome-groups-api-link-index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts outcome-group-links outcome-groups-api-link-index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-group-links.outcome-groups-api-link-index-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/outcome_group_links", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

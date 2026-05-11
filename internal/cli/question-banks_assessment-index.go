@@ -20,7 +20,7 @@ func newQuestionBanksAssessmentIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "assessment-index",
 		Aliases: []string{"list"},
 		Short: "Returns the paginated list of question banks for a given context.",
-		Example: "  canvas-pp-cli question-banks assessment-index --context-type example-value --context-id 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli question-banks assessment-index --context-type example-value --context-id 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "question-banks.assessment-index", "pp:method": "GET", "pp:path": "/question_banks", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !cmd.Flags().Changed("context-type") && !flags.dryRun {

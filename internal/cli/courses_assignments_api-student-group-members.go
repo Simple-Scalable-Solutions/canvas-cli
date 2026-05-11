@@ -16,7 +16,7 @@ func newCoursesAssignmentsApiStudentGroupMembersCmd(flags *rootFlags) *cobra.Com
 	cmd := &cobra.Command{
 		Use:   "api-student-group-members <assignment_id> <course_id> <user_id>",
 		Short: "List group members for a student on an assignment",
-		Example: "  canvas-pp-cli courses assignments api-student-group-members 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments api-student-group-members 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.api-student-group-members", "pp:method": "GET", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/users/{user_id}/group_members", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

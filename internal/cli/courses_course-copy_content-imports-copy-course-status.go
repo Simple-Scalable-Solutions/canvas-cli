@@ -17,7 +17,7 @@ func newCoursesCourseCopyContentImportsCopyCourseStatusCmd(flags *rootFlags) *co
 		Use:   "content-imports-copy-course-status <course_id> <id>",
 		Aliases: []string{"get"},
 		Short: "DEPRECATED: Please use the {api:ContentMigrationsController#create Content Migrations API} Retrieve the status of a...",
-		Example: "  canvas-pp-cli courses course-copy content-imports-copy-course-status 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses course-copy content-imports-copy-course-status 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "course-copy.content-imports-copy-course-status", "pp:method": "GET", "pp:path": "/courses/{course_id}/course_copy/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newPlannerNotesIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index",
 		Aliases: []string{"list"},
 		Short: "Retrieve the paginated list of planner notes Retrieve planner note for a user",
-		Example: "  canvas-pp-cli planner-notes index",
+		Example: "  canvas-cli planner-notes index",
 		Annotations: map[string]string{"pp:endpoint": "planner-notes.index", "pp:method": "GET", "pp:path": "/planner_notes", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

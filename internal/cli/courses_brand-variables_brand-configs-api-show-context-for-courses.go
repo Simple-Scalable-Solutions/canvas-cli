@@ -17,7 +17,7 @@ func newCoursesBrandVariablesBrandConfigsApiShowContextForCoursesCmd(flags *root
 		Use:   "brand-configs-api-show-context-for-courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "Will redirect to a static json file that has all of the brand variables used by the provided context. Even though...",
-		Example: "  canvas-pp-cli courses brand-variables brand-configs-api-show-context-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses brand-variables brand-configs-api-show-context-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "brand-variables.brand-configs-api-show-context-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/brand_variables", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

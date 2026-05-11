@@ -32,7 +32,7 @@ func newCoursesStudentsSubmissionsApiForForCoursesCmd(flags *rootFlags) *cobra.C
 	cmd := &cobra.Command{
 		Use:   "submissions-api-for-for-courses <course_id>",
 		Short: "A paginated list of all existing submissions for a given set of students and assignments.",
-		Example: "  canvas-pp-cli courses students submissions-api-for-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses students submissions-api-for-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "students.submissions-api-for-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/students/submissions", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

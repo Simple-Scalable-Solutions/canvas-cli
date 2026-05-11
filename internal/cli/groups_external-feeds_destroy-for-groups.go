@@ -17,7 +17,7 @@ func newGroupsExternalFeedsDestroyForGroupsCmd(flags *rootFlags) *cobra.Command 
 		Use:   "destroy-for-groups <group_id> <external_feed_id>",
 		Aliases: []string{"delete"},
 		Short: "Deletes the external feed.",
-		Example: "  canvas-pp-cli groups external-feeds destroy-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups external-feeds destroy-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-feeds.destroy-for-groups", "pp:method": "DELETE", "pp:path": "/groups/{group_id}/external_feeds/{external_feed_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

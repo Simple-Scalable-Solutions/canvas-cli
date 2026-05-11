@@ -16,7 +16,7 @@ func newCoursesContentMigrationsAvailableMigratorsForCoursesCmd(flags *rootFlags
 	cmd := &cobra.Command{
 		Use:   "available-migrators-for-courses <course_id>",
 		Short: "Lists the currently available migration types. These values may change.",
-		Example: "  canvas-pp-cli courses content-migrations available-migrators-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses content-migrations available-migrators-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-migrations.available-migrators-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/content_migrations/migrators", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

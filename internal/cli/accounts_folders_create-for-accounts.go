@@ -27,7 +27,7 @@ func newAccountsFoldersCreateForAccountsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "create-for-accounts <account_id>",
 		Aliases: []string{"create"},
 		Short: "Creates a folder in the specified context",
-		Example: "  canvas-pp-cli accounts folders create-for-accounts 550e8400-e29b-41d4-a716-446655440000 --name example-resource",
+		Example: "  canvas-cli accounts folders create-for-accounts 550e8400-e29b-41d4-a716-446655440000 --name example-resource",
 		Annotations: map[string]string{"pp:endpoint": "folders.create-for-accounts", "pp:method": "POST", "pp:path": "/accounts/{account_id}/folders"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

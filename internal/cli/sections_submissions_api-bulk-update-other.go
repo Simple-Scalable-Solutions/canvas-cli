@@ -20,7 +20,7 @@ func newSectionsSubmissionsApiBulkUpdateOtherCmd(flags *rootFlags) *cobra.Comman
 		Use:   "api-bulk-update-other <section_id>",
 		Aliases: []string{"create"},
 		Short: "Update the grading and comments on multiple student's assignment submissions in an asynchronous job. The user must...",
-		Example: "  canvas-pp-cli sections submissions api-bulk-update-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections submissions api-bulk-update-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "submissions.api-bulk-update-other", "pp:method": "POST", "pp:path": "/sections/{section_id}/submissions/update_grades"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

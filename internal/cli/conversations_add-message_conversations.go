@@ -25,7 +25,7 @@ func newConversationsAddMessageConversationsCmd(flags *rootFlags) *cobra.Command
 		Use:   "conversations <id>",
 		Aliases: []string{"create"},
 		Short: "Add a message to an existing conversation. Response is similar to the GET/show action, except that only includes the...",
-		Example: "  canvas-pp-cli conversations add-message conversations 550e8400-e29b-41d4-a716-446655440000 --body example-value",
+		Example: "  canvas-cli conversations add-message conversations 550e8400-e29b-41d4-a716-446655440000 --body example-value",
 		Annotations: map[string]string{"pp:endpoint": "add-message.conversations", "pp:method": "POST", "pp:path": "/conversations/{id}/add_message"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

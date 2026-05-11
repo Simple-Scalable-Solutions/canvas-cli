@@ -23,7 +23,7 @@ func newAccountsOutcomeProficiencyApiCreateForAccountsCmd(flags *rootFlags) *cob
 		Use:   "api-create-for-accounts <account_id>",
 		Aliases: []string{"create"},
 		Short: "Create or update account-level proficiency ratings. These ratings will apply to all sub-accounts, unless they have...",
-		Example: "  canvas-pp-cli accounts outcome-proficiency api-create-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts outcome-proficiency api-create-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-proficiency.api-create-for-accounts", "pp:method": "POST", "pp:path": "/accounts/{account_id}/outcome_proficiency"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

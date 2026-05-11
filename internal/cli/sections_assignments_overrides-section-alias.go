@@ -17,7 +17,7 @@ func newSectionsAssignmentsOverridesSectionAliasCmd(flags *rootFlags) *cobra.Com
 		Use:   "overrides-section-alias <assignment_id> <course_section_id>",
 		Aliases: []string{"get"},
 		Short: "Responds with a redirect to the override for the given section, if any (404 otherwise).",
-		Example: "  canvas-pp-cli sections assignments overrides-section-alias 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections assignments overrides-section-alias 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.overrides-section-alias", "pp:method": "GET", "pp:path": "/sections/{course_section_id}/assignments/{assignment_id}/override", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

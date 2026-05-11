@@ -16,7 +16,7 @@ func newCoursesAssignmentsSubmissionsApiDocumentAnnotationsReadStateForCoursesCm
 	cmd := &cobra.Command{
 		Use:   "submissions-api-document-annotations-read-state-for-courses <assignment_id> <course_id> <user_id>",
 		Short: "Return whether annotations made on a submitted document have been read by the student",
-		Example: "  canvas-pp-cli courses assignments submissions-api-document-annotations-read-state-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments submissions-api-document-annotations-read-state-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-document-annotations-read-state-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/submissions/{user_id}/document_annotations/read", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

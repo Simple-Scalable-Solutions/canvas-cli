@@ -22,7 +22,7 @@ func newAccountsOutcomeImportsInvalidContentTypeCreateForAccountsCmd(flags *root
 		Use:   "invalid-content-type-create-for-accounts <account_id> <learning_outcome_group_id>",
 		Aliases: []string{"create"},
 		Short: "Import outcomes into Canvas. For more information on the format that's expected here, please see the 'Outcomes CSV'...",
-		Example: "  canvas-pp-cli accounts outcome-imports invalid-content-type-create-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --attachment example-value",
+		Example: "  canvas-cli accounts outcome-imports invalid-content-type-create-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --attachment example-value",
 		Annotations: map[string]string{"pp:endpoint": "outcome-imports.invalid-content-type-create-for-accounts", "pp:method": "POST", "pp:path": "/accounts/{account_id}/outcome_imports(/group/{learning_outcome_group_id})"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

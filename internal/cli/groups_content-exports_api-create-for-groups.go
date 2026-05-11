@@ -22,7 +22,7 @@ func newGroupsContentExportsApiCreateForGroupsCmd(flags *rootFlags) *cobra.Comma
 		Use:   "api-create-for-groups <group_id>",
 		Aliases: []string{"create"},
 		Short: "Begin a content export job for a course, group, or user. You can use the {api:ProgressController#show Progress API}...",
-		Example: "  canvas-pp-cli groups content-exports api-create-for-groups 550e8400-e29b-41d4-a716-446655440000 --export-type example-value",
+		Example: "  canvas-cli groups content-exports api-create-for-groups 550e8400-e29b-41d4-a716-446655440000 --export-type example-value",
 		Annotations: map[string]string{"pp:endpoint": "content-exports.api-create-for-groups", "pp:method": "POST", "pp:path": "/groups/{group_id}/content_exports"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

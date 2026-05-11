@@ -27,7 +27,7 @@ func newAccountsGroupCategoriesCreateForAccountsCmd(flags *rootFlags) *cobra.Com
 		Use:   "create-for-accounts <account_id>",
 		Aliases: []string{"create"},
 		Short: "Create a new group category",
-		Example: "  canvas-pp-cli accounts group-categories create-for-accounts 550e8400-e29b-41d4-a716-446655440000 --name example-resource",
+		Example: "  canvas-cli accounts group-categories create-for-accounts 550e8400-e29b-41d4-a716-446655440000 --name example-resource",
 		Annotations: map[string]string{"pp:endpoint": "group-categories.create-for-accounts", "pp:method": "POST", "pp:path": "/accounts/{account_id}/group_categories"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

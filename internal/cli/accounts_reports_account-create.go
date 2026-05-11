@@ -20,7 +20,7 @@ func newAccountsReportsAccountCreateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "account-create <account_id> <report>",
 		Aliases: []string{"create"},
 		Short: "Generates a report instance for the account. Note that 'report' in the request must match one of the available...",
-		Example: "  canvas-pp-cli accounts reports account-create 550e8400-e29b-41d4-a716-446655440000 example-value",
+		Example: "  canvas-cli accounts reports account-create 550e8400-e29b-41d4-a716-446655440000 example-value",
 		Annotations: map[string]string{"pp:endpoint": "reports.account-create", "pp:method": "POST", "pp:path": "/accounts/{account_id}/reports/{report}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -17,7 +17,7 @@ func newCoursesAiExperiencesAiConversationsDestroyCmd(flags *rootFlags) *cobra.C
 		Use:   "ai-conversations-destroy <ai_experience_id> <course_id> <id>",
 		Aliases: []string{"delete"},
 		Short: "Mark a conversation as completed/deleted",
-		Example: "  canvas-pp-cli courses ai-experiences ai-conversations-destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses ai-experiences ai-conversations-destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "ai-experiences.ai-conversations-destroy", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/ai_experiences/{ai_experience_id}/conversations/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

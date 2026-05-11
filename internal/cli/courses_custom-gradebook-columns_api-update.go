@@ -19,7 +19,7 @@ func newCoursesCustomGradebookColumnsApiUpdateCmd(flags *rootFlags) *cobra.Comma
 		Use:   "api-update <course_id> <id>",
 		Aliases: []string{"update"},
 		Short: "Accepts the same parameters as custom gradebook column creation",
-		Example: "  canvas-pp-cli courses custom-gradebook-columns api-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses custom-gradebook-columns api-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "custom-gradebook-columns.api-update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/custom_gradebook_columns/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

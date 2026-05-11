@@ -20,7 +20,7 @@ func newAccountsTermsUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update <account_id> <id>",
 		Short: "Update an existing enrollment term for the specified account.",
-		Example: "  canvas-pp-cli accounts terms update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts terms update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "terms.update", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/terms/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

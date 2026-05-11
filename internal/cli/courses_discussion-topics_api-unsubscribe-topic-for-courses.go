@@ -16,7 +16,7 @@ func newCoursesDiscussionTopicsApiUnsubscribeTopicForCoursesCmd(flags *rootFlags
 	cmd := &cobra.Command{
 		Use:   "api-unsubscribe-topic-for-courses <course_id> <topic_id>",
 		Short: "Unsubscribe from a topic to stop receiving notifications about new entries On success, the response will be 204 No...",
-		Example: "  canvas-pp-cli courses discussion-topics api-unsubscribe-topic-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses discussion-topics api-unsubscribe-topic-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-unsubscribe-topic-for-courses", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/discussion_topics/{topic_id}/subscribed"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newCoursesTodoCoursesItemsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "courses-items <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the current user's course-specific todo items. For full documentation, see the API documentation for the...",
-		Example: "  canvas-pp-cli courses todo courses-items 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses todo courses-items 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "todo.courses-items", "pp:method": "GET", "pp:path": "/courses/{course_id}/todo", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -22,7 +22,7 @@ func newUsersPageViewsIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index <user_id>",
 		Aliases: []string{"get"},
 		Short: "Return a paginated list of the user's page view history in json format, similar to the available CSV download. Page...",
-		Example: "  canvas-pp-cli users page-views index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users page-views index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "page-views.index", "pp:method": "GET", "pp:path": "/users/{user_id}/page_views", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

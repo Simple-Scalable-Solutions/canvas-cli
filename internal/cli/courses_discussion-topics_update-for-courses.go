@@ -41,7 +41,7 @@ func newCoursesDiscussionTopicsUpdateForCoursesCmd(flags *rootFlags) *cobra.Comm
 	cmd := &cobra.Command{
 		Use:   "update-for-courses <course_id> <topic_id>",
 		Short: "Update an existing discussion topic for the course or group.",
-		Example: "  canvas-pp-cli courses discussion-topics update-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses discussion-topics update-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.update-for-courses", "pp:method": "PUT", "pp:path": "/courses/{course_id}/discussion_topics/{topic_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

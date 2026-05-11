@@ -20,7 +20,7 @@ func newGroupsInviteGroupsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "groups <group_id>",
 		Aliases: []string{"create"},
 		Short: "Sends an invitation to all supplied email addresses which will allow the receivers to join the group.",
-		Example: "  canvas-pp-cli groups invite groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups invite groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "invite.groups", "pp:method": "POST", "pp:path": "/groups/{group_id}/invite"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

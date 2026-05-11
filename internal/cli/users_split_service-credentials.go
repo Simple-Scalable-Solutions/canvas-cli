@@ -19,7 +19,7 @@ func newUsersSplitServiceCredentialsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "service-credentials <id>",
 		Aliases: []string{"create"},
 		Short: "Merged users cannot be fully restored to their previous state, but this will attempt to split as much as possible to...",
-		Example: "  canvas-pp-cli users split service-credentials 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users split service-credentials 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "split.service-credentials", "pp:method": "POST", "pp:path": "/users/{id}/split"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -18,7 +18,7 @@ func newSectionsAssignmentsSubmissionsApiSubmissionSummaryOtherCmd(flags *rootFl
 	cmd := &cobra.Command{
 		Use:   "submissions-api-submission-summary-other <section_id> <assignment_id>",
 		Short: "Returns the number of submissions for the given assignment based on gradeable students that fall into three...",
-		Example: "  canvas-pp-cli sections assignments submissions-api-submission-summary-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections assignments submissions-api-submission-summary-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-submission-summary-other", "pp:method": "GET", "pp:path": "/sections/{section_id}/assignments/{assignment_id}/submission_summary", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

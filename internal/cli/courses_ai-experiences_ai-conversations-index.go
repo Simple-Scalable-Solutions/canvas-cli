@@ -16,7 +16,7 @@ func newCoursesAiExperiencesAiConversationsIndexCmd(flags *rootFlags) *cobra.Com
 	cmd := &cobra.Command{
 		Use:   "ai-conversations-index <course_id> <id>",
 		Short: "Retrieve the latest AI conversation for each student in the course for this AI experience. Only available to...",
-		Example: "  canvas-pp-cli courses ai-experiences ai-conversations-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses ai-experiences ai-conversations-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "ai-experiences.ai-conversations-index", "pp:method": "GET", "pp:path": "/courses/{course_id}/ai_experiences/{id}/ai_conversations", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

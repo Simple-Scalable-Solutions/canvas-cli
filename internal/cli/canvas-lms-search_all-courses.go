@@ -23,7 +23,7 @@ func newCanvasLmsSearchAllCoursesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "all-courses",
 		Aliases: []string{"list"},
 		Short: "A paginated list of all courses visible in the public index",
-		Example: "  canvas-pp-cli canvas-lms-search all-courses",
+		Example: "  canvas-cli canvas-lms-search all-courses",
 		Annotations: map[string]string{"pp:endpoint": "canvas-lms-search.all-courses", "pp:method": "GET", "pp:path": "/search/all_courses", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

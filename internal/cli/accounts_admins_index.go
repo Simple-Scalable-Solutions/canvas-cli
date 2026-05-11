@@ -23,7 +23,7 @@ func newAccountsAdminsIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index <account_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of the admins in the account",
-		Example: "  canvas-pp-cli accounts admins index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts admins index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "admins.index", "pp:method": "GET", "pp:path": "/accounts/{account_id}/admins", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newAccountsSisImportsErrorsApiIndexForAccountsCmd(flags *rootFlags) *cobra.
 	cmd := &cobra.Command{
 		Use:   "errors-api-index-for-accounts <account_id> <id>",
 		Short: "Returns the list of SIS import errors for an account or a SIS import. Import errors are only stored for 30 days....",
-		Example: "  canvas-pp-cli accounts sis-imports errors-api-index-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts sis-imports errors-api-index-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sis-imports.errors-api-index-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/sis_imports/{id}/errors", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

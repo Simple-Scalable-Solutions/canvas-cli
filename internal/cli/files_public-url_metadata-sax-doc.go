@@ -18,7 +18,7 @@ func newFilesPublicUrlMetadataSaxDocCmd(flags *rootFlags) *cobra.Command {
 		Use:   "metadata-sax-doc <id>",
 		Aliases: []string{"get"},
 		Short: "Determine the URL that should be used for inline preview of the file.",
-		Example: "  canvas-pp-cli files public-url metadata-sax-doc 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli files public-url metadata-sax-doc 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "public-url.metadata-sax-doc", "pp:method": "GET", "pp:path": "/files/{id}/public_url", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

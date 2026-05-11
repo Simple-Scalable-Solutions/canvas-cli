@@ -22,7 +22,7 @@ func newCoursesGradebookHistoryApiFeedCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "api-feed <course_id>",
 		Short: "Gives a paginated, uncollated list of submission versions for all matching submissions in the context. This...",
-		Example: "  canvas-pp-cli courses gradebook-history api-feed 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses gradebook-history api-feed 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "gradebook-history.api-feed", "pp:method": "GET", "pp:path": "/courses/{course_id}/gradebook_history/feed", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

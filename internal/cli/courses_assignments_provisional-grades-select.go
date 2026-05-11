@@ -18,7 +18,7 @@ func newCoursesAssignmentsProvisionalGradesSelectCmd(flags *rootFlags) *cobra.Co
 	cmd := &cobra.Command{
 		Use:   "provisional-grades-select <assignment_id> <course_id> <provisional_grade_id>",
 		Short: "Choose which provisional grade the student should receive for a submission. The caller must be the final grader for...",
-		Example: "  canvas-pp-cli courses assignments provisional-grades-select 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments provisional-grades-select 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.provisional-grades-select", "pp:method": "PUT", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/provisional_grades/{provisional_grade_id}/select"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

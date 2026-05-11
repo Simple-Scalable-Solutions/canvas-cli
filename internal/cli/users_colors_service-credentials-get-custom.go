@@ -17,7 +17,7 @@ func newUsersColorsServiceCredentialsGetCustomCmd(flags *rootFlags) *cobra.Comma
 		Use:   "service-credentials-get-custom <id>",
 		Aliases: []string{"get"},
 		Short: "Returns all custom colors that have been saved for a user.",
-		Example: "  canvas-pp-cli users colors service-credentials-get-custom 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users colors service-credentials-get-custom 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "colors.service-credentials-get-custom", "pp:method": "GET", "pp:path": "/users/{id}/colors", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

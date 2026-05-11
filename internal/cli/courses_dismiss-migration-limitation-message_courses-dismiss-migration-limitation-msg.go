@@ -19,7 +19,7 @@ func newCoursesDismissMigrationLimitationMessageCoursesDismissMigrationLimitatio
 		Use:   "courses-dismiss-migration-limitation-msg <id>",
 		Aliases: []string{"create"},
 		Short: "Remove alert about the limitations of quiz migrations that is displayed to a user in a course you must be logged in...",
-		Example: "  canvas-pp-cli courses dismiss-migration-limitation-message courses-dismiss-migration-limitation-msg 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses dismiss-migration-limitation-message courses-dismiss-migration-limitation-msg 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "dismiss-migration-limitation-message.courses-dismiss-migration-limitation-msg", "pp:method": "POST", "pp:path": "/courses/{id}/dismiss_migration_limitation_message"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

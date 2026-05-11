@@ -21,7 +21,7 @@ func newAuditCourseApiForAccountCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "course-api-for-account <account_id>",
 		Short: "List course change events for a given account.",
-		Example: "  canvas-pp-cli audit course-api-for-account 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli audit course-api-for-account 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "audit.course-api-for-account", "pp:method": "GET", "pp:path": "/audit/course/accounts/{account_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -19,7 +19,7 @@ func newUsersTokensUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update <id> <user_id>",
 		Short: "Update an existing access token. The ID can be the actual database ID of the token, or the 'token_hint' value....",
-		Example: "  canvas-pp-cli users tokens update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users tokens update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "tokens.update", "pp:method": "PUT", "pp:path": "/users/{user_id}/tokens/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

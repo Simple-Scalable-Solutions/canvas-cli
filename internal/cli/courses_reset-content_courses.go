@@ -19,7 +19,7 @@ func newCoursesResetContentCoursesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "courses <course_id>",
 		Aliases: []string{"create"},
 		Short: "Deletes the current course, and creates a new equivalent course with no content, but all sections and users moved over.",
-		Example: "  canvas-pp-cli courses reset-content courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses reset-content courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "reset-content.courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/reset_content"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

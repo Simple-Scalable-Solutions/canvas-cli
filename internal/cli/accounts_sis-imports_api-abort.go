@@ -19,7 +19,7 @@ func newAccountsSisImportsApiAbortCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-abort <account_id> <id>",
 		Aliases: []string{"update"},
 		Short: "Abort a SIS import that has not completed. Aborting a sis batch that is running can take some time for every process...",
-		Example: "  canvas-pp-cli accounts sis-imports api-abort 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts sis-imports api-abort 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sis-imports.api-abort", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/sis_imports/{id}/abort"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

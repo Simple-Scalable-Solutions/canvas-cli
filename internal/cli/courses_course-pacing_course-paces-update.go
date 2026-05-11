@@ -26,7 +26,7 @@ func newCoursesCoursePacingCoursePacesUpdateCmd(flags *rootFlags) *cobra.Command
 		Use:   "course-paces-update <course_id> <id>",
 		Aliases: []string{"update"},
 		Short: "Returns the updated course pace",
-		Example: "  canvas-pp-cli courses course-pacing course-paces-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses course-pacing course-paces-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "course-pacing.course-paces-update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/course_pacing/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

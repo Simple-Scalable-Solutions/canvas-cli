@@ -17,7 +17,7 @@ func newCoursesAssignmentsPeerReviewsApiDestroyForCoursesCmd(flags *rootFlags) *
 	cmd := &cobra.Command{
 		Use:   "peer-reviews-api-destroy-for-courses <assignment_id> <course_id> <submission_id>",
 		Short: "Delete a peer review for the assignment",
-		Example: "  canvas-pp-cli courses assignments peer-reviews-api-destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --user-id 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments peer-reviews-api-destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --user-id 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.peer-reviews-api-destroy-for-courses", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/submissions/{submission_id}/peer_reviews"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

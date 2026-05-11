@@ -16,7 +16,7 @@ func newCoursesAiExperiencesEditCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "edit <course_id> <id>",
 		Short: "Display the form for editing an existing AI experience",
-		Example: "  canvas-pp-cli courses ai-experiences edit 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses ai-experiences edit 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "ai-experiences.edit", "pp:method": "GET", "pp:path": "/courses/{course_id}/ai_experiences/{id}/edit", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -23,7 +23,7 @@ func newAccountsGroupsContextIndexForAccountsCmd(flags *rootFlags) *cobra.Comman
 		Use:   "context-index-for-accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of active groups in the given context that are visible to user.",
-		Example: "  canvas-pp-cli accounts groups context-index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts groups context-index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "groups.context-index-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/groups", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

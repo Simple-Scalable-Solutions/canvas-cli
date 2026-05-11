@@ -32,7 +32,7 @@ func newSectionsEnrollmentsApiIndexOtherCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-index-other <section_id>",
 		Aliases: []string{"get"},
 		Short: "Depending on the URL given, return a paginated list of either (1) all of the enrollments in a course, (2) all of the...",
-		Example: "  canvas-pp-cli sections enrollments api-index-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections enrollments api-index-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "enrollments.api-index-other", "pp:method": "GET", "pp:path": "/sections/{section_id}/enrollments", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

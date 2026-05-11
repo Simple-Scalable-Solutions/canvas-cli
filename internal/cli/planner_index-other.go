@@ -25,7 +25,7 @@ func newPlannerIndexOtherCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index-other",
 		Aliases: []string{"list"},
 		Short: "Retrieve the paginated list of objects to be shown on the planner for the current user with the associated planner...",
-		Example: "  canvas-pp-cli planner index-other",
+		Example: "  canvas-cli planner index-other",
 		Annotations: map[string]string{"pp:endpoint": "planner.index-other", "pp:method": "GET", "pp:path": "/planner/items", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cmd.Flags().Changed("filter") {

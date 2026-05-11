@@ -17,7 +17,7 @@ func newUsersServiceCredentialsActivityStreamSummaryCmd(flags *rootFlags) *cobra
 	cmd := &cobra.Command{
 		Use:   "service-credentials-activity-stream-summary",
 		Short: "Returns a summary of the current user's global activity stream.",
-		Example: "  canvas-pp-cli users service-credentials-activity-stream-summary",
+		Example: "  canvas-cli users service-credentials-activity-stream-summary",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-activity-stream-summary", "pp:method": "GET", "pp:path": "/users/self/activity_stream/summary", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

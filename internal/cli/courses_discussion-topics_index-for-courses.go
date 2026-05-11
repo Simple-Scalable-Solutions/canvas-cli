@@ -26,7 +26,7 @@ func newCoursesDiscussionTopicsIndexForCoursesCmd(flags *rootFlags) *cobra.Comma
 	cmd := &cobra.Command{
 		Use:   "index-for-courses <course_id>",
 		Short: "Returns the paginated list of discussion topics for this course or group.",
-		Example: "  canvas-pp-cli courses discussion-topics index-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses discussion-topics index-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.index-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/discussion_topics", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

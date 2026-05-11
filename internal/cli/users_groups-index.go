@@ -21,7 +21,7 @@ func newUsersGroupsIndexCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "groups-index",
 		Short: "Returns a paginated list of active groups for the current user.",
-		Example: "  canvas-pp-cli users groups-index",
+		Example: "  canvas-cli users groups-index",
 		Annotations: map[string]string{"pp:endpoint": "users.groups-index", "pp:method": "GET", "pp:path": "/users/self/groups", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cmd.Flags().Changed("context-type") {

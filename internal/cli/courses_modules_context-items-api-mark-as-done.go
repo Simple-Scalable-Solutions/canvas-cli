@@ -18,7 +18,7 @@ func newCoursesModulesContextItemsApiMarkAsDoneCmd(flags *rootFlags) *cobra.Comm
 	cmd := &cobra.Command{
 		Use:   "context-items-api-mark-as-done <course_id> <id> <module_id>",
 		Short: "Mark a module item as done/not done. Use HTTP method PUT to mark as done, and DELETE to mark as not done.",
-		Example: "  canvas-pp-cli courses modules context-items-api-mark-as-done 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses modules context-items-api-mark-as-done 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "modules.context-items-api-mark-as-done", "pp:method": "PUT", "pp:path": "/courses/{course_id}/modules/{module_id}/items/{id}/done"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

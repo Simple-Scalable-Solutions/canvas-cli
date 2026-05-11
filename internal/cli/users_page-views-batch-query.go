@@ -22,7 +22,7 @@ func newUsersPageViewsBatchQueryCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "page-views-batch-query",
 		Short: "Initiates an asynchronous query for page views data across multiple users. This method enqueues a background job to...",
-		Example: "  canvas-pp-cli users page-views-batch-query",
+		Example: "  canvas-cli users page-views-batch-query",
 		Annotations: map[string]string{"pp:endpoint": "users.page-views-batch-query", "pp:method": "POST", "pp:path": "/users/page_views/query"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

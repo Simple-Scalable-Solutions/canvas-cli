@@ -24,7 +24,7 @@ func newCoursesGradingStandardsApiCreateForCoursesCmd(flags *rootFlags) *cobra.C
 		Use:   "api-create-for-courses <course_id>",
 		Aliases: []string{"create"},
 		Short: "Create a new grading standard",
-		Example: "  canvas-pp-cli courses grading-standards api-create-for-courses 550e8400-e29b-41d4-a716-446655440000 --grading-scheme-entry-name example-resource",
+		Example: "  canvas-cli courses grading-standards api-create-for-courses 550e8400-e29b-41d4-a716-446655440000 --grading-scheme-entry-name example-resource",
 		Annotations: map[string]string{"pp:endpoint": "grading-standards.api-create-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/grading_standards"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

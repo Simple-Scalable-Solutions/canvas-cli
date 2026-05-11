@@ -17,7 +17,7 @@ func newInstAccessTokensPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "inst-access-tokens",
 		Short: "Create a unique, encrypted InstAccess token. Generates a different InstAccess token each time it's called, each one...",
 		Long:  "Shortcut for 'inst-access-tokens create'. Create a unique, encrypted InstAccess token. Generates a different InstAccess token each time it's called, each one...",
-		Example: "  canvas-pp-cli inst-access-tokens",
+		Example: "  canvas-cli inst-access-tokens",
 		Annotations: map[string]string{"pp:endpoint": "inst-access-tokens.create", "pp:method": "POST", "pp:path": "/inst_access_tokens"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

@@ -24,7 +24,7 @@ func newAppointmentGroupsIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index",
 		Aliases: []string{"list"},
 		Short: "Retrieve the paginated list of appointment groups that can be reserved or managed by the current user.",
-		Example: "  canvas-pp-cli appointment-groups index",
+		Example: "  canvas-cli appointment-groups index",
 		Annotations: map[string]string{"pp:endpoint": "appointment-groups.index", "pp:method": "GET", "pp:path": "/appointment_groups", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cmd.Flags().Changed("scope") {

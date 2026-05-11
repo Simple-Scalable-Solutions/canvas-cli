@@ -20,7 +20,7 @@ func newConversationsAddRecipientsConversationsCmd(flags *rootFlags) *cobra.Comm
 		Use:   "conversations <id>",
 		Aliases: []string{"create"},
 		Short: "Add recipients to an existing group conversation. Response is similar to the GET/show action, except that only...",
-		Example: "  canvas-pp-cli conversations add-recipients conversations 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli conversations add-recipients conversations 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "add-recipients.conversations", "pp:method": "POST", "pp:path": "/conversations/{id}/add_recipients"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

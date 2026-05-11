@@ -17,7 +17,7 @@ func newCoursesGradebookHistoryApiSubmissionsCmd(flags *rootFlags) *cobra.Comman
 	cmd := &cobra.Command{
 		Use:   "api-submissions <assignment_id> <course_id> <grader_id>",
 		Short: "Gives a nested list of submission versions",
-		Example: "  canvas-pp-cli courses gradebook-history api-submissions 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --date 2026-01-15",
+		Example: "  canvas-cli courses gradebook-history api-submissions 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --date 2026-01-15",
 		Annotations: map[string]string{"pp:endpoint": "gradebook-history.api-submissions", "pp:method": "GET", "pp:path": "/courses/{course_id}/gradebook_history/{date}/graders/{grader_id}/assignments/{assignment_id}/submissions", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

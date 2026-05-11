@@ -16,7 +16,7 @@ func newAccountsOutcomeImportsInvalidContentTypeShowForAccountsCmd(flags *rootFl
 	cmd := &cobra.Command{
 		Use:   "invalid-content-type-show-for-accounts <account_id> <id>",
 		Short: "Get the status of an already created Outcome import. Pass 'latest' for the outcome import id for the latest import....",
-		Example: "  canvas-pp-cli accounts outcome-imports invalid-content-type-show-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts outcome-imports invalid-content-type-show-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-imports.invalid-content-type-show-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/outcome_imports/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

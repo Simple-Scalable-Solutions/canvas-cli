@@ -20,7 +20,7 @@ func newCoursesBlackoutDatesBulkUpdateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "bulk-update <course_id>",
 		Aliases: []string{"update"},
 		Short: "Create, update, and delete blackout dates to sync the db with the incoming data.",
-		Example: "  canvas-pp-cli courses blackout-dates bulk-update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses blackout-dates bulk-update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "blackout-dates.bulk-update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/blackout_dates"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

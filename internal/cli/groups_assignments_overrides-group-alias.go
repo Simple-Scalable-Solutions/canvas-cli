@@ -17,7 +17,7 @@ func newGroupsAssignmentsOverridesGroupAliasCmd(flags *rootFlags) *cobra.Command
 		Use:   "overrides-group-alias <assignment_id> <group_id>",
 		Aliases: []string{"get"},
 		Short: "Responds with a redirect to the override for the given group, if any (404 otherwise).",
-		Example: "  canvas-pp-cli groups assignments overrides-group-alias 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups assignments overrides-group-alias 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.overrides-group-alias", "pp:method": "GET", "pp:path": "/groups/{group_id}/assignments/{assignment_id}/override", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newCoursesModulesAssignmentOverridesIndexCmd(flags *rootFlags) *cobra.Comma
 		Use:   "assignment-overrides-index <context_module_id> <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a paginated list of AssignmentOverrides that apply to the ContextModule.",
-		Example: "  canvas-pp-cli courses modules assignment-overrides-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses modules assignment-overrides-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "modules.assignment-overrides-index", "pp:method": "GET", "pp:path": "/courses/{course_id}/modules/{context_module_id}/assignment_overrides", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

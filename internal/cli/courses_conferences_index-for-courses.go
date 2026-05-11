@@ -20,7 +20,7 @@ func newCoursesConferencesIndexForCoursesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index-for-courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "Retrieve the paginated list of conferences for this context This API returns a JSON object containing the list of...",
-		Example: "  canvas-pp-cli courses conferences index-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses conferences index-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "conferences.index-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/conferences", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

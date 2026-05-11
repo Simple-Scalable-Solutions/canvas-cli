@@ -18,7 +18,7 @@ func newAccountsSharedBrandConfigsUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update <account_id> <id>",
 		Short: "Update the specified shared_brand_config with a new name or to point to a new brand_config. Uses same parameters as...",
-		Example: "  canvas-pp-cli accounts shared-brand-configs update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts shared-brand-configs update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "shared-brand-configs.update", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/shared_brand_configs/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

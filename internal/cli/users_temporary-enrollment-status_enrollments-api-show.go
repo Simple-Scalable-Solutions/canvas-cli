@@ -18,7 +18,7 @@ func newUsersTemporaryEnrollmentStatusEnrollmentsApiShowCmd(flags *rootFlags) *c
 		Use:   "enrollments-api-show <user_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a JSON Object containing the temporary enrollment status for a user.",
-		Example: "  canvas-pp-cli users temporary-enrollment-status enrollments-api-show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users temporary-enrollment-status enrollments-api-show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "temporary-enrollment-status.enrollments-api-show", "pp:method": "GET", "pp:path": "/users/{user_id}/temporary_enrollment_status", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

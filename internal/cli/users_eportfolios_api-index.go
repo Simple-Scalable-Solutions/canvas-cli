@@ -21,7 +21,7 @@ func newUsersEportfoliosApiIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-index <user_id>",
 		Aliases: []string{"get"},
 		Short: "Get a list of all ePortfolios for the specified user.",
-		Example: "  canvas-pp-cli users eportfolios api-index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users eportfolios api-index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "eportfolios.api-index", "pp:method": "GET", "pp:path": "/users/{user_id}/eportfolios", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

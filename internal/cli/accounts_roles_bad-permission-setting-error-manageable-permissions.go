@@ -17,7 +17,7 @@ func newAccountsRolesBadPermissionSettingErrorManageablePermissionsCmd(flags *ro
 	cmd := &cobra.Command{
 		Use:   "bad-permission-setting-error-manageable-permissions <account_id>",
 		Short: "List all permissions that can be granted to roles in the given account. This returns largely the same information...",
-		Example: "  canvas-pp-cli accounts roles bad-permission-setting-error-manageable-permissions 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts roles bad-permission-setting-error-manageable-permissions 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "roles.bad-permission-setting-error-manageable-permissions", "pp:method": "GET", "pp:path": "/accounts/{account_id}/roles/permissions", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -17,7 +17,7 @@ func newAccountsBlackoutDatesDestroyForAccountsCmd(flags *rootFlags) *cobra.Comm
 		Use:   "destroy-for-accounts <account_id> <id>",
 		Aliases: []string{"delete"},
 		Short: "Delete a blackout date for the given context.",
-		Example: "  canvas-pp-cli accounts blackout-dates destroy-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts blackout-dates destroy-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "blackout-dates.destroy-for-accounts", "pp:method": "DELETE", "pp:path": "/accounts/{account_id}/blackout_dates/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

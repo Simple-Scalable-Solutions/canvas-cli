@@ -19,7 +19,7 @@ func newCoursesAssignmentsModerationSetCreateCmd(flags *rootFlags) *cobra.Comman
 	cmd := &cobra.Command{
 		Use:   "moderation-set-create <assignment_id> <course_id>",
 		Short: "Returns an array of users that were selected for moderation",
-		Example: "  canvas-pp-cli courses assignments moderation-set-create 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments moderation-set-create 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.moderation-set-create", "pp:method": "POST", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/moderated_students"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

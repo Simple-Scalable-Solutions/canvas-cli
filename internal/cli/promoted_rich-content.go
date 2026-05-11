@@ -21,7 +21,7 @@ func newRichContentPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "rich-content",
 		Short: "Generates a rich content.",
 		Long:  "Shortcut for 'rich-content api-generate'. Generates a rich content.",
-		Example: "  canvas-pp-cli rich-content",
+		Example: "  canvas-cli rich-content",
 		Annotations: map[string]string{"pp:endpoint": "rich-content.api-generate", "pp:method": "POST", "pp:path": "/rich_content/generate"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

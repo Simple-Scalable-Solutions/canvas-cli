@@ -17,7 +17,7 @@ func newSectionsAssignmentsPeerReviewsApiIndexOther2Cmd(flags *rootFlags) *cobra
 	cmd := &cobra.Command{
 		Use:   "peer-reviews-api-index-other-2 <submission_id> <section_id> <assignment_id>",
 		Short: "Get a list of all Peer Reviews for this assignment",
-		Example: "  canvas-pp-cli sections assignments peer-reviews-api-index-other-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections assignments peer-reviews-api-index-other-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.peer-reviews-api-index-other-2", "pp:method": "GET", "pp:path": "/sections/{section_id}/assignments/{assignment_id}/submissions/{submission_id}/peer_reviews", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

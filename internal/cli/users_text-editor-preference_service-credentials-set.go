@@ -20,7 +20,7 @@ func newUsersTextEditorPreferenceServiceCredentialsSetCmd(flags *rootFlags) *cob
 		Use:   "service-credentials-set <id>",
 		Aliases: []string{"update"},
 		Short: "Updates a user's default choice for text editor. This allows the Choose an Editor propmts to preload the user's...",
-		Example: "  canvas-pp-cli users text-editor-preference service-credentials-set 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users text-editor-preference service-credentials-set 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "text-editor-preference.service-credentials-set", "pp:method": "PUT", "pp:path": "/users/{id}/text_editor_preference"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

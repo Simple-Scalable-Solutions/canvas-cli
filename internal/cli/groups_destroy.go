@@ -17,7 +17,7 @@ func newGroupsDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "destroy <group_id>",
 		Aliases: []string{"delete"},
 		Short: "Deletes a group and removes all members.",
-		Example: "  canvas-pp-cli groups destroy 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups destroy 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "groups.destroy", "pp:method": "DELETE", "pp:path": "/groups/{group_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

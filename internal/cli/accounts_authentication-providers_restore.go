@@ -18,7 +18,7 @@ func newAccountsAuthenticationProvidersRestoreCmd(flags *rootFlags) *cobra.Comma
 	cmd := &cobra.Command{
 		Use:   "restore <account_id> <id>",
 		Short: "Restore an authentication provider back to active that was previously deleted. Only available to admins who can...",
-		Example: "  canvas-pp-cli accounts authentication-providers restore 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts authentication-providers restore 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "authentication-providers.restore", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/authentication_providers/{id}/restore"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

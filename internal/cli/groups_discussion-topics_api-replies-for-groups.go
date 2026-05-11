@@ -19,7 +19,7 @@ func newGroupsDiscussionTopicsApiRepliesForGroupsCmd(flags *rootFlags) *cobra.Co
 	cmd := &cobra.Command{
 		Use:   "api-replies-for-groups <group_id> <entry_id> <topic_id>",
 		Short: "Retrieve the (paginated) replies to a top-level entry in a discussion topic. May require (depending on the topic)...",
-		Example: "  canvas-pp-cli groups discussion-topics api-replies-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups discussion-topics api-replies-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-replies-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/discussion_topics/{topic_id}/entries/{entry_id}/replies", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

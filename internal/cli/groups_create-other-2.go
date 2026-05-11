@@ -25,7 +25,7 @@ func newGroupsCreateOther2Cmd(flags *rootFlags) *cobra.Command {
 		Use:   "create-other-2",
 		Aliases: []string{"create"},
 		Short: "Creates a new group. Groups created using the '/api/v1/groups/' endpoint will be community groups.",
-		Example: "  canvas-pp-cli groups create-other-2",
+		Example: "  canvas-cli groups create-other-2",
 		Annotations: map[string]string{"pp:endpoint": "groups.create-other-2", "pp:method": "POST", "pp:path": "/groups"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

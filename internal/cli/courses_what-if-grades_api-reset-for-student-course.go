@@ -19,7 +19,7 @@ func newCoursesWhatIfGradesApiResetForStudentCourseCmd(flags *rootFlags) *cobra.
 		Use:   "api-reset-for-student-course <course_id>",
 		Aliases: []string{"update"},
 		Short: "Reset the what-if scores for the current user for an entire course and recalculate grades",
-		Example: "  canvas-pp-cli courses what-if-grades api-reset-for-student-course 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses what-if-grades api-reset-for-student-course 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "what-if-grades.api-reset-for-student-course", "pp:method": "PUT", "pp:path": "/courses/{course_id}/what_if_grades/reset"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

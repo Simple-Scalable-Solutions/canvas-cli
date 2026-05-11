@@ -17,7 +17,7 @@ func newAccountCalendarsApiShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-show <account_id>",
 		Aliases: []string{"get"},
 		Short: "Get details about a specific account calendar.",
-		Example: "  canvas-pp-cli account-calendars api-show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli account-calendars api-show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "account-calendars.api-show", "pp:method": "GET", "pp:path": "/account_calendars/{account_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

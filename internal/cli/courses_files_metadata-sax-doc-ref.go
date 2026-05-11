@@ -16,7 +16,7 @@ func newCoursesFilesMetadataSaxDocRefCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "metadata-sax-doc-ref <course_id> <migration_id>",
 		Short: "Get information about a file from a course copy file reference",
-		Example: "  canvas-pp-cli courses files metadata-sax-doc-ref 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses files metadata-sax-doc-ref 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "files.metadata-sax-doc-ref", "pp:method": "GET", "pp:path": "/courses/{course_id}/files/file_ref/{migration_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

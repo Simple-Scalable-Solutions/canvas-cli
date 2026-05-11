@@ -17,7 +17,7 @@ func newAccountsGradingPeriodsDestroyForAccountsCmd(flags *rootFlags) *cobra.Com
 		Use:   "destroy-for-accounts <account_id> <id>",
 		Aliases: []string{"delete"},
 		Short: "<b>204 No Content</b> response code is returned if the deletion was successful.",
-		Example: "  canvas-pp-cli accounts grading-periods destroy-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts grading-periods destroy-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "grading-periods.destroy-for-accounts", "pp:method": "DELETE", "pp:path": "/accounts/{account_id}/grading_periods/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

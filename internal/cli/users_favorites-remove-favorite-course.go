@@ -16,7 +16,7 @@ func newUsersFavoritesRemoveFavoriteCourseCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "favorites-remove-favorite-course <id>",
 		Short: "Remove a course from the current user's favorites.",
-		Example: "  canvas-pp-cli users favorites-remove-favorite-course 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users favorites-remove-favorite-course 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.favorites-remove-favorite-course", "pp:method": "DELETE", "pp:path": "/users/self/favorites/courses/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

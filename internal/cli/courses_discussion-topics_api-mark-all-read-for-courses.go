@@ -19,7 +19,7 @@ func newCoursesDiscussionTopicsApiMarkAllReadForCoursesCmd(flags *rootFlags) *co
 	cmd := &cobra.Command{
 		Use:   "api-mark-all-read-for-courses <course_id> <topic_id>",
 		Short: "Mark the discussion topic and all its entries as read. No request fields are necessary. On success, the response...",
-		Example: "  canvas-pp-cli courses discussion-topics api-mark-all-read-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses discussion-topics api-mark-all-read-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-mark-all-read-for-courses", "pp:method": "PUT", "pp:path": "/courses/{course_id}/discussion_topics/{topic_id}/read_all"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

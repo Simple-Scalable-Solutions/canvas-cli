@@ -20,7 +20,7 @@ func newCalendarEventsApiSaveEnabledAccountCalendarsCmd(flags *rootFlags) *cobra
 	cmd := &cobra.Command{
 		Use:   "api-save-enabled-account-calendars",
 		Short: "Creates and updates the enabled_account_calendars and mark_feature_as_seen user preferences",
-		Example: "  canvas-pp-cli calendar-events api-save-enabled-account-calendars",
+		Example: "  canvas-cli calendar-events api-save-enabled-account-calendars",
 		Annotations: map[string]string{"pp:endpoint": "calendar-events.api-save-enabled-account-calendars", "pp:method": "POST", "pp:path": "/calendar_events/save_enabled_account_calendars"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

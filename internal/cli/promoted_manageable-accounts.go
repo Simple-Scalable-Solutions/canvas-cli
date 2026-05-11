@@ -20,7 +20,7 @@ func newManageableAccountsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "manageable-accounts",
 		Short: "A paginated list of accounts where the current user has permission to create or manage courses. List will be empty...",
 		Long:  "Shortcut for 'manageable-accounts accounts'. A paginated list of accounts where the current user has permission to create or manage courses. List will be empty...",
-		Example: "  canvas-pp-cli manageable-accounts",
+		Example: "  canvas-cli manageable-accounts",
 		Annotations: map[string]string{"pp:endpoint": "manageable-accounts.accounts", "pp:method": "GET", "pp:path": "/manageable_accounts", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

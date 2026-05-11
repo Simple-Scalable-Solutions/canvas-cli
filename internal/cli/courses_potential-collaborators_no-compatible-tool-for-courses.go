@@ -20,7 +20,7 @@ func newCoursesPotentialCollaboratorsNoCompatibleToolForCoursesCmd(flags *rootFl
 		Use:   "no-compatible-tool-for-courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of the users who can potentially be added to a collaboration in the given context. For courses,...",
-		Example: "  canvas-pp-cli courses potential-collaborators no-compatible-tool-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses potential-collaborators no-compatible-tool-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "potential-collaborators.no-compatible-tool-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/potential_collaborators", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

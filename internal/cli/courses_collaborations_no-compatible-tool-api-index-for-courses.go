@@ -20,7 +20,7 @@ func newCoursesCollaborationsNoCompatibleToolApiIndexForCoursesCmd(flags *rootFl
 		Use:   "no-compatible-tool-api-index-for-courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of collaborations the current user has access to in the context of the course provided in the url....",
-		Example: "  canvas-pp-cli courses collaborations no-compatible-tool-api-index-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses collaborations no-compatible-tool-api-index-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "collaborations.no-compatible-tool-api-index-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/collaborations", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -18,7 +18,7 @@ func newCoursesDiscussionTopicsApiSubscribeTopicForCoursesCmd(flags *rootFlags) 
 	cmd := &cobra.Command{
 		Use:   "api-subscribe-topic-for-courses <course_id> <topic_id>",
 		Short: "Subscribe to a topic to receive notifications about new entries On success, the response will be 204 No Content with...",
-		Example: "  canvas-pp-cli courses discussion-topics api-subscribe-topic-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses discussion-topics api-subscribe-topic-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-subscribe-topic-for-courses", "pp:method": "PUT", "pp:path": "/courses/{course_id}/discussion_topics/{topic_id}/subscribed"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

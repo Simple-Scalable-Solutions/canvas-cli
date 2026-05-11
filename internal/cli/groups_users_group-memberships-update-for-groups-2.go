@@ -21,7 +21,7 @@ func newGroupsUsersGroupMembershipsUpdateForGroups2Cmd(flags *rootFlags) *cobra.
 		Use:   "group-memberships-update-for-groups-2 <user_id> <group_id>",
 		Aliases: []string{"update"},
 		Short: "Accept a membership request, or add/remove moderator rights.",
-		Example: "  canvas-pp-cli groups users group-memberships-update-for-groups-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups users group-memberships-update-for-groups-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.group-memberships-update-for-groups-2", "pp:method": "PUT", "pp:path": "/groups/{group_id}/users/{user_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

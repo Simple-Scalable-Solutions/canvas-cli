@@ -18,7 +18,7 @@ func newCoursesAssignmentsProvisionalGradesPublishCmd(flags *rootFlags) *cobra.C
 	cmd := &cobra.Command{
 		Use:   "provisional-grades-publish <assignment_id> <course_id>",
 		Short: "Publish the selected provisional grade for all submissions to an assignment. Use the 'Select provisional grade'...",
-		Example: "  canvas-pp-cli courses assignments provisional-grades-publish 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments provisional-grades-publish 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.provisional-grades-publish", "pp:method": "POST", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/provisional_grades/publish"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

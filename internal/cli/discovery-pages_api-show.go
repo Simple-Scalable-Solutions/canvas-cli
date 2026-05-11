@@ -17,7 +17,7 @@ func newDiscoveryPagesApiShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-show",
 		Aliases: []string{"list"},
 		Short: "Get the discovery page configuration for the domain root account.",
-		Example: "  canvas-pp-cli discovery-pages api-show",
+		Example: "  canvas-cli discovery-pages api-show",
 		Annotations: map[string]string{"pp:endpoint": "discovery-pages.api-show", "pp:method": "GET", "pp:path": "/discovery_pages", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

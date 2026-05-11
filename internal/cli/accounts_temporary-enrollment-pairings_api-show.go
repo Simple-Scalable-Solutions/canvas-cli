@@ -16,7 +16,7 @@ func newAccountsTemporaryEnrollmentPairingsApiShowCmd(flags *rootFlags) *cobra.C
 	cmd := &cobra.Command{
 		Use:   "api-show <account_id> <id>",
 		Short: "Returns the temporary enrollment pairing with the given id.",
-		Example: "  canvas-pp-cli accounts temporary-enrollment-pairings api-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts temporary-enrollment-pairings api-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "temporary-enrollment-pairings.api-show", "pp:method": "GET", "pp:path": "/accounts/{account_id}/temporary_enrollment_pairings/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

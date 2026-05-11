@@ -19,7 +19,7 @@ func newAccountsReportsAccountIndexCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "account-index <account_id> <report>",
 		Short: "Shows all reports that have been run for the account of a specific type.",
-		Example: "  canvas-pp-cli accounts reports account-index 550e8400-e29b-41d4-a716-446655440000 example-value",
+		Example: "  canvas-cli accounts reports account-index 550e8400-e29b-41d4-a716-446655440000 example-value",
 		Annotations: map[string]string{"pp:endpoint": "reports.account-index", "pp:method": "GET", "pp:path": "/accounts/{account_id}/reports/{report}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

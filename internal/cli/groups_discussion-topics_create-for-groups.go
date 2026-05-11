@@ -42,7 +42,7 @@ func newGroupsDiscussionTopicsCreateForGroupsCmd(flags *rootFlags) *cobra.Comman
 	cmd := &cobra.Command{
 		Use:   "create-for-groups <group_id>",
 		Short: "Create an new discussion topic for the course or group.",
-		Example: "  canvas-pp-cli groups discussion-topics create-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups discussion-topics create-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.create-for-groups", "pp:method": "POST", "pp:path": "/groups/{group_id}/discussion_topics"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

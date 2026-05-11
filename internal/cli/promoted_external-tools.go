@@ -18,7 +18,7 @@ func newExternalToolsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "external-tools",
 		Short: "Get a list of external tools with the course_navigation placement that have not been hidden in course settings and...",
 		Long:  "Shortcut for 'external-tools timing-meta-all-visible-nav-tools'. Get a list of external tools with the course_navigation placement that have not been hidden in course settings and...",
-		Example: "  canvas-pp-cli external-tools --context-codes example-value",
+		Example: "  canvas-cli external-tools --context-codes example-value",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-all-visible-nav-tools", "pp:method": "GET", "pp:path": "/external_tools/visible_course_nav_tools", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !cmd.Flags().Changed("context-codes") && !flags.dryRun {

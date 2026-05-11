@@ -19,7 +19,7 @@ func newCoursesModulesContextItemsApiCreateCmd(flags *rootFlags) *cobra.Command 
 	cmd := &cobra.Command{
 		Use:   "context-items-api-create <course_id> <module_id>",
 		Short: "Create and return a new module item",
-		Example: "  canvas-pp-cli courses modules context-items-api-create 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses modules context-items-api-create 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "modules.context-items-api-create", "pp:method": "POST", "pp:path": "/courses/{course_id}/modules/{module_id}/items"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

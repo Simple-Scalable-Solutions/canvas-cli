@@ -20,7 +20,7 @@ func newUsersLoginsPseudonymsIndexForUsersCmd(flags *rootFlags) *cobra.Command {
 		Use:   "pseudonyms-index-for-users <user_id>",
 		Aliases: []string{"get"},
 		Short: "Given a user ID, return a paginated list of that user's logins for the given account.",
-		Example: "  canvas-pp-cli users logins pseudonyms-index-for-users 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users logins pseudonyms-index-for-users 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "logins.pseudonyms-index-for-users", "pp:method": "GET", "pp:path": "/users/{user_id}/logins", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

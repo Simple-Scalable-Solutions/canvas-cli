@@ -16,7 +16,7 @@ func newCoursesGradebookHistoryApiDaysCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "api-days <course_id>",
 		Short: "Returns a map of dates to grader/assignment groups",
-		Example: "  canvas-pp-cli courses gradebook-history api-days 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses gradebook-history api-days 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "gradebook-history.api-days", "pp:method": "GET", "pp:path": "/courses/{course_id}/gradebook_history/days", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

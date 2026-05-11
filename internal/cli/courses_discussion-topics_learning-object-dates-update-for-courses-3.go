@@ -24,7 +24,7 @@ func newCoursesDiscussionTopicsLearningObjectDatesUpdateForCourses3Cmd(flags *ro
 	cmd := &cobra.Command{
 		Use:   "learning-object-dates-update-for-courses-3 <discussion_topic_id> <course_id>",
 		Short: "Updates date-related information for learning objects, including due date, availability dates, override status, and...",
-		Example: "  canvas-pp-cli courses discussion-topics learning-object-dates-update-for-courses-3 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses discussion-topics learning-object-dates-update-for-courses-3 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.learning-object-dates-update-for-courses-3", "pp:method": "PUT", "pp:path": "/courses/{course_id}/discussion_topics/{discussion_topic_id}/date_details"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

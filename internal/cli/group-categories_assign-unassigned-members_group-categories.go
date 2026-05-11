@@ -20,7 +20,7 @@ func newGroupCategoriesAssignUnassignedMembersGroupCategoriesCmd(flags *rootFlag
 		Use:   "group-categories <group_category_id>",
 		Aliases: []string{"create"},
 		Short: "Assign all unassigned members as evenly as possible among the existing student groups.",
-		Example: "  canvas-pp-cli group-categories assign-unassigned-members group-categories 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli group-categories assign-unassigned-members group-categories 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assign-unassigned-members.group-categories", "pp:method": "POST", "pp:path": "/group_categories/{group_category_id}/assign_unassigned_members"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

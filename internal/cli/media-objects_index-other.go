@@ -23,7 +23,7 @@ func newMediaObjectsIndexOtherCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index-other",
 		Aliases: []string{"list"},
 		Short: "Returns media objects created by the user making the request. When using the second version, returns media objects...",
-		Example: "  canvas-pp-cli media-objects index-other",
+		Example: "  canvas-cli media-objects index-other",
 		Annotations: map[string]string{"pp:endpoint": "media-objects.index-other", "pp:method": "GET", "pp:path": "/media_objects", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cmd.Flags().Changed("sort") {

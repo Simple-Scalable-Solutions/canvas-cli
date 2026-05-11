@@ -17,7 +17,7 @@ func newGroupsUsersGroupMembershipsShowForGroups2Cmd(flags *rootFlags) *cobra.Co
 		Use:   "group-memberships-show-for-groups-2 <user_id> <group_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the group membership with the given membership id or user id.",
-		Example: "  canvas-pp-cli groups users group-memberships-show-for-groups-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups users group-memberships-show-for-groups-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.group-memberships-show-for-groups-2", "pp:method": "GET", "pp:path": "/groups/{group_id}/users/{user_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

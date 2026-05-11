@@ -19,7 +19,7 @@ func newCoursesGroupCategoriesImportTagsCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "import-tags <course_id>",
 		Short: "Create Differentiation Tags through a CSV import For more information on the format that's expected here, please see...",
-		Example: "  canvas-pp-cli courses group-categories import-tags 550e8400-e29b-41d4-a716-446655440000 --attachment example-value",
+		Example: "  canvas-cli courses group-categories import-tags 550e8400-e29b-41d4-a716-446655440000 --attachment example-value",
 		Annotations: map[string]string{"pp:endpoint": "group-categories.import-tags", "pp:method": "POST", "pp:path": "/courses/{course_id}/group_categories/import_tags"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

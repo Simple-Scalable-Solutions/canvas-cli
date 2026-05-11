@@ -22,7 +22,7 @@ func newCoursesExternalFeedsCreateForCoursesCmd(flags *rootFlags) *cobra.Command
 		Use:   "create-for-courses <course_id>",
 		Aliases: []string{"create"},
 		Short: "Create a new external feed for the course or group.",
-		Example: "  canvas-pp-cli courses external-feeds create-for-courses 550e8400-e29b-41d4-a716-446655440000 --url https://example.com/resource",
+		Example: "  canvas-cli courses external-feeds create-for-courses 550e8400-e29b-41d4-a716-446655440000 --url https://example.com/resource",
 		Annotations: map[string]string{"pp:endpoint": "external-feeds.create-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/external_feeds"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

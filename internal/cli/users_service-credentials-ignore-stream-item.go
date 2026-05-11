@@ -16,7 +16,7 @@ func newUsersServiceCredentialsIgnoreStreamItemCmd(flags *rootFlags) *cobra.Comm
 	cmd := &cobra.Command{
 		Use:   "service-credentials-ignore-stream-item <id>",
 		Short: "Hide the given stream item.",
-		Example: "  canvas-pp-cli users service-credentials-ignore-stream-item 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users service-credentials-ignore-stream-item 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-ignore-stream-item", "pp:method": "DELETE", "pp:path": "/users/self/activity_stream/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -18,7 +18,7 @@ func newCoursesRubricsApiShowForCoursesCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "api-show-for-courses <course_id> <id>",
 		Short: "Returns the rubric with the given id.",
-		Example: "  canvas-pp-cli courses rubrics api-show-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses rubrics api-show-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "rubrics.api-show-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/rubrics/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newUsersContentExportsApiIndexForUsersCmd(flags *rootFlags) *cobra.Command 
 		Use:   "api-index-for-users <user_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of the past and pending content export jobs for a course, group, or user. Exports are returned...",
-		Example: "  canvas-pp-cli users content-exports api-index-for-users 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users content-exports api-index-for-users 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-exports.api-index-for-users", "pp:method": "GET", "pp:path": "/users/{user_id}/content_exports", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

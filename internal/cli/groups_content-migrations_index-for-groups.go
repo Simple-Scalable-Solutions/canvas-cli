@@ -19,7 +19,7 @@ func newGroupsContentMigrationsIndexForGroupsCmd(flags *rootFlags) *cobra.Comman
 	cmd := &cobra.Command{
 		Use:   "index-for-groups <group_id>",
 		Short: "Returns paginated content migrations",
-		Example: "  canvas-pp-cli groups content-migrations index-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups content-migrations index-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-migrations.index-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/content_migrations", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

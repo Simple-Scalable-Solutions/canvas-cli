@@ -17,7 +17,7 @@ func newAccountsTermsDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "destroy <account_id> <id>",
 		Aliases: []string{"delete"},
 		Short: "Delete the specified enrollment term.",
-		Example: "  canvas-pp-cli accounts terms destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts terms destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "terms.destroy", "pp:method": "DELETE", "pp:path": "/accounts/{account_id}/terms/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

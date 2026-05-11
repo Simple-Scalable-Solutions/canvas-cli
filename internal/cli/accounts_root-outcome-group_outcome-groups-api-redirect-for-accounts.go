@@ -17,7 +17,7 @@ func newAccountsRootOutcomeGroupOutcomeGroupsApiRedirectForAccountsCmd(flags *ro
 		Use:   "outcome-groups-api-redirect-for-accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "Convenience redirect to find the root outcome group for a particular context. Will redirect to the appropriate...",
-		Example: "  canvas-pp-cli accounts root-outcome-group outcome-groups-api-redirect-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts root-outcome-group outcome-groups-api-redirect-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "root-outcome-group.outcome-groups-api-redirect-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/root_outcome_group", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

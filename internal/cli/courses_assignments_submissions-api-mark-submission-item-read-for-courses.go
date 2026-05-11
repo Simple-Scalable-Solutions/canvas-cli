@@ -18,7 +18,7 @@ func newCoursesAssignmentsSubmissionsApiMarkSubmissionItemReadForCoursesCmd(flag
 	cmd := &cobra.Command{
 		Use:   "submissions-api-mark-submission-item-read-for-courses <assignment_id> <course_id> <item> <user_id>",
 		Short: "No request fields are necessary. A submission item can be 'grade', 'comment' or 'rubric' On success, the response...",
-		Example: "  canvas-pp-cli courses assignments submissions-api-mark-submission-item-read-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 example-value 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments submissions-api-mark-submission-item-read-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 example-value 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-mark-submission-item-read-for-courses", "pp:method": "PUT", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/submissions/{user_id}/read/{item}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

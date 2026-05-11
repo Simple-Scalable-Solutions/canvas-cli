@@ -21,7 +21,7 @@ func newAccountCalendarsApiUpdateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-update <account_id>",
 		Aliases: []string{"update"},
 		Short: "Set an account calendar's visibility and auto_subscribe values. Requires the `manage_account_calendar_visibility`...",
-		Example: "  canvas-pp-cli account-calendars api-update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli account-calendars api-update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "account-calendars.api-update", "pp:method": "PUT", "pp:path": "/account_calendars/{account_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

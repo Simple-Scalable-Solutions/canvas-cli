@@ -19,7 +19,7 @@ func newPlannerOverridesIndexCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "overrides-index",
 		Short: "Retrieve a planner override for the current user",
-		Example: "  canvas-pp-cli planner overrides-index",
+		Example: "  canvas-cli planner overrides-index",
 		Annotations: map[string]string{"pp:endpoint": "planner.overrides-index", "pp:method": "GET", "pp:path": "/planner/overrides", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

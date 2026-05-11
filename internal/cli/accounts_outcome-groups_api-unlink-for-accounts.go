@@ -16,7 +16,7 @@ func newAccountsOutcomeGroupsApiUnlinkForAccountsCmd(flags *rootFlags) *cobra.Co
 	cmd := &cobra.Command{
 		Use:   "api-unlink-for-accounts <account_id> <id> <outcome_id>",
 		Short: "Unlinking an outcome only deletes the outcome itself if this was the last link to the outcome in any group in any...",
-		Example: "  canvas-pp-cli accounts outcome-groups api-unlink-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts outcome-groups api-unlink-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-groups.api-unlink-for-accounts", "pp:method": "DELETE", "pp:path": "/accounts/{account_id}/outcome_groups/{id}/outcomes/{outcome_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

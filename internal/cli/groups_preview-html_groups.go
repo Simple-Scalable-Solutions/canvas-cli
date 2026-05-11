@@ -20,7 +20,7 @@ func newGroupsPreviewHtmlGroupsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "groups <group_id>",
 		Aliases: []string{"create"},
 		Short: "Preview html content processed for this group",
-		Example: "  canvas-pp-cli groups preview-html groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups preview-html groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "preview-html.groups", "pp:method": "POST", "pp:path": "/groups/{group_id}/preview_html"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

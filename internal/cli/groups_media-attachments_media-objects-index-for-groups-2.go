@@ -23,7 +23,7 @@ func newGroupsMediaAttachmentsMediaObjectsIndexForGroups2Cmd(flags *rootFlags) *
 		Use:   "media-objects-index-for-groups-2 <group_id>",
 		Aliases: []string{"get"},
 		Short: "Returns media objects created by the user making the request. When using the second version, returns media objects...",
-		Example: "  canvas-pp-cli groups media-attachments media-objects-index-for-groups-2 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups media-attachments media-objects-index-for-groups-2 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "media-attachments.media-objects-index-for-groups-2", "pp:method": "GET", "pp:path": "/groups/{group_id}/media_attachments", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

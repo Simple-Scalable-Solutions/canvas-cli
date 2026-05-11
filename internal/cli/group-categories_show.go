@@ -17,7 +17,7 @@ func newGroupCategoriesShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "show <group_category_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the data for a single group category, or a 401 if the caller doesn't have the rights to see it.",
-		Example: "  canvas-pp-cli group-categories show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli group-categories show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "group-categories.show", "pp:method": "GET", "pp:path": "/group_categories/{group_category_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

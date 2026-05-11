@@ -23,7 +23,7 @@ func newCoursesGroupsContextIndexForCoursesCmd(flags *rootFlags) *cobra.Command 
 		Use:   "context-index-for-courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of active groups in the given context that are visible to user.",
-		Example: "  canvas-pp-cli courses groups context-index-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses groups context-index-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "groups.context-index-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/groups", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

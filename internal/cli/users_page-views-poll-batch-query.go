@@ -16,7 +16,7 @@ func newUsersPageViewsPollBatchQueryCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "page-views-poll-batch-query <query_id>",
 		Short: "Checks the status of a previously initiated batch page views query. Returns the current processing status and...",
-		Example: "  canvas-pp-cli users page-views-poll-batch-query 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users page-views-poll-batch-query 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.page-views-poll-batch-query", "pp:method": "GET", "pp:path": "/users/page_views/query/{query_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

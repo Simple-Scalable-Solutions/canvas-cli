@@ -23,7 +23,7 @@ func newPlannerOverridesCreateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "overrides-create",
 		Aliases: []string{"create"},
 		Short: "Create a planner override for the current user",
-		Example: "  canvas-pp-cli planner overrides-create --plannable-type example-value",
+		Example: "  canvas-cli planner overrides-create --plannable-type example-value",
 		Annotations: map[string]string{"pp:endpoint": "planner.overrides-create", "pp:method": "POST", "pp:path": "/planner/overrides"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

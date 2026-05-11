@@ -20,7 +20,7 @@ func newUsersCourseNicknamesIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "course-nicknames-index",
 		Aliases: []string{"list"},
 		Short: "Returns all course nicknames you have set.",
-		Example: "  canvas-pp-cli users course-nicknames-index",
+		Example: "  canvas-cli users course-nicknames-index",
 		Annotations: map[string]string{"pp:endpoint": "users.course-nicknames-index", "pp:method": "GET", "pp:path": "/users/self/course_nicknames", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

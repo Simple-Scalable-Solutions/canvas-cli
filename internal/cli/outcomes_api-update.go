@@ -29,7 +29,7 @@ func newOutcomesApiUpdateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-update <id>",
 		Aliases: []string{"update"},
 		Short: "Modify an existing outcome. Fields not provided are left as is; unrecognized fields are ignored. If any new ratings...",
-		Example: "  canvas-pp-cli outcomes api-update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli outcomes api-update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcomes.api-update", "pp:method": "PUT", "pp:path": "/outcomes/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

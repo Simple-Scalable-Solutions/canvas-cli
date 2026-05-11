@@ -19,7 +19,7 @@ func newAppointmentGroupsCreateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "create",
 		Short: "Create and return a new appointment group. If new_appointments are specified, the response will return a...",
-		Example: "  canvas-pp-cli appointment-groups create",
+		Example: "  canvas-cli appointment-groups create",
 		Annotations: map[string]string{"pp:endpoint": "appointment-groups.create", "pp:method": "POST", "pp:path": "/appointment_groups"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

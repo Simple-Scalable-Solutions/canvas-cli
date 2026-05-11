@@ -19,7 +19,7 @@ func newAccountsRolesBadPermissionSettingErrorRemoveCmd(flags *rootFlags) *cobra
 		Use:   "bad-permission-setting-error-remove <account_id> <id>",
 		Aliases: []string{"delete"},
 		Short: "Deactivates a custom role. This hides it in the user interface and prevents it from being assigned to new users....",
-		Example: "  canvas-pp-cli accounts roles bad-permission-setting-error-remove 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --role-id 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts roles bad-permission-setting-error-remove 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --role-id 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "roles.bad-permission-setting-error-remove", "pp:method": "DELETE", "pp:path": "/accounts/{account_id}/roles/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

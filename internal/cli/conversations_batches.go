@@ -20,7 +20,7 @@ func newConversationsBatchesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "batches",
 		Aliases: []string{"list"},
 		Short: "Returns any currently running conversation batches for the current user. Conversation batches are created when a...",
-		Example: "  canvas-pp-cli conversations batches",
+		Example: "  canvas-cli conversations batches",
 		Annotations: map[string]string{"pp:endpoint": "conversations.batches", "pp:method": "GET", "pp:path": "/conversations/batches", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

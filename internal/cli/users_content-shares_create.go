@@ -21,7 +21,7 @@ func newUsersContentSharesCreateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "create <user_id>",
 		Short: "Share content directly between two or more users",
-		Example: "  canvas-pp-cli users content-shares create 550e8400-e29b-41d4-a716-446655440000 --content-type example-value",
+		Example: "  canvas-cli users content-shares create 550e8400-e29b-41d4-a716-446655440000 --content-type example-value",
 		Annotations: map[string]string{"pp:endpoint": "content-shares.create", "pp:method": "POST", "pp:path": "/users/{user_id}/content_shares"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

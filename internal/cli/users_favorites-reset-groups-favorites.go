@@ -16,7 +16,7 @@ func newUsersFavoritesResetGroupsFavoritesCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "favorites-reset-groups-favorites",
 		Short: "Reset the current user's group favorites to the default automatically generated list of enrolled group",
-		Example: "  canvas-pp-cli users favorites-reset-groups-favorites",
+		Example: "  canvas-cli users favorites-reset-groups-favorites",
 		Annotations: map[string]string{"pp:endpoint": "users.favorites-reset-groups-favorites", "pp:method": "DELETE", "pp:path": "/users/self/favorites/groups"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

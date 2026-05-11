@@ -18,7 +18,7 @@ func newCoursesEffectiveDueDatesCoursesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "For each assignment in the course, returns each assigned student's ID and their corresponding due date along with...",
-		Example: "  canvas-pp-cli courses effective-due-dates courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses effective-due-dates courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "effective-due-dates.courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/effective_due_dates", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

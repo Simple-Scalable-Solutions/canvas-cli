@@ -20,7 +20,7 @@ func newCoursesLatePolicyRecordAlreadyExistsUpdateCmd(flags *rootFlags) *cobra.C
 		Use:   "record-already-exists-update <id>",
 		Aliases: []string{"update"},
 		Short: "Patch a late policy. No body is returned upon success.",
-		Example: "  canvas-pp-cli courses late-policy record-already-exists-update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses late-policy record-already-exists-update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "late-policy.record-already-exists-update", "pp:method": "PATCH", "pp:path": "/courses/{id}/late_policy"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

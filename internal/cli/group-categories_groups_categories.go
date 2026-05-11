@@ -20,7 +20,7 @@ func newGroupCategoriesGroupsCategoriesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "categories <group_category_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a paginated list of groups in a group category",
-		Example: "  canvas-pp-cli group-categories groups categories 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli group-categories groups categories 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "groups.categories", "pp:method": "GET", "pp:path": "/group_categories/{group_category_id}/groups", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

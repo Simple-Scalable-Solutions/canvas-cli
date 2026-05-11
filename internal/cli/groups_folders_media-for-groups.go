@@ -16,7 +16,7 @@ func newGroupsFoldersMediaForGroupsCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "media-for-groups <group_id>",
 		Short: "Returns the details for a designated upload folder that the user has rights to upload to, and creates it if it...",
-		Example: "  canvas-pp-cli groups folders media-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups folders media-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "folders.media-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/folders/media", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

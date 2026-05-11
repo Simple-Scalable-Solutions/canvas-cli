@@ -38,7 +38,7 @@ func newAccountsSisImportsApiCreateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-create <account_id>",
 		Aliases: []string{"create"},
 		Short: "Import SIS data into Canvas. Must be on a root account with SIS imports enabled. For more information on the format...",
-		Example: "  canvas-pp-cli accounts sis-imports api-create 550e8400-e29b-41d4-a716-446655440000 --attachment example-value",
+		Example: "  canvas-cli accounts sis-imports api-create 550e8400-e29b-41d4-a716-446655440000 --attachment example-value",
 		Annotations: map[string]string{"pp:endpoint": "sis-imports.api-create", "pp:method": "POST", "pp:path": "/accounts/{account_id}/sis_imports"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

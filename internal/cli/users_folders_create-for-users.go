@@ -27,7 +27,7 @@ func newUsersFoldersCreateForUsersCmd(flags *rootFlags) *cobra.Command {
 		Use:   "create-for-users <user_id>",
 		Aliases: []string{"create"},
 		Short: "Creates a folder in the specified context",
-		Example: "  canvas-pp-cli users folders create-for-users 550e8400-e29b-41d4-a716-446655440000 --name example-resource",
+		Example: "  canvas-cli users folders create-for-users 550e8400-e29b-41d4-a716-446655440000 --name example-resource",
 		Annotations: map[string]string{"pp:endpoint": "folders.create-for-users", "pp:method": "POST", "pp:path": "/users/{user_id}/folders"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

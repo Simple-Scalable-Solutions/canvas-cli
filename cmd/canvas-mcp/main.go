@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/mark3labs/mcp-go/server"
-	mcptools "canvas-pp-cli/internal/mcp"
+	mcptools "canvas-cli/internal/mcp"
 )
 
 func main() {

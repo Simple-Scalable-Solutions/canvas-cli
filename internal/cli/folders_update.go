@@ -25,7 +25,7 @@ func newFoldersUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update <id>",
 		Short: "Updates a folder",
-		Example: "  canvas-pp-cli folders update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli folders update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "folders.update", "pp:method": "PUT", "pp:path": "/folders/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

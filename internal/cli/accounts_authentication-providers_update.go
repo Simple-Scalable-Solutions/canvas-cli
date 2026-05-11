@@ -18,7 +18,7 @@ func newAccountsAuthenticationProvidersUpdateCmd(flags *rootFlags) *cobra.Comman
 	cmd := &cobra.Command{
 		Use:   "update <account_id> <id>",
 		Short: "Update an authentication provider using the same options as the {api:AuthenticationProvidersController#create Add...",
-		Example: "  canvas-pp-cli accounts authentication-providers update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts authentication-providers update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "authentication-providers.update", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/authentication_providers/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

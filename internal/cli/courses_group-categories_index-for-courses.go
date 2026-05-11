@@ -20,7 +20,7 @@ func newCoursesGroupCategoriesIndexForCoursesCmd(flags *rootFlags) *cobra.Comman
 	cmd := &cobra.Command{
 		Use:   "index-for-courses <course_id>",
 		Short: "Returns a paginated list of group categories in a context. The list returned depends on the permissions of the...",
-		Example: "  canvas-pp-cli courses group-categories index-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses group-categories index-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "group-categories.index-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/group_categories", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

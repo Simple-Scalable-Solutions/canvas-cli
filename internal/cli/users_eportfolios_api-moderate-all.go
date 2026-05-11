@@ -20,7 +20,7 @@ func newUsersEportfoliosApiModerateAllCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-moderate-all <user_id>",
 		Aliases: []string{"update"},
 		Short: "Update the spam_status for all active eportfolios of a user. Only available to admins who can moderate_user_content.",
-		Example: "  canvas-pp-cli users eportfolios api-moderate-all 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users eportfolios api-moderate-all 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "eportfolios.api-moderate-all", "pp:method": "PUT", "pp:path": "/users/{user_id}/eportfolios"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

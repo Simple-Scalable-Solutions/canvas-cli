@@ -16,7 +16,7 @@ func newCareerExperienceExperienceSummaryCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "experience-experience-summary",
 		Short: "Returns the current user's active experience and available experiences they can switch to.",
-		Example: "  canvas-pp-cli career experience-experience-summary",
+		Example: "  canvas-cli career experience-experience-summary",
 		Annotations: map[string]string{"pp:endpoint": "career.experience-experience-summary", "pp:method": "GET", "pp:path": "/career/experience_summary", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

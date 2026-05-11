@@ -20,7 +20,7 @@ func newCoursesUsersEnrollmentsApiLastAttendedCmd(flags *rootFlags) *cobra.Comma
 		Use:   "enrollments-api-last-attended <course_id> <user_id>",
 		Aliases: []string{"update"},
 		Short: "Add last attended date to student enrollment in course",
-		Example: "  canvas-pp-cli courses users enrollments-api-last-attended 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses users enrollments-api-last-attended 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.enrollments-api-last-attended", "pp:method": "PUT", "pp:path": "/courses/{course_id}/users/{user_id}/last_attended"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

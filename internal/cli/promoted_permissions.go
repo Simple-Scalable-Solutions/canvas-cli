@@ -17,7 +17,7 @@ func newPermissionsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "permissions",
 		Short: "Retrieve information about groups of granular permissions The return value is a dictionary of permission group keys...",
 		Long:  "Shortcut for 'permissions help-groups'. Retrieve information about groups of granular permissions The return value is a dictionary of permission group keys...",
-		Example: "  canvas-pp-cli permissions",
+		Example: "  canvas-cli permissions",
 		Annotations: map[string]string{"pp:endpoint": "permissions.help-groups", "pp:method": "GET", "pp:path": "/permissions/groups", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

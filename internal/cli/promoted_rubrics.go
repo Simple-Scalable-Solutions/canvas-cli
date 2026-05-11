@@ -17,7 +17,7 @@ func newRubricsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "rubrics",
 		Short: "Returns a CSV template file that can be used to import rubrics into Canvas.",
 		Long:  "Shortcut for 'rubrics api-upload-template'. Returns a CSV template file that can be used to import rubrics into Canvas.",
-		Example: "  canvas-pp-cli rubrics",
+		Example: "  canvas-cli rubrics",
 		Annotations: map[string]string{"pp:endpoint": "rubrics.api-upload-template", "pp:method": "GET", "pp:path": "/rubrics/upload_template", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

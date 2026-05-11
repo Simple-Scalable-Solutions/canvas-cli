@@ -20,7 +20,7 @@ func newUsersUserGeneratedTokensTokensCmd(flags *rootFlags) *cobra.Command {
 		Use:   "tokens <user_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a list of manually generated access tokens for the specified user. Note that the actual token values are...",
-		Example: "  canvas-pp-cli users user-generated-tokens tokens 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users user-generated-tokens tokens 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "user-generated-tokens.tokens", "pp:method": "GET", "pp:path": "/users/{user_id}/user_generated_tokens", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

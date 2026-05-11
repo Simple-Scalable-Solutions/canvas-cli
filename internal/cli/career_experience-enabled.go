@@ -17,7 +17,7 @@ func newCareerExperienceEnabledCmd(flags *rootFlags) *cobra.Command {
 		Use:   "experience-enabled",
 		Aliases: []string{"list"},
 		Short: "Returns whether the root account has Canvas Career (Horizon) enabled in at least one subaccount.",
-		Example: "  canvas-pp-cli career experience-enabled",
+		Example: "  canvas-cli career experience-enabled",
 		Annotations: map[string]string{"pp:endpoint": "career.experience-enabled", "pp:method": "GET", "pp:path": "/career/enabled", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

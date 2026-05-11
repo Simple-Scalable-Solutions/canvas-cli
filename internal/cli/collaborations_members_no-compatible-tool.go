@@ -21,7 +21,7 @@ func newCollaborationsMembersNoCompatibleToolCmd(flags *rootFlags) *cobra.Comman
 		Use:   "no-compatible-tool <id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of the collaborators of a given collaboration",
-		Example: "  canvas-pp-cli collaborations members no-compatible-tool 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli collaborations members no-compatible-tool 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "members.no-compatible-tool", "pp:method": "GET", "pp:path": "/collaborations/{id}/members", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

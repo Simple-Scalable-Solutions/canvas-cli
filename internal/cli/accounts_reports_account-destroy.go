@@ -17,7 +17,7 @@ func newAccountsReportsAccountDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "account-destroy <account_id> <id> <report>",
 		Aliases: []string{"delete"},
 		Short: "Deletes a generated report instance.",
-		Example: "  canvas-pp-cli accounts reports account-destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 example-value",
+		Example: "  canvas-cli accounts reports account-destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 example-value",
 		Annotations: map[string]string{"pp:endpoint": "reports.account-destroy", "pp:method": "DELETE", "pp:path": "/accounts/{account_id}/reports/{report}/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

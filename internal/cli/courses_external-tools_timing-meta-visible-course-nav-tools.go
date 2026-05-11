@@ -16,7 +16,7 @@ func newCoursesExternalToolsTimingMetaVisibleCourseNavToolsCmd(flags *rootFlags)
 	cmd := &cobra.Command{
 		Use:   "timing-meta-visible-course-nav-tools <course_id>",
 		Short: "Get a list of external tools with the course_navigation placement that have not been hidden in course settings and...",
-		Example: "  canvas-pp-cli courses external-tools timing-meta-visible-course-nav-tools 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses external-tools timing-meta-visible-course-nav-tools 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-visible-course-nav-tools", "pp:method": "GET", "pp:path": "/courses/{course_id}/external_tools/visible_course_nav_tools", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

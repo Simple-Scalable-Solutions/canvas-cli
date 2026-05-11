@@ -16,7 +16,7 @@ func newAccountsGradingStandardsApiContextShowForAccountsCmd(flags *rootFlags) *
 	cmd := &cobra.Command{
 		Use:   "api-context-show-for-accounts <account_id> <grading_standard_id>",
 		Short: "Returns a grading standard for the given context that is visible to the user.",
-		Example: "  canvas-pp-cli accounts grading-standards api-context-show-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts grading-standards api-context-show-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "grading-standards.api-context-show-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/grading_standards/{grading_standard_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

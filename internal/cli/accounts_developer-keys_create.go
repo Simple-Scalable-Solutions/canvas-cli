@@ -19,7 +19,7 @@ func newAccountsDeveloperKeysCreateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "create <account_id>",
 		Short: "Create a new Canvas API key. Creating an LTI 1.3 registration is not supported here and should be done via the LTI...",
-		Example: "  canvas-pp-cli accounts developer-keys create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts developer-keys create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "developer-keys.create", "pp:method": "POST", "pp:path": "/accounts/{account_id}/developer_keys"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

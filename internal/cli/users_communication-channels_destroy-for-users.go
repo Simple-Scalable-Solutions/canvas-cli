@@ -17,7 +17,7 @@ func newUsersCommunicationChannelsDestroyForUsersCmd(flags *rootFlags) *cobra.Co
 		Use:   "destroy-for-users <id> <user_id>",
 		Aliases: []string{"delete"},
 		Short: "Delete an existing communication channel.",
-		Example: "  canvas-pp-cli users communication-channels destroy-for-users 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users communication-channels destroy-for-users 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "communication-channels.destroy-for-users", "pp:method": "DELETE", "pp:path": "/users/{user_id}/communication_channels/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

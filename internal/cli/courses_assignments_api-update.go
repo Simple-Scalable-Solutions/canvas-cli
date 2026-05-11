@@ -19,7 +19,7 @@ func newCoursesAssignmentsApiUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "api-update <course_id> <id>",
 		Short: "Modify an existing assignment.",
-		Example: "  canvas-pp-cli courses assignments api-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments api-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.api-update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/assignments/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

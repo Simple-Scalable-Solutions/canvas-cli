@@ -20,7 +20,7 @@ func newConversationsBatchUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "batch-update",
 		Short: "Perform a change on a set of conversations. Operates asynchronously; use the {api:ProgressController#show progress...",
-		Example: "  canvas-pp-cli conversations batch-update --event example-value",
+		Example: "  canvas-cli conversations batch-update --event example-value",
 		Annotations: map[string]string{"pp:endpoint": "conversations.batch-update", "pp:method": "PUT", "pp:path": "/conversations"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

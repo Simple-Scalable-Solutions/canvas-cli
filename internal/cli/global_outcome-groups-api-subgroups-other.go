@@ -19,7 +19,7 @@ func newGlobalOutcomeGroupsApiSubgroupsOtherCmd(flags *rootFlags) *cobra.Command
 	cmd := &cobra.Command{
 		Use:   "outcome-groups-api-subgroups-other <id>",
 		Short: "A paginated list of the immediate OutcomeGroup children of the outcome group.",
-		Example: "  canvas-pp-cli global outcome-groups-api-subgroups-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli global outcome-groups-api-subgroups-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "global.outcome-groups-api-subgroups-other", "pp:method": "GET", "pp:path": "/global/outcome_groups/{id}/subgroups", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

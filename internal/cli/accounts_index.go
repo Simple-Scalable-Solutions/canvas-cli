@@ -21,7 +21,7 @@ func newAccountsIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index",
 		Aliases: []string{"list"},
 		Short: "A paginated list of accounts that the current user can view or manage. Typically, students and even teachers will...",
-		Example: "  canvas-pp-cli accounts index",
+		Example: "  canvas-cli accounts index",
 		Annotations: map[string]string{"pp:endpoint": "accounts.index", "pp:method": "GET", "pp:path": "/accounts", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

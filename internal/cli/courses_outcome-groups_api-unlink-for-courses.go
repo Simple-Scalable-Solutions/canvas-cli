@@ -16,7 +16,7 @@ func newCoursesOutcomeGroupsApiUnlinkForCoursesCmd(flags *rootFlags) *cobra.Comm
 	cmd := &cobra.Command{
 		Use:   "api-unlink-for-courses <course_id> <id> <outcome_id>",
 		Short: "Unlinking an outcome only deletes the outcome itself if this was the last link to the outcome in any group in any...",
-		Example: "  canvas-pp-cli courses outcome-groups api-unlink-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses outcome-groups api-unlink-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-groups.api-unlink-for-courses", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/outcome_groups/{id}/outcomes/{outcome_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

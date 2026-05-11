@@ -19,7 +19,7 @@ func newServicesApiStartKalturaSessionCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-start-kaltura-session",
 		Aliases: []string{"create"},
 		Short: "Start a new Kaltura session, so that new media can be recorded and uploaded to this Canvas instance's Kaltura instance.",
-		Example: "  canvas-pp-cli services api-start-kaltura-session",
+		Example: "  canvas-cli services api-start-kaltura-session",
 		Annotations: map[string]string{"pp:endpoint": "services.api-start-kaltura-session", "pp:method": "POST", "pp:path": "/services/kaltura_session"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

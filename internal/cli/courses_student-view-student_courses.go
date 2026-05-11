@@ -17,7 +17,7 @@ func newCoursesStudentViewStudentCoursesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns information for a test student in this course. Creates a test student if one does not already exist for the...",
-		Example: "  canvas-pp-cli courses student-view-student courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses student-view-student courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "student-view-student.courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/student_view_student", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newUsersContentSharesIndexForUsersCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index-for-users <user_id>",
 		Aliases: []string{"get"},
 		Short: "Return a paginated list of content shares a user has sent or received. Use +self+ as the user_id to retrieve your...",
-		Example: "  canvas-pp-cli users content-shares index-for-users 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users content-shares index-for-users 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-shares.index-for-users", "pp:method": "GET", "pp:path": "/users/{user_id}/content_shares/sent", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

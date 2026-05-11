@@ -17,7 +17,7 @@ func newGroupsActivityStreamGroupsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "groups <group_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the current user's group-specific activity stream, paginated. For full documentation, see the API...",
-		Example: "  canvas-pp-cli groups activity-stream groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups activity-stream groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "activity-stream.groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/activity_stream", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

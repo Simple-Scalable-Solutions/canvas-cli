@@ -19,7 +19,7 @@ func newSectionsSubmissionsApiMarkBulkAsReadOtherCmd(flags *rootFlags) *cobra.Co
 	cmd := &cobra.Command{
 		Use:   "api-mark-bulk-as-read-other <section_id>",
 		Short: "Accepts a string array of submission ids. Loops through and marks each submission as read On success, the response...",
-		Example: "  canvas-pp-cli sections submissions api-mark-bulk-as-read-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections submissions api-mark-bulk-as-read-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "submissions.api-mark-bulk-as-read-other", "pp:method": "PUT", "pp:path": "/sections/{section_id}/submissions/bulk_mark_read"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

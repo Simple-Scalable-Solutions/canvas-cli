@@ -20,7 +20,7 @@ func newCoursesLatePolicyRecordAlreadyExistsCreateCmd(flags *rootFlags) *cobra.C
 		Use:   "record-already-exists-create <id>",
 		Aliases: []string{"create"},
 		Short: "Create a late policy. If the course already has a late policy, a bad_request is returned since there can only be one...",
-		Example: "  canvas-pp-cli courses late-policy record-already-exists-create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses late-policy record-already-exists-create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "late-policy.record-already-exists-create", "pp:method": "POST", "pp:path": "/courses/{id}/late_policy"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

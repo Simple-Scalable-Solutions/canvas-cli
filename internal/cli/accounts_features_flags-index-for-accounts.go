@@ -20,7 +20,7 @@ func newAccountsFeaturesFlagsIndexForAccountsCmd(flags *rootFlags) *cobra.Comman
 	cmd := &cobra.Command{
 		Use:   "flags-index-for-accounts <account_id>",
 		Short: "A paginated list of all features that apply to a given Account, Course, or User.",
-		Example: "  canvas-pp-cli accounts features flags-index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts features flags-index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "features.flags-index-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/features", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

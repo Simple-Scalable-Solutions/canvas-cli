@@ -14,12 +14,12 @@ import (
 
 	mcplib "github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
-	"canvas-pp-cli/internal/cli"
-	"canvas-pp-cli/internal/cliutil"
-	"canvas-pp-cli/internal/client"
-	"canvas-pp-cli/internal/config"
-	"canvas-pp-cli/internal/mcp/cobratree"
-	"canvas-pp-cli/internal/store"
+	"canvas-cli/internal/cli"
+	"canvas-cli/internal/cliutil"
+	"canvas-cli/internal/client"
+	"canvas-cli/internal/config"
+	"canvas-cli/internal/mcp/cobratree"
+	"canvas-cli/internal/store"
 )
 
 // RegisterTools registers all API operations as MCP tools.
@@ -10892,17 +10892,17 @@ func makeAPIHandler(method, pathTemplate string, bindings []mcpParamBinding, pos
 				return mcplib.NewToolResultError("authentication error: " + cliutil.SanitizeErrorBody(msg) +
 					"\nhint: the API rejected the request — this usually means auth is missing or invalid." +
 					"\n      Set your API key: export CANVAS_LMS_TOKEN=<your-key>" +
-					"\n      Run 'canvas-pp-cli doctor' to check auth status."), nil
+					"\n      Run 'canvas-cli doctor' to check auth status."), nil
 			case strings.Contains(msg, "HTTP 401"):
 				return mcplib.NewToolResultError("authentication failed: " + cliutil.SanitizeErrorBody(msg) +
 					"\nhint: check your token." +
 					"\n      Set it with: export CANVAS_LMS_TOKEN=<your-key>" +
-					"\n      Run 'canvas-pp-cli doctor' to check auth status."), nil
+					"\n      Run 'canvas-cli doctor' to check auth status."), nil
 			case strings.Contains(msg, "HTTP 403"):
 				return mcplib.NewToolResultError("permission denied: " + cliutil.SanitizeErrorBody(msg) +
 					"\nhint: your credentials are valid but lack access to this resource." +
 					"\n      Set it with: export CANVAS_LMS_TOKEN=<your-key>" +
-					"\n      Run 'canvas-pp-cli doctor' to check auth status."), nil
+					"\n      Run 'canvas-cli doctor' to check auth status."), nil
 			case strings.Contains(msg, "HTTP 404"):
 				if method == "DELETE" {
 					return mcplib.NewToolResultText("already deleted (no-op)"), nil
@@ -10936,7 +10936,7 @@ func makeAPIHandler(method, pathTemplate string, bindings []mcpParamBinding, pos
 
 func newMCPClient() (*client.Client, error) {
 	home, _ := os.UserHomeDir()
-	cfgPath := filepath.Join(home, ".config", "canvas-pp-cli", "config.toml")
+	cfgPath := filepath.Join(home, ".config", "canvas-cli", "config.toml")
 	cfg, err := config.Load(cfgPath)
 	if err != nil {
 		return nil, fmt.Errorf("loading config: %w", err)
@@ -10953,7 +10953,7 @@ func newMCPClient() (*client.Client, error) {
 
 func dbPath() string {
 	home, _ := os.UserHomeDir()
-	return filepath.Join(home, ".local", "share", "canvas-pp-cli", "data.db")
+	return filepath.Join(home, ".local", "share", "canvas-cli", "data.db")
 }
 // Note: MCP tools use their own dbPath() because they are in a separate package (main, not cli).
 // The CLI's defaultDBPath() in the cli package uses the same canonical path.
@@ -11089,7 +11089,7 @@ func handleContext(_ context.Context, _ mcplib.CallToolRequest) (*mcplib.CallToo
 		"archetype":   "content",
 		"tool_count":  906,
 		// tool_surface tells agents which surface a capability lives on.
-		"tool_surface": "MCP exposes typed endpoint tools plus a runtime mirror of user-facing CLI commands. Endpoint tools keep typed schemas; command-mirror tools shell out to the companion canvas-pp-cli binary.",
+		"tool_surface": "MCP exposes typed endpoint tools plus a runtime mirror of user-facing CLI commands. Endpoint tools keep typed schemas; command-mirror tools shell out to the companion canvas-cli binary.",
 		"auth": map[string]any{
 			"type": "bearer_token",
 			"env_vars": []map[string]any{

@@ -20,7 +20,7 @@ func newCoursesAssignmentsSubmissionsCreateForCoursesCmd(flags *rootFlags) *cobr
 	cmd := &cobra.Command{
 		Use:   "submissions-create-for-courses <assignment_id> <course_id>",
 		Short: "Make a submission for an assignment. You must be actively enrolled as a student in the course/section to do this....",
-		Example: "  canvas-pp-cli courses assignments submissions-create-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments submissions-create-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-create-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/submissions"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

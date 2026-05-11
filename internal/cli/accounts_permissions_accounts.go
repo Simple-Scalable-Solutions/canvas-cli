@@ -18,7 +18,7 @@ func newAccountsPermissionsAccountsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns permission information for the calling user and the given account. You may use `self` as the account id to...",
-		Example: "  canvas-pp-cli accounts permissions accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts permissions accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "permissions.accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/permissions", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

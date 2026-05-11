@@ -19,7 +19,7 @@ func newCoursesAssignmentsApiDuplicateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "api-duplicate <assignment_id> <course_id>",
 		Short: "Duplicate an assignment and return a json based on result_type argument.",
-		Example: "  canvas-pp-cli courses assignments api-duplicate 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments api-duplicate 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.api-duplicate", "pp:method": "POST", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/duplicate"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

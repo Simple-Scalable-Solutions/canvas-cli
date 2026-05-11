@@ -16,7 +16,7 @@ func newGroupsFoldersShowForGroupsCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "show-for-groups <group_id> <id>",
 		Short: "Returns the details for a folder You can get the root folder from a context by using 'root' as the :id. For example,...",
-		Example: "  canvas-pp-cli groups folders show-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups folders show-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "folders.show-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/folders/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

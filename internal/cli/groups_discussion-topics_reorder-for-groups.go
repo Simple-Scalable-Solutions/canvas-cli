@@ -19,7 +19,7 @@ func newGroupsDiscussionTopicsReorderForGroupsCmd(flags *rootFlags) *cobra.Comma
 	cmd := &cobra.Command{
 		Use:   "reorder-for-groups <group_id>",
 		Short: "Puts the pinned discussion topics in the specified order. All pinned topics should be included.",
-		Example: "  canvas-pp-cli groups discussion-topics reorder-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups discussion-topics reorder-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.reorder-for-groups", "pp:method": "POST", "pp:path": "/groups/{group_id}/discussion_topics/reorder"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

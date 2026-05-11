@@ -17,7 +17,7 @@ func newManuallyCreatedCoursesAccountPromotedCmd(flags *rootFlags) *cobra.Comman
 		Use:   "manually-created-courses-account",
 		Short: "Returns the sub-account that contains manually created courses for the domain root account.",
 		Long:  "Shortcut for 'manually-created-courses-account accounts'. Returns the sub-account that contains manually created courses for the domain root account.",
-		Example: "  canvas-pp-cli manually-created-courses-account",
+		Example: "  canvas-cli manually-created-courses-account",
 		Annotations: map[string]string{"pp:endpoint": "manually-created-courses-account.accounts", "pp:method": "GET", "pp:path": "/manually_created_courses_account", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

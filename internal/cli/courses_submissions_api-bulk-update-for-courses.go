@@ -20,7 +20,7 @@ func newCoursesSubmissionsApiBulkUpdateForCoursesCmd(flags *rootFlags) *cobra.Co
 		Use:   "api-bulk-update-for-courses <course_id>",
 		Aliases: []string{"create"},
 		Short: "Update the grading and comments on multiple student's assignment submissions in an asynchronous job. The user must...",
-		Example: "  canvas-pp-cli courses submissions api-bulk-update-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses submissions api-bulk-update-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "submissions.api-bulk-update-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/submissions/update_grades"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

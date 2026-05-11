@@ -19,7 +19,7 @@ func newAccountsDeveloperKeysAccountBindingsCreateOrUpdateCmd(flags *rootFlags) 
 	cmd := &cobra.Command{
 		Use:   "account-bindings-create-or-update <account_id> <developer_key_id>",
 		Short: "Create a new Developer Key Account Binding. The developer key specified in the request URL must be available in the...",
-		Example: "  canvas-pp-cli accounts developer-keys account-bindings-create-or-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts developer-keys account-bindings-create-or-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "developer-keys.account-bindings-create-or-update", "pp:method": "POST", "pp:path": "/accounts/{account_id}/developer_keys/{developer_key_id}/developer_key_account_bindings"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -17,7 +17,7 @@ func newEpubExportsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "epub-exports",
 		Short: "A paginated list of all courses a user is actively participating in, and the latest ePub export associated with the...",
 		Long:  "Shortcut for 'epub-exports index'. A paginated list of all courses a user is actively participating in, and the latest ePub export associated with the...",
-		Example: "  canvas-pp-cli epub-exports",
+		Example: "  canvas-cli epub-exports",
 		Annotations: map[string]string{"pp:endpoint": "epub-exports.index", "pp:method": "GET", "pp:path": "/epub_exports", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

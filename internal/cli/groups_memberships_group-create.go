@@ -23,7 +23,7 @@ func newGroupsMembershipsGroupCreateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "group-create <group_id>",
 		Aliases: []string{"create"},
 		Short: "Join, or request to join, a group, depending on the join_level of the group. If the membership or join request...",
-		Example: "  canvas-pp-cli groups memberships group-create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups memberships group-create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "memberships.group-create", "pp:method": "POST", "pp:path": "/groups/{group_id}/memberships"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

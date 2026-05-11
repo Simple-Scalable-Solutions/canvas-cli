@@ -19,7 +19,7 @@ func newCoursesRubricAssociationsCreateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "create <course_id>",
 		Short: "Returns the rubric with the given id.",
-		Example: "  canvas-pp-cli courses rubric-associations create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses rubric-associations create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "rubric-associations.create", "pp:method": "POST", "pp:path": "/courses/{course_id}/rubric_associations"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

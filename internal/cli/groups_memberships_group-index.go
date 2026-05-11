@@ -21,7 +21,7 @@ func newGroupsMembershipsGroupIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "group-index <group_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of the members of a group.",
-		Example: "  canvas-pp-cli groups memberships group-index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups memberships group-index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "memberships.group-index", "pp:method": "GET", "pp:path": "/groups/{group_id}/memberships", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

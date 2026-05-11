@@ -16,7 +16,7 @@ func newUsersFavoritesResetCourseFavoritesCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "favorites-reset-course-favorites",
 		Short: "Reset the current user's course favorites to the default automatically generated list of enrolled courses",
-		Example: "  canvas-pp-cli users favorites-reset-course-favorites",
+		Example: "  canvas-cli users favorites-reset-course-favorites",
 		Annotations: map[string]string{"pp:endpoint": "users.favorites-reset-course-favorites", "pp:method": "DELETE", "pp:path": "/users/self/favorites/courses"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

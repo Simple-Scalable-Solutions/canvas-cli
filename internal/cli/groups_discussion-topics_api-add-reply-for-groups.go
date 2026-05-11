@@ -20,7 +20,7 @@ func newGroupsDiscussionTopicsApiAddReplyForGroupsCmd(flags *rootFlags) *cobra.C
 	cmd := &cobra.Command{
 		Use:   "api-add-reply-for-groups <group_id> <entry_id> <topic_id>",
 		Short: "Add a reply to an entry in a discussion topic. Returns a json representation of the created reply (see documentation...",
-		Example: "  canvas-pp-cli groups discussion-topics api-add-reply-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups discussion-topics api-add-reply-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-add-reply-for-groups", "pp:method": "POST", "pp:path": "/groups/{group_id}/discussion_topics/{topic_id}/entries/{entry_id}/replies"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

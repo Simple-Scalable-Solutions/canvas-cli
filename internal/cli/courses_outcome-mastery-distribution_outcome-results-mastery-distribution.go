@@ -24,7 +24,7 @@ func newCoursesOutcomeMasteryDistributionOutcomeResultsMasteryDistributionCmd(fl
 		Use:   "outcome-results-mastery-distribution <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the distribution of student scores across mastery levels for all outcomes. This endpoint fetches data for...",
-		Example: "  canvas-pp-cli courses outcome-mastery-distribution outcome-results-mastery-distribution 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses outcome-mastery-distribution outcome-results-mastery-distribution 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-mastery-distribution.outcome-results-mastery-distribution", "pp:method": "GET", "pp:path": "/courses/{course_id}/outcome_mastery_distribution", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

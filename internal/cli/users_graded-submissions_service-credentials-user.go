@@ -23,7 +23,7 @@ func newUsersGradedSubmissionsServiceCredentialsUserCmd(flags *rootFlags) *cobra
 		Use:   "service-credentials-user <id>",
 		Aliases: []string{"get"},
 		Short: "Returns a list of the user's most recently graded submissions.",
-		Example: "  canvas-pp-cli users graded-submissions service-credentials-user 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users graded-submissions service-credentials-user 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "graded-submissions.service-credentials-user", "pp:method": "GET", "pp:path": "/users/{id}/graded_submissions", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

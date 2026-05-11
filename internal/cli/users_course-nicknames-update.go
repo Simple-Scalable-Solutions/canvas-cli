@@ -20,7 +20,7 @@ func newUsersCourseNicknamesUpdateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "course-nicknames-update <course_id>",
 		Aliases: []string{"update"},
 		Short: "Set a nickname for the given course. This will replace the course's name in output of API calls you make...",
-		Example: "  canvas-pp-cli users course-nicknames-update 550e8400-e29b-41d4-a716-446655440000 --nickname example-resource",
+		Example: "  canvas-cli users course-nicknames-update 550e8400-e29b-41d4-a716-446655440000 --nickname example-resource",
 		Annotations: map[string]string{"pp:endpoint": "users.course-nicknames-update", "pp:method": "PUT", "pp:path": "/users/self/course_nicknames/{course_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

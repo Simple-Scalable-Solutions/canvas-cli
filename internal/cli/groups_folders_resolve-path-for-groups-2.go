@@ -16,7 +16,7 @@ func newGroupsFoldersResolvePathForGroups2Cmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "resolve-path-for-groups-2 <group_id>",
 		Short: "Given the full path to a folder, returns a list of all Folders in the path hierarchy, starting at the root folder,...",
-		Example: "  canvas-pp-cli groups folders resolve-path-for-groups-2 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups folders resolve-path-for-groups-2 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "folders.resolve-path-for-groups-2", "pp:method": "GET", "pp:path": "/groups/{group_id}/folders/by_path", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

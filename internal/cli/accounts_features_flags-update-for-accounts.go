@@ -20,7 +20,7 @@ func newAccountsFeaturesFlagsUpdateForAccountsCmd(flags *rootFlags) *cobra.Comma
 		Use:   "flags-update-for-accounts <account_id> <feature>",
 		Aliases: []string{"update"},
 		Short: "Set a feature flag for a given Account, Course, or User. This call will fail if a parent account sets a feature flag...",
-		Example: "  canvas-pp-cli accounts features flags-update-for-accounts 550e8400-e29b-41d4-a716-446655440000 example-value",
+		Example: "  canvas-cli accounts features flags-update-for-accounts 550e8400-e29b-41d4-a716-446655440000 example-value",
 		Annotations: map[string]string{"pp:endpoint": "features.flags-update-for-accounts", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/features/flags/{feature}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

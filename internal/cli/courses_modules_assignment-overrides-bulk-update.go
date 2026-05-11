@@ -20,7 +20,7 @@ func newCoursesModulesAssignmentOverridesBulkUpdateCmd(flags *rootFlags) *cobra.
 		Use:   "assignment-overrides-bulk-update <context_module_id> <course_id>",
 		Aliases: []string{"update"},
 		Short: "Accepts a list of overrides and applies them to the ContextModule. Returns 204 No Content response code if successful.",
-		Example: "  canvas-pp-cli courses modules assignment-overrides-bulk-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses modules assignment-overrides-bulk-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "modules.assignment-overrides-bulk-update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/modules/{context_module_id}/assignment_overrides"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -17,7 +17,7 @@ func newCoursesContentMigrationsAssetIdMappingCmd(flags *rootFlags) *cobra.Comma
 		Use:   "asset-id-mapping <course_id> <id>",
 		Aliases: []string{"get"},
 		Short: "Given a complete course copy or blueprint import content migration, return a mapping of asset ids from the source...",
-		Example: "  canvas-pp-cli courses content-migrations asset-id-mapping 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses content-migrations asset-id-mapping 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-migrations.asset-id-mapping", "pp:method": "GET", "pp:path": "/courses/{course_id}/content_migrations/{id}/asset_id_mapping", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

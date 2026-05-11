@@ -20,7 +20,7 @@ func newCoursesAssignmentGroupsApiShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-show <assignment_group_id> <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the assignment group with the given id.",
-		Example: "  canvas-pp-cli courses assignment-groups api-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignment-groups api-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignment-groups.api-show", "pp:method": "GET", "pp:path": "/courses/{course_id}/assignment_groups/{assignment_group_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newCareerExperienceSwitchExperienceCmd(flags *rootFlags) *cobra.Command {
 		Use:   "experience-switch-experience",
 		Aliases: []string{"create"},
 		Short: "Switch the current user's active experience to the specified one.",
-		Example: "  canvas-pp-cli career experience-switch-experience --experience example-value",
+		Example: "  canvas-cli career experience-switch-experience --experience example-value",
 		Annotations: map[string]string{"pp:endpoint": "career.experience-switch-experience", "pp:method": "POST", "pp:path": "/career/switch_experience"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

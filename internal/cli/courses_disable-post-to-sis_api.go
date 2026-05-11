@@ -20,7 +20,7 @@ func newCoursesDisablePostToSisApiCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api <course_id>",
 		Aliases: []string{"update"},
 		Short: "Disable all assignments flagged as 'post_to_sis', with the option of making it specific to a grading period, in a...",
-		Example: "  canvas-pp-cli courses disable-post-to-sis api 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses disable-post-to-sis api 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "disable-post-to-sis.api", "pp:method": "PUT", "pp:path": "/courses/{course_id}/disable_post_to_sis"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

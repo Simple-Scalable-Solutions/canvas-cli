@@ -17,7 +17,7 @@ func newCoursesGroupCategoriesExportTagsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "export-tags <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a csv file of users in format ready to import.",
-		Example: "  canvas-pp-cli courses group-categories export-tags 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses group-categories export-tags 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "group-categories.export-tags", "pp:method": "GET", "pp:path": "/courses/{course_id}/group_categories/export_tags", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

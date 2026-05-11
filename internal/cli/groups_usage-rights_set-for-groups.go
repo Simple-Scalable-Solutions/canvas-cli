@@ -23,7 +23,7 @@ func newGroupsUsageRightsSetForGroupsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "set-for-groups <group_id>",
 		Aliases: []string{"update"},
 		Short: "Sets copyright and license information for one or more files",
-		Example: "  canvas-pp-cli groups usage-rights set-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups usage-rights set-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "usage-rights.set-for-groups", "pp:method": "PUT", "pp:path": "/groups/{group_id}/usage_rights"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

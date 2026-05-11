@@ -20,7 +20,7 @@ func newCoursesEnrollmentsApiCreateForCoursesCmd(flags *rootFlags) *cobra.Comman
 	cmd := &cobra.Command{
 		Use:   "api-create-for-courses <course_id>",
 		Short: "Create a new user enrollment for a course or section.",
-		Example: "  canvas-pp-cli courses enrollments api-create-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses enrollments api-create-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "enrollments.api-create-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/enrollments"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

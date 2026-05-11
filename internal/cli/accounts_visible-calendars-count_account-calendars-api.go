@@ -17,7 +17,7 @@ func newAccountsVisibleCalendarsCountAccountCalendarsApiCmd(flags *rootFlags) *c
 		Use:   "account-calendars-api <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the number of visible account calendars.",
-		Example: "  canvas-pp-cli accounts visible-calendars-count account-calendars-api 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts visible-calendars-count account-calendars-api 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "visible-calendars-count.account-calendars-api", "pp:method": "GET", "pp:path": "/accounts/{account_id}/visible_calendars_count", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

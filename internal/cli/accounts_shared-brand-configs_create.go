@@ -19,7 +19,7 @@ func newAccountsSharedBrandConfigsCreateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "create <account_id>",
 		Short: "Create a SharedBrandConfig, which will give the given brand_config a name and make it available to other users of...",
-		Example: "  canvas-pp-cli accounts shared-brand-configs create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts shared-brand-configs create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "shared-brand-configs.create", "pp:method": "POST", "pp:path": "/accounts/{account_id}/shared_brand_configs"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

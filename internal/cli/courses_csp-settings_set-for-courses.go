@@ -20,7 +20,7 @@ func newCoursesCspSettingsSetForCoursesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "set-for-courses <course_id>",
 		Aliases: []string{"update"},
 		Short: "Either explicitly sets CSP to be on or off for courses and sub-accounts, or clear the explicit settings to default...",
-		Example: "  canvas-pp-cli courses csp-settings set-for-courses 550e8400-e29b-41d4-a716-446655440000 --status example-value",
+		Example: "  canvas-cli courses csp-settings set-for-courses 550e8400-e29b-41d4-a716-446655440000 --status example-value",
 		Annotations: map[string]string{"pp:endpoint": "csp-settings.set-for-courses", "pp:method": "PUT", "pp:path": "/courses/{course_id}/csp_settings"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

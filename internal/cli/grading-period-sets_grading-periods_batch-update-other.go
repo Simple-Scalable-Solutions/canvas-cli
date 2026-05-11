@@ -25,7 +25,7 @@ func newGradingPeriodSetsGradingPeriodsBatchUpdateOtherCmd(flags *rootFlags) *co
 		Use:   "batch-update-other <set_id>",
 		Aliases: []string{"update"},
 		Short: "Update multiple grading periods",
-		Example: "  canvas-pp-cli grading-period-sets grading-periods batch-update-other 550e8400-e29b-41d4-a716-446655440000 --grading-periods-close-date 2026-01-15",
+		Example: "  canvas-cli grading-period-sets grading-periods batch-update-other 550e8400-e29b-41d4-a716-446655440000 --grading-periods-close-date 2026-01-15",
 		Annotations: map[string]string{"pp:endpoint": "grading-periods.batch-update-other", "pp:method": "PATCH", "pp:path": "/grading_period_sets/{set_id}/grading_periods/batch_update"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

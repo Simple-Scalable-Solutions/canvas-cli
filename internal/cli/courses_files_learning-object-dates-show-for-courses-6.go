@@ -22,7 +22,7 @@ func newCoursesFilesLearningObjectDatesShowForCourses6Cmd(flags *rootFlags) *cob
 		Use:   "learning-object-dates-show-for-courses-6 <attachment_id> <course_id>",
 		Aliases: []string{"get"},
 		Short: "Get a learning object's date-related information, including due date, availability dates, override status, and a...",
-		Example: "  canvas-pp-cli courses files learning-object-dates-show-for-courses-6 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses files learning-object-dates-show-for-courses-6 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "files.learning-object-dates-show-for-courses-6", "pp:method": "GET", "pp:path": "/courses/{course_id}/files/{attachment_id}/date_details", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

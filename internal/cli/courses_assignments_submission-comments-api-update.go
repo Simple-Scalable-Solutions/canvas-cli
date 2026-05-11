@@ -19,7 +19,7 @@ func newCoursesAssignmentsSubmissionCommentsApiUpdateCmd(flags *rootFlags) *cobr
 	cmd := &cobra.Command{
 		Use:   "submission-comments-api-update <assignment_id> <course_id> <id> <user_id>",
 		Short: "Edit the given submission comment.",
-		Example: "  canvas-pp-cli courses assignments submission-comments-api-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments submission-comments-api-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submission-comments-api-update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/submissions/{user_id}/comments/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

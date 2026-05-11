@@ -17,7 +17,7 @@ func newCoursesCustomGradebookColumnsApiDestroyCmd(flags *rootFlags) *cobra.Comm
 		Use:   "api-destroy <course_id> <id>",
 		Aliases: []string{"delete"},
 		Short: "Permanently deletes a custom column and its associated data",
-		Example: "  canvas-pp-cli courses custom-gradebook-columns api-destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses custom-gradebook-columns api-destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "custom-gradebook-columns.api-destroy", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/custom_gradebook_columns/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

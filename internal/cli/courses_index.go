@@ -27,7 +27,7 @@ func newCoursesIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index",
 		Aliases: []string{"list"},
 		Short: "Returns the paginated list of active courses for the current user.",
-		Example: "  canvas-pp-cli courses index",
+		Example: "  canvas-cli courses index",
 		Annotations: map[string]string{"pp:endpoint": "courses.index", "pp:method": "GET", "pp:path": "/courses", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cmd.Flags().Changed("enrollment-type") {

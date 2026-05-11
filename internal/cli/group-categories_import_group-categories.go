@@ -20,7 +20,7 @@ func newGroupCategoriesImportGroupCategoriesCmd(flags *rootFlags) *cobra.Command
 		Use:   "group-categories <group_category_id>",
 		Aliases: []string{"create"},
 		Short: "Create Groups in a Group Category through a CSV import For more information on the format that's expected here,...",
-		Example: "  canvas-pp-cli group-categories import group-categories 550e8400-e29b-41d4-a716-446655440000 --attachment example-value",
+		Example: "  canvas-cli group-categories import group-categories 550e8400-e29b-41d4-a716-446655440000 --attachment example-value",
 		Annotations: map[string]string{"pp:endpoint": "import.group-categories", "pp:method": "POST", "pp:path": "/group_categories/{group_category_id}/import"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

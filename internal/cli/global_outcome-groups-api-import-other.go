@@ -20,7 +20,7 @@ func newGlobalOutcomeGroupsApiImportOtherCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "outcome-groups-api-import-other <id>",
 		Short: "Creates a new subgroup of the outcome group with the same title and description as the source group, then creates...",
-		Example: "  canvas-pp-cli global outcome-groups-api-import-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli global outcome-groups-api-import-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "global.outcome-groups-api-import-other", "pp:method": "POST", "pp:path": "/global/outcome_groups/{id}/import"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

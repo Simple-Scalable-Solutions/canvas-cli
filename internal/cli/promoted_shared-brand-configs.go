@@ -17,7 +17,7 @@ func newSharedBrandConfigsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "shared-brand-configs <id>",
 		Short: "Delete a SharedBrandConfig, which will unshare it so you nor anyone else in your account will see it as an option to...",
 		Long:  "Shortcut for 'shared-brand-configs destroy'. Delete a SharedBrandConfig, which will unshare it so you nor anyone else in your account will see it as an option to...",
-		Example: "  canvas-pp-cli shared-brand-configs 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli shared-brand-configs 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "shared-brand-configs.destroy", "pp:method": "DELETE", "pp:path": "/shared_brand_configs/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

@@ -17,7 +17,7 @@ func newPermissionsHelpPermissionsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "permissions <context_type> <permission>",
 		Aliases: []string{"get"},
 		Short: "Retrieve information about what Canvas permissions do and considerations for their use.",
-		Example: "  canvas-pp-cli permissions help permissions example-value example-value",
+		Example: "  canvas-cli permissions help permissions example-value example-value",
 		Annotations: map[string]string{"pp:endpoint": "help.permissions", "pp:method": "GET", "pp:path": "/permissions/{context_type}/{permission}/help", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

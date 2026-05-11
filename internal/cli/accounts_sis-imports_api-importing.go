@@ -17,7 +17,7 @@ func newAccountsSisImportsApiImportingCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-importing <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the SIS imports that are currently processing for an account. If no imports are running, will return an...",
-		Example: "  canvas-pp-cli accounts sis-imports api-importing 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts sis-imports api-importing 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sis-imports.api-importing", "pp:method": "GET", "pp:path": "/accounts/{account_id}/sis_imports/importing", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

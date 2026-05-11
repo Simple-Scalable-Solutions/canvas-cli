@@ -24,7 +24,7 @@ func newGroupsExternalToolsTimingMetaIndexForGroupsCmd(flags *rootFlags) *cobra.
 		Use:   "timing-meta-index-for-groups <group_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of external tools for the current context. See the get request docs for a single tool for...",
-		Example: "  canvas-pp-cli groups external-tools timing-meta-index-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups external-tools timing-meta-index-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-index-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/external_tools", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

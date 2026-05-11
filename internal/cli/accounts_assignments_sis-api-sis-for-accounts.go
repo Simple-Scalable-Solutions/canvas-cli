@@ -21,7 +21,7 @@ func newAccountsAssignmentsSisApiSisForAccountsCmd(flags *rootFlags) *cobra.Comm
 		Use:   "sis-api-sis-for-accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "Retrieve a list of published assignments flagged as 'post_to_sis'. See the Assignments API for more details on...",
-		Example: "  canvas-pp-cli accounts assignments sis-api-sis-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts assignments sis-api-sis-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.sis-api-sis-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/assignments", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

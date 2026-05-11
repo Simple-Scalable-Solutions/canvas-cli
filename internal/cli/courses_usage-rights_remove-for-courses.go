@@ -19,7 +19,7 @@ func newCoursesUsageRightsRemoveForCoursesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "remove-for-courses <course_id>",
 		Aliases: []string{"delete"},
 		Short: "Removes copyright and license information associated with one or more files",
-		Example: "  canvas-pp-cli courses usage-rights remove-for-courses 550e8400-e29b-41d4-a716-446655440000 --file-ids example-value",
+		Example: "  canvas-cli courses usage-rights remove-for-courses 550e8400-e29b-41d4-a716-446655440000 --file-ids example-value",
 		Annotations: map[string]string{"pp:endpoint": "usage-rights.remove-for-courses", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/usage_rights"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

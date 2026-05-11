@@ -17,7 +17,7 @@ func newCoursesOutcomeImportsInvalidContentTypeCreatedGroupIdsForCoursesCmd(flag
 		Use:   "invalid-content-type-created-group-ids-for-courses <course_id> <id>",
 		Aliases: []string{"get"},
 		Short: "Get the IDs of the outcome groups created after a successful import. Pass 'latest' for the outcome import id for the...",
-		Example: "  canvas-pp-cli courses outcome-imports invalid-content-type-created-group-ids-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses outcome-imports invalid-content-type-created-group-ids-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-imports.invalid-content-type-created-group-ids-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/outcome_imports/{id}/created_group_ids", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

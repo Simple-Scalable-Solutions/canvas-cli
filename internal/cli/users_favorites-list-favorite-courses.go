@@ -17,7 +17,7 @@ func newUsersFavoritesListFavoriteCoursesCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "favorites-list-favorite-courses",
 		Short: "Retrieve the paginated list of favorite courses for the current user. If the user has not chosen any favorites, then...",
-		Example: "  canvas-pp-cli users favorites-list-favorite-courses",
+		Example: "  canvas-cli users favorites-list-favorite-courses",
 		Annotations: map[string]string{"pp:endpoint": "users.favorites-list-favorite-courses", "pp:method": "GET", "pp:path": "/users/self/favorites/courses", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

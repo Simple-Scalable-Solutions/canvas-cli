@@ -19,7 +19,7 @@ func newAppointmentGroupsUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update <id>",
 		Short: "Update and return an appointment group. If new_appointments are specified, the response will return a...",
-		Example: "  canvas-pp-cli appointment-groups update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli appointment-groups update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "appointment-groups.update", "pp:method": "PUT", "pp:path": "/appointment_groups/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

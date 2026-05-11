@@ -18,8 +18,8 @@ import (
 	"sort"
 	"strings"
 	"time"
-	"canvas-pp-cli/internal/cliutil"
-	"canvas-pp-cli/internal/config"
+	"canvas-cli/internal/cliutil"
+	"canvas-cli/internal/config"
 )
 
 type Client struct {
@@ -52,7 +52,7 @@ func newHTTPClient(timeout time.Duration, jar http.CookieJar) *http.Client {
 
 func New(cfg *config.Config, timeout time.Duration, rateLimit float64) *Client {
 	homeDir, _ := os.UserHomeDir()
-	cacheDir := filepath.Join(homeDir, ".cache", "canvas-pp-cli")
+	cacheDir := filepath.Join(homeDir, ".cache", "canvas-cli")
 	httpClient := newHTTPClient(timeout, nil)
 	return &Client{
 		BaseURL:    strings.TrimRight(cfg.BaseURL, "/"),
@@ -247,7 +247,7 @@ func (c *Client) do(method, path string, params map[string]string, body any, hea
 			req.Header.Set(k, v)
 		}
 		if req.Header.Get("User-Agent") == "" {
-			req.Header.Set("User-Agent", "canvas-pp-cli/1.0.0")
+			req.Header.Set("User-Agent", "canvas-cli/1.0.0")
 		}
 
 		resp, err := c.HTTPClient.Do(req)

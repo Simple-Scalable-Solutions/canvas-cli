@@ -19,7 +19,7 @@ func newCoursesSyllabusApiAccessibilityQueueScanCmd(flags *rootFlags) *cobra.Com
 		Use:   "api-accessibility-queue-scan <course_id>",
 		Aliases: []string{"create"},
 		Short: "Queues a course syllabus for accessibility scanning.",
-		Example: "  canvas-pp-cli courses syllabus api-accessibility-queue-scan 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses syllabus api-accessibility-queue-scan 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "syllabus.api-accessibility-queue-scan", "pp:method": "POST", "pp:path": "/courses/{course_id}/syllabus/accessibility/queue_scan"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

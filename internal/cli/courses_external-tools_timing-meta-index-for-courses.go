@@ -23,7 +23,7 @@ func newCoursesExternalToolsTimingMetaIndexForCoursesCmd(flags *rootFlags) *cobr
 	cmd := &cobra.Command{
 		Use:   "timing-meta-index-for-courses <course_id>",
 		Short: "Returns the paginated list of external tools for the current context. See the get request docs for a single tool for...",
-		Example: "  canvas-pp-cli courses external-tools timing-meta-index-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses external-tools timing-meta-index-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-index-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/external_tools", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

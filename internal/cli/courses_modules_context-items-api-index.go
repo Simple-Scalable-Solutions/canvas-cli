@@ -22,7 +22,7 @@ func newCoursesModulesContextItemsApiIndexCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "context-items-api-index <course_id> <module_id>",
 		Short: "A paginated list of the items in a module",
-		Example: "  canvas-pp-cli courses modules context-items-api-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses modules context-items-api-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "modules.context-items-api-index", "pp:method": "GET", "pp:path": "/courses/{course_id}/modules/{module_id}/items", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

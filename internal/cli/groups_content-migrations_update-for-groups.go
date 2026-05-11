@@ -18,7 +18,7 @@ func newGroupsContentMigrationsUpdateForGroupsCmd(flags *rootFlags) *cobra.Comma
 	cmd := &cobra.Command{
 		Use:   "update-for-groups <group_id> <id>",
 		Short: "Update a content migration. Takes same arguments as {api:ContentMigrationsController#create create} except that you...",
-		Example: "  canvas-pp-cli groups content-migrations update-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups content-migrations update-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-migrations.update-for-groups", "pp:method": "PUT", "pp:path": "/groups/{group_id}/content_migrations/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

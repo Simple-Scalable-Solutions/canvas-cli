@@ -20,7 +20,7 @@ func newCoursesWebZipExportsIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index <course_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of all web zip exports in a course for the current user",
-		Example: "  canvas-pp-cli courses web-zip-exports index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses web-zip-exports index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "web-zip-exports.index", "pp:method": "GET", "pp:path": "/courses/{course_id}/web_zip_exports", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

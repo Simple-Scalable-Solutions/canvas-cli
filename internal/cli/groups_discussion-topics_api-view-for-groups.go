@@ -16,7 +16,7 @@ func newGroupsDiscussionTopicsApiViewForGroupsCmd(flags *rootFlags) *cobra.Comma
 	cmd := &cobra.Command{
 		Use:   "api-view-for-groups <group_id> <topic_id>",
 		Short: "Return a cached structure of the discussion topic, containing all entries, their authors, and their message bodies....",
-		Example: "  canvas-pp-cli groups discussion-topics api-view-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups discussion-topics api-view-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-view-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/discussion_topics/{topic_id}/view", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

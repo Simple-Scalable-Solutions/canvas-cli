@@ -20,7 +20,7 @@ func newMediaAttachmentsMediaObjectsUpdateMediaObjectOther2Cmd(flags *rootFlags)
 		Use:   "media-objects-update-media-object-other-2 <attachment_id>",
 		Aliases: []string{"update"},
 		Short: "Updates the title of a media object.",
-		Example: "  canvas-pp-cli media-attachments media-objects-update-media-object-other-2 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli media-attachments media-objects-update-media-object-other-2 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "media-attachments.media-objects-update-media-object-other-2", "pp:method": "PUT", "pp:path": "/media_attachments/{attachment_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

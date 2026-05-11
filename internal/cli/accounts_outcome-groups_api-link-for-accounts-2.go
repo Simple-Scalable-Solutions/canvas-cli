@@ -28,7 +28,7 @@ func newAccountsOutcomeGroupsApiLinkForAccounts2Cmd(flags *rootFlags) *cobra.Com
 	cmd := &cobra.Command{
 		Use:   "api-link-for-accounts-2 <outcome_id> <account_id> <id>",
 		Short: "Link an outcome into the outcome group. The outcome to link can either be specified by a PUT to the link URL for a...",
-		Example: "  canvas-pp-cli accounts outcome-groups api-link-for-accounts-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --title example-resource",
+		Example: "  canvas-cli accounts outcome-groups api-link-for-accounts-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --title example-resource",
 		Annotations: map[string]string{"pp:endpoint": "outcome-groups.api-link-for-accounts-2", "pp:method": "POST", "pp:path": "/accounts/{account_id}/outcome_groups/{id}/outcomes/{outcome_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

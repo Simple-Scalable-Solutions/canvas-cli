@@ -19,7 +19,7 @@ func newCoursesShowOtherCmd(flags *rootFlags) *cobra.Command {
 		Use:   "show-other <id>",
 		Aliases: []string{"get"},
 		Short: "Return information on a single course. Accepts the same include[] parameters as the list action plus:",
-		Example: "  canvas-pp-cli courses show-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses show-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "courses.show-other", "pp:method": "GET", "pp:path": "/courses/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

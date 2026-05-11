@@ -17,7 +17,7 @@ func newAccountsSsoSettingsAuthenticationProvidersShowCmd(flags *rootFlags) *cob
 		Use:   "authentication-providers-show <account_id>",
 		Aliases: []string{"get"},
 		Short: "The way to get the current state of each account level setting that's relevant to Single Sign On configuration You...",
-		Example: "  canvas-pp-cli accounts sso-settings authentication-providers-show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts sso-settings authentication-providers-show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sso-settings.authentication-providers-show", "pp:method": "GET", "pp:path": "/accounts/{account_id}/sso_settings", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

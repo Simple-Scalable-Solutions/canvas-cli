@@ -21,7 +21,7 @@ func newAccountsRolesBadPermissionSettingErrorActivateCmd(flags *rootFlags) *cob
 		Use:   "bad-permission-setting-error-activate <account_id> <id>",
 		Aliases: []string{"create"},
 		Short: "Re-activates an inactive role (allowing it to be assigned to new users)",
-		Example: "  canvas-pp-cli accounts roles bad-permission-setting-error-activate 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts roles bad-permission-setting-error-activate 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "roles.bad-permission-setting-error-activate", "pp:method": "POST", "pp:path": "/accounts/{account_id}/roles/{id}/activate"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

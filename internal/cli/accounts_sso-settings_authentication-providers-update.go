@@ -19,7 +19,7 @@ func newAccountsSsoSettingsAuthenticationProvidersUpdateCmd(flags *rootFlags) *c
 		Use:   "authentication-providers-update <account_id>",
 		Aliases: []string{"update"},
 		Short: "For various cases of mixed SSO configurations, you may need to set some configuration at the account level to handle...",
-		Example: "  canvas-pp-cli accounts sso-settings authentication-providers-update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts sso-settings authentication-providers-update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sso-settings.authentication-providers-update", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/sso_settings"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

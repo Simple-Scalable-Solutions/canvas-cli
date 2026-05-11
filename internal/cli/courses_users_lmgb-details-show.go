@@ -16,7 +16,7 @@ func newCoursesUsersLmgbDetailsShowCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "lmgb-details-show <course_id> <id>",
 		Short: "Returns details about a user in the context of a course for LMGB",
-		Example: "  canvas-pp-cli courses users lmgb-details-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses users lmgb-details-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.lmgb-details-show", "pp:method": "GET", "pp:path": "/courses/{course_id}/users/{id}/lmgb_user_details", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newGroupsFrontPageWikiPagesApiUpdateForGroupsCmd(flags *rootFlags) *cobra.C
 		Use:   "wiki-pages-api-update-for-groups <group_id>",
 		Aliases: []string{"update"},
 		Short: "Update the title or contents of the front page",
-		Example: "  canvas-pp-cli groups front-page wiki-pages-api-update-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups front-page wiki-pages-api-update-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "front-page.wiki-pages-api-update-for-groups", "pp:method": "PUT", "pp:path": "/groups/{group_id}/front_page"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

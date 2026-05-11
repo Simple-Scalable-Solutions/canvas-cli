@@ -20,7 +20,7 @@ func newMediaAttachmentsMediaTracksUpdateOther2Cmd(flags *rootFlags) *cobra.Comm
 		Use:   "update-other-2 <attachment_id>",
 		Aliases: []string{"update"},
 		Short: "Replace the media tracks associated with a media object or attachment with the array of tracks provided in the body....",
-		Example: "  canvas-pp-cli media-attachments media-tracks update-other-2 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli media-attachments media-tracks update-other-2 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "media-tracks.update-other-2", "pp:method": "PUT", "pp:path": "/media_attachments/{attachment_id}/media_tracks"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

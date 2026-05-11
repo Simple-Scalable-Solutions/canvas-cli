@@ -17,7 +17,7 @@ func newFoldersShowOtherCmd(flags *rootFlags) *cobra.Command {
 		Use:   "show-other <id>",
 		Aliases: []string{"get"},
 		Short: "Returns the details for a folder You can get the root folder from a context by using 'root' as the :id. For example,...",
-		Example: "  canvas-pp-cli folders show-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli folders show-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "folders.show-other", "pp:method": "GET", "pp:path": "/folders/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

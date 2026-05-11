@@ -22,7 +22,7 @@ func newAccountsAccountCalendarsApiAllCalendarsCmd(flags *rootFlags) *cobra.Comm
 		Use:   "api-all-calendars <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a paginated list of account calendars for the provided account and its first level of sub-accounts. Includes...",
-		Example: "  canvas-pp-cli accounts account-calendars api-all-calendars 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts account-calendars api-all-calendars 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "account-calendars.api-all-calendars", "pp:method": "GET", "pp:path": "/accounts/{account_id}/account_calendars", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

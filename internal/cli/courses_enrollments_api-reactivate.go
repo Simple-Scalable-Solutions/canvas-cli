@@ -19,7 +19,7 @@ func newCoursesEnrollmentsApiReactivateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-reactivate <course_id> <id>",
 		Aliases: []string{"update"},
 		Short: "Activates an inactive enrollment",
-		Example: "  canvas-pp-cli courses enrollments api-reactivate 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses enrollments api-reactivate 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "enrollments.api-reactivate", "pp:method": "PUT", "pp:path": "/courses/{course_id}/enrollments/{id}/reactivate"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

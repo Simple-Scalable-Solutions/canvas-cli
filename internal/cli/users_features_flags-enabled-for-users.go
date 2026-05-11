@@ -17,7 +17,7 @@ func newUsersFeaturesFlagsEnabledForUsersCmd(flags *rootFlags) *cobra.Command {
 		Use:   "flags-enabled-for-users <user_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of all features that are enabled on a given Account, Course, or User. Only the feature names are...",
-		Example: "  canvas-pp-cli users features flags-enabled-for-users 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users features flags-enabled-for-users 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "features.flags-enabled-for-users", "pp:method": "GET", "pp:path": "/users/{user_id}/features/enabled", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

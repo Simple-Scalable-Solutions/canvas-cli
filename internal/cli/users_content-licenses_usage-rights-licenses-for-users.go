@@ -17,7 +17,7 @@ func newUsersContentLicensesUsageRightsLicensesForUsersCmd(flags *rootFlags) *co
 		Use:   "usage-rights-licenses-for-users <user_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of licenses that can be applied",
-		Example: "  canvas-pp-cli users content-licenses usage-rights-licenses-for-users 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users content-licenses usage-rights-licenses-for-users 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-licenses.usage-rights-licenses-for-users", "pp:method": "GET", "pp:path": "/users/{user_id}/content_licenses", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

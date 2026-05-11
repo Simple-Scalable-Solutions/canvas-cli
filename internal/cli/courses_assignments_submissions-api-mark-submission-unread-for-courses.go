@@ -16,7 +16,7 @@ func newCoursesAssignmentsSubmissionsApiMarkSubmissionUnreadForCoursesCmd(flags 
 	cmd := &cobra.Command{
 		Use:   "submissions-api-mark-submission-unread-for-courses <assignment_id> <course_id> <user_id>",
 		Short: "No request fields are necessary. On success, the response will be 204 No Content with an empty body.",
-		Example: "  canvas-pp-cli courses assignments submissions-api-mark-submission-unread-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments submissions-api-mark-submission-unread-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-mark-submission-unread-for-courses", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/submissions/{user_id}/read"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

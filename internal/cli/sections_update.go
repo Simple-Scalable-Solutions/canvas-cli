@@ -20,7 +20,7 @@ func newSectionsUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update <id>",
 		Short: "Modify an existing section.",
-		Example: "  canvas-pp-cli sections update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sections.update", "pp:method": "PUT", "pp:path": "/sections/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

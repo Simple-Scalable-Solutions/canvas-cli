@@ -17,7 +17,7 @@ func newCoursesRubricAssociationsDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "destroy <course_id> <id>",
 		Aliases: []string{"delete"},
 		Short: "Delete the RubricAssociation with the given ID",
-		Example: "  canvas-pp-cli courses rubric-associations destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses rubric-associations destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "rubric-associations.destroy", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/rubric_associations/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

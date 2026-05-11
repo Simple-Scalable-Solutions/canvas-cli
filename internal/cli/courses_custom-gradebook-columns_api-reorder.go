@@ -19,7 +19,7 @@ func newCoursesCustomGradebookColumnsApiReorderCmd(flags *rootFlags) *cobra.Comm
 	cmd := &cobra.Command{
 		Use:   "api-reorder <course_id>",
 		Short: "Puts the given columns in the specified order <b>200 OK</b> is returned if successful",
-		Example: "  canvas-pp-cli courses custom-gradebook-columns api-reorder 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses custom-gradebook-columns api-reorder 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "custom-gradebook-columns.api-reorder", "pp:method": "POST", "pp:path": "/courses/{course_id}/custom_gradebook_columns/reorder"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

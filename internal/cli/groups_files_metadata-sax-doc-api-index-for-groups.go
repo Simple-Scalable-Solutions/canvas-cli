@@ -27,7 +27,7 @@ func newGroupsFilesMetadataSaxDocApiIndexForGroupsCmd(flags *rootFlags) *cobra.C
 		Use:   "metadata-sax-doc-api-index-for-groups <group_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of files for the folder or course.",
-		Example: "  canvas-pp-cli groups files metadata-sax-doc-api-index-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups files metadata-sax-doc-api-index-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "files.metadata-sax-doc-api-index-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/files", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

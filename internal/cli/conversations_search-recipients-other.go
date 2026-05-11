@@ -26,7 +26,7 @@ func newConversationsSearchRecipientsOtherCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "search-recipients-other",
 		Short: "Find valid recipients (users, courses and groups) that the current user can send messages to. The...",
-		Example: "  canvas-pp-cli conversations search-recipients-other",
+		Example: "  canvas-cli conversations search-recipients-other",
 		Annotations: map[string]string{"pp:endpoint": "conversations.search-recipients-other", "pp:method": "GET", "pp:path": "/conversations/find_recipients", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cmd.Flags().Changed("type") {

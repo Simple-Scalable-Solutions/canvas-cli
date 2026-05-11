@@ -25,7 +25,7 @@ func newGroupsPagesWikiApiIndexForGroupsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "wiki-api-index-for-groups <group_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of the wiki pages associated with a course or group",
-		Example: "  canvas-pp-cli groups pages wiki-api-index-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups pages wiki-api-index-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "pages.wiki-api-index-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/pages", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

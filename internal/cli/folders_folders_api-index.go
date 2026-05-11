@@ -20,7 +20,7 @@ func newFoldersFoldersApiIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-index <folder_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of folders in the folder.",
-		Example: "  canvas-pp-cli folders folders api-index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli folders folders api-index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "folders.api-index", "pp:method": "GET", "pp:path": "/folders/{folder_id}/folders", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

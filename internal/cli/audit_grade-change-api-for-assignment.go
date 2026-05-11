@@ -21,7 +21,7 @@ func newAuditGradeChangeApiForAssignmentCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "grade-change-api-for-assignment <assignment_id>",
 		Short: "List grade change events for a given assignment.",
-		Example: "  canvas-pp-cli audit grade-change-api-for-assignment 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli audit grade-change-api-for-assignment 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "audit.grade-change-api-for-assignment", "pp:method": "GET", "pp:path": "/audit/grade_change/assignments/{assignment_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

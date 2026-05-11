@@ -22,7 +22,7 @@ func newAuditAuthenticationApiForAccountCmd(flags *rootFlags) *cobra.Command {
 		Use:   "authentication-api-for-account <account_id>",
 		Aliases: []string{"get"},
 		Short: "List authentication events for a given account.",
-		Example: "  canvas-pp-cli audit authentication-api-for-account 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli audit authentication-api-for-account 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "audit.authentication-api-for-account", "pp:method": "GET", "pp:path": "/audit/authentication/accounts/{account_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

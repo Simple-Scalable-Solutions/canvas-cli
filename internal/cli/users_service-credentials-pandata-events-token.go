@@ -19,7 +19,7 @@ func newUsersServiceCredentialsPandataEventsTokenCmd(flags *rootFlags) *cobra.Co
 	cmd := &cobra.Command{
 		Use:   "service-credentials-pandata-events-token",
 		Short: "Returns a jwt auth and props token that can be used to send events to Pandata. NOTE: This is currently only...",
-		Example: "  canvas-pp-cli users service-credentials-pandata-events-token",
+		Example: "  canvas-cli users service-credentials-pandata-events-token",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-pandata-events-token", "pp:method": "POST", "pp:path": "/users/self/pandata_events_token"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

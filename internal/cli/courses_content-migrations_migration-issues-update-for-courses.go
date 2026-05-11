@@ -20,7 +20,7 @@ func newCoursesContentMigrationsMigrationIssuesUpdateForCoursesCmd(flags *rootFl
 		Use:   "migration-issues-update-for-courses <course_id> <content_migration_id> <id>",
 		Aliases: []string{"update"},
 		Short: "Update the workflow_state of a migration issue",
-		Example: "  canvas-pp-cli courses content-migrations migration-issues-update-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --workflow-state example-value",
+		Example: "  canvas-cli courses content-migrations migration-issues-update-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --workflow-state example-value",
 		Annotations: map[string]string{"pp:endpoint": "content-migrations.migration-issues-update-for-courses", "pp:method": "PUT", "pp:path": "/courses/{course_id}/content_migrations/{content_migration_id}/migration_issues/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

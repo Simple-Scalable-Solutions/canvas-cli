@@ -16,7 +16,7 @@ func newCoursesDiscussionTopicsDiscussionEntriesDestroyForCoursesCmd(flags *root
 	cmd := &cobra.Command{
 		Use:   "discussion-entries-destroy-for-courses <course_id> <id> <topic_id>",
 		Short: "Delete a discussion entry. The entry must have been created by the current user, or the current user must have admin...",
-		Example: "  canvas-pp-cli courses discussion-topics discussion-entries-destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses discussion-topics discussion-entries-destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.discussion-entries-destroy-for-courses", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/discussion_topics/{topic_id}/entries/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -26,7 +26,7 @@ func newCanvasLmsSearchRecipientsOther2Cmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "recipients-other-2",
 		Short: "Find valid recipients (users, courses and groups) that the current user can send messages to. The...",
-		Example: "  canvas-pp-cli canvas-lms-search recipients-other-2",
+		Example: "  canvas-cli canvas-lms-search recipients-other-2",
 		Annotations: map[string]string{"pp:endpoint": "canvas-lms-search.recipients-other-2", "pp:method": "GET", "pp:path": "/search/recipients", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cmd.Flags().Changed("type") {

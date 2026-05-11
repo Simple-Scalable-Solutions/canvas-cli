@@ -18,7 +18,7 @@ func newAccountsDeveloperKeysLookupUtidsCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "lookup-utids <account_id>",
 		Short: "Returns a list of matching Unified Tool IDs (UTIDs) from Learn Platform for the given redirect URIs.",
-		Example: "  canvas-pp-cli accounts developer-keys lookup-utids 550e8400-e29b-41d4-a716-446655440000 --redirect-uris example-value",
+		Example: "  canvas-cli accounts developer-keys lookup-utids 550e8400-e29b-41d4-a716-446655440000 --redirect-uris example-value",
 		Annotations: map[string]string{"pp:endpoint": "developer-keys.lookup-utids", "pp:method": "GET", "pp:path": "/accounts/{account_id}/developer_keys/lookup_utids", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

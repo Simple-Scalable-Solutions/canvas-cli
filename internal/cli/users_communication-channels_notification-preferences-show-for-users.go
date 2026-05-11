@@ -16,7 +16,7 @@ func newUsersCommunicationChannelsNotificationPreferencesShowForUsersCmd(flags *
 	cmd := &cobra.Command{
 		Use:   "notification-preferences-show-for-users <communication_channel_id> <notification> <user_id>",
 		Short: "Fetch the preference for the given notification for the given communication channel",
-		Example: "  canvas-pp-cli users communication-channels notification-preferences-show-for-users 550e8400-e29b-41d4-a716-446655440000 example-value 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users communication-channels notification-preferences-show-for-users 550e8400-e29b-41d4-a716-446655440000 example-value 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "communication-channels.notification-preferences-show-for-users", "pp:method": "GET", "pp:path": "/users/{user_id}/communication_channels/{communication_channel_id}/notification_preferences/{notification}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newGroupsExternalFeedsIndexForGroupsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index-for-groups <group_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of External Feeds this course or group.",
-		Example: "  canvas-pp-cli groups external-feeds index-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups external-feeds index-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-feeds.index-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/external_feeds", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

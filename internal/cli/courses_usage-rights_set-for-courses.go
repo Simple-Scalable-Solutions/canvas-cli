@@ -23,7 +23,7 @@ func newCoursesUsageRightsSetForCoursesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "set-for-courses <course_id>",
 		Aliases: []string{"update"},
 		Short: "Sets copyright and license information for one or more files",
-		Example: "  canvas-pp-cli courses usage-rights set-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses usage-rights set-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "usage-rights.set-for-courses", "pp:method": "PUT", "pp:path": "/courses/{course_id}/usage_rights"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"canvas-pp-cli/internal/config"
+	"canvas-cli/internal/config"
 	"github.com/spf13/cobra"
 )
 
@@ -28,7 +28,7 @@ func newAuthStatusCmd(flags *rootFlags) *cobra.Command {
 	return &cobra.Command{
 		Use:   "status",
 		Short: "Show authentication status",
-		Example: "  canvas-pp-cli auth status",
+		Example: "  canvas-cli auth status",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			cfg, err := config.Load(flags.configPath)
 			if err != nil {
@@ -61,7 +61,7 @@ func newAuthStatusCmd(flags *rootFlags) *cobra.Command {
 				fmt.Fprintln(w, "")
 				fmt.Fprintln(w, "Set your token:")
 				fmt.Fprintln(w, "  export CANVAS_LMS_TOKEN=\"your-token-here\"")
-				fmt.Fprintf(w, "  canvas-pp-cli auth set-token <token>\n")
+				fmt.Fprintf(w, "  canvas-cli auth set-token <token>\n")
 				return authErr(fmt.Errorf("no credentials configured"))
 			}
 
@@ -77,7 +77,7 @@ func newAuthSetTokenCmd(flags *rootFlags) *cobra.Command {
 	return &cobra.Command{
 		Use:   "set-token <token>",
 		Short: "Save an API token to the config file",
-		Example: "  canvas-pp-cli auth set-token YOUR_TOKEN_HERE",
+		Example: "  canvas-cli auth set-token YOUR_TOKEN_HERE",
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			cfg, err := config.Load(flags.configPath)
@@ -113,7 +113,7 @@ func newAuthLogoutCmd(flags *rootFlags) *cobra.Command {
 	return &cobra.Command{
 		Use:   "logout",
 		Short: "Clear stored credentials",
-		Example: "  canvas-pp-cli auth logout",
+		Example: "  canvas-cli auth logout",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			cfg, err := config.Load(flags.configPath)
 			if err != nil {

@@ -19,7 +19,7 @@ func newGroupsDiscussionTopicsApiSummaryFeedbackForGroupsCmd(flags *rootFlags) *
 	cmd := &cobra.Command{
 		Use:   "api-summary-feedback-for-groups <group_id> <summary_id> <topic_id>",
 		Short: "Persists feedback on a discussion topic summary.",
-		Example: "  canvas-pp-cli groups discussion-topics api-summary-feedback-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --action example-value",
+		Example: "  canvas-cli groups discussion-topics api-summary-feedback-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --action example-value",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-summary-feedback-for-groups", "pp:method": "POST", "pp:path": "/groups/{group_id}/discussion_topics/{topic_id}/summaries/{summary_id}/feedback"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

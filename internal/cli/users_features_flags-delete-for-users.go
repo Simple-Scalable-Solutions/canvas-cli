@@ -17,7 +17,7 @@ func newUsersFeaturesFlagsDeleteForUsersCmd(flags *rootFlags) *cobra.Command {
 		Use:   "flags-delete-for-users <user_id> <feature>",
 		Aliases: []string{"delete"},
 		Short: "Remove feature flag for a given Account, Course, or User. (Note that the flag must be defined on the Account,...",
-		Example: "  canvas-pp-cli users features flags-delete-for-users 550e8400-e29b-41d4-a716-446655440000 example-value",
+		Example: "  canvas-cli users features flags-delete-for-users 550e8400-e29b-41d4-a716-446655440000 example-value",
 		Annotations: map[string]string{"pp:endpoint": "features.flags-delete-for-users", "pp:method": "DELETE", "pp:path": "/users/{user_id}/features/flags/{feature}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

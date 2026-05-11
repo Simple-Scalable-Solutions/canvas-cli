@@ -23,7 +23,7 @@ func newAccountsBulkEnrollmentEnrollmentsApiCmd(flags *rootFlags) *cobra.Command
 		Use:   "enrollments-api <account_id>",
 		Aliases: []string{"create"},
 		Short: "Enrolls multiple users in one or more courses in a single operation.",
-		Example: "  canvas-pp-cli accounts bulk-enrollment enrollments-api 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts bulk-enrollment enrollments-api 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "bulk-enrollment.enrollments-api", "pp:method": "POST", "pp:path": "/accounts/{account_id}/bulk_enrollment"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

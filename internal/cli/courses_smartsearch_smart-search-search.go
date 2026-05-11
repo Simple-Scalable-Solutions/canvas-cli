@@ -23,7 +23,7 @@ func newCoursesSmartsearchSmartSearchSearchCmd(flags *rootFlags) *cobra.Command 
 		Use:   "smart-search-search <course_id>",
 		Aliases: []string{"get"},
 		Short: "Find course content using a meaning-based search",
-		Example: "  canvas-pp-cli courses smartsearch smart-search-search 550e8400-e29b-41d4-a716-446655440000 --q example-value",
+		Example: "  canvas-cli courses smartsearch smart-search-search 550e8400-e29b-41d4-a716-446655440000 --q example-value",
 		Annotations: map[string]string{"pp:endpoint": "smartsearch.smart-search-search", "pp:method": "GET", "pp:path": "/courses/{course_id}/smartsearch", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

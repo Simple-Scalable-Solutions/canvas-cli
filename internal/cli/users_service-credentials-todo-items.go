@@ -20,7 +20,7 @@ func newUsersServiceCredentialsTodoItemsCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "service-credentials-todo-items",
 		Short: "A paginated list of the current user's list of todo items. There is a limit to the number of items returned. The...",
-		Example: "  canvas-pp-cli users service-credentials-todo-items",
+		Example: "  canvas-cli users service-credentials-todo-items",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-todo-items", "pp:method": "GET", "pp:path": "/users/self/todo", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

@@ -18,7 +18,7 @@ func newErrorReportsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "error-reports",
 		Short: "Create a new error report documenting an experienced problem Performs the same action as when a user uses the 'help...",
 		Long:  "Shortcut for 'error-reports errors-create'. Create a new error report documenting an experienced problem Performs the same action as when a user uses the 'help...",
-		Example: "  canvas-pp-cli error-reports",
+		Example: "  canvas-cli error-reports",
 		Annotations: map[string]string{"pp:endpoint": "error-reports.errors-create", "pp:method": "POST", "pp:path": "/error_reports"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !cmd.Flags().Changed("error") && !flags.dryRun {

@@ -18,7 +18,7 @@ func newCoursesAssignmentsSubmissionCommentsApiCreateFileCmd(flags *rootFlags) *
 	cmd := &cobra.Command{
 		Use:   "submission-comments-api-create-file <assignment_id> <course_id> <user_id>",
 		Short: "Upload a file to attach to a submission comment See the {file:file.file_uploads.html File Upload Documentation} for...",
-		Example: "  canvas-pp-cli courses assignments submission-comments-api-create-file 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments submission-comments-api-create-file 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submission-comments-api-create-file", "pp:method": "POST", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/submissions/{user_id}/comments/files"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

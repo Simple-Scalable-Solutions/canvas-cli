@@ -22,7 +22,7 @@ func newAccountsRolesBadPermissionSettingErrorAddCmd(flags *rootFlags) *cobra.Co
 	cmd := &cobra.Command{
 		Use:   "bad-permission-setting-error-add <account_id>",
 		Short: "Create a new course-level or account-level role.",
-		Example: "  canvas-pp-cli accounts roles bad-permission-setting-error-add 550e8400-e29b-41d4-a716-446655440000 --label example-value",
+		Example: "  canvas-cli accounts roles bad-permission-setting-error-add 550e8400-e29b-41d4-a716-446655440000 --label example-value",
 		Annotations: map[string]string{"pp:endpoint": "roles.bad-permission-setting-error-add", "pp:method": "POST", "pp:path": "/accounts/{account_id}/roles"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newUsersColorsServiceCredentialsSetCustomCmd(flags *rootFlags) *cobra.Comma
 		Use:   "service-credentials-set-custom <asset_string> <id>",
 		Aliases: []string{"update"},
 		Short: "Updates a custom color for a user for a given context. This allows colors for the calendar and elsewhere to be...",
-		Example: "  canvas-pp-cli users colors service-credentials-set-custom example-value 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users colors service-credentials-set-custom example-value 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "colors.service-credentials-set-custom", "pp:method": "PUT", "pp:path": "/users/{id}/colors/{asset_string}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

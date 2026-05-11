@@ -17,7 +17,7 @@ func newUsersServiceCredentialsExpireMobileSessionsOtherCmd(flags *rootFlags) *c
 	cmd := &cobra.Command{
 		Use:   "service-credentials-expire-mobile-sessions-other",
 		Short: "Permanently expires any active mobile sessions, forcing them to re-authorize. The route that takes a user id will...",
-		Example: "  canvas-pp-cli users service-credentials-expire-mobile-sessions-other",
+		Example: "  canvas-cli users service-credentials-expire-mobile-sessions-other",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-expire-mobile-sessions-other", "pp:method": "DELETE", "pp:path": "/users/mobile_sessions"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

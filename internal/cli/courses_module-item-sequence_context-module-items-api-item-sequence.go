@@ -19,7 +19,7 @@ func newCoursesModuleItemSequenceContextModuleItemsApiItemSequenceCmd(flags *roo
 		Use:   "context-module-items-api-item-sequence <course_id>",
 		Aliases: []string{"get"},
 		Short: "Given an asset in a course, find the ModuleItem it belongs to, the previous and next Module Items in the course...",
-		Example: "  canvas-pp-cli courses module-item-sequence context-module-items-api-item-sequence 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses module-item-sequence context-module-items-api-item-sequence 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "module-item-sequence.context-module-items-api-item-sequence", "pp:method": "GET", "pp:path": "/courses/{course_id}/module_item_sequence", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

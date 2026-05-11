@@ -17,7 +17,7 @@ func newUsersLoginsPseudonymsDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "pseudonyms-destroy <id> <user_id>",
 		Aliases: []string{"delete"},
 		Short: "Delete an existing login.",
-		Example: "  canvas-pp-cli users logins pseudonyms-destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users logins pseudonyms-destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "logins.pseudonyms-destroy", "pp:method": "DELETE", "pp:path": "/users/{user_id}/logins/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

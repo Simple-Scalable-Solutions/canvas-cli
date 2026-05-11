@@ -17,7 +17,7 @@ func newCoursesLatePolicyRecordAlreadyExistsShowCmd(flags *rootFlags) *cobra.Com
 		Use:   "record-already-exists-show <id>",
 		Aliases: []string{"get"},
 		Short: "Returns the late policy for a course.",
-		Example: "  canvas-pp-cli courses late-policy record-already-exists-show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses late-policy record-already-exists-show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "late-policy.record-already-exists-show", "pp:method": "GET", "pp:path": "/courses/{id}/late_policy", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

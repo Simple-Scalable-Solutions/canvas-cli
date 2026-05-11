@@ -22,7 +22,7 @@ func newAccountsOutcomeGroupsApiCreateForAccountsCmd(flags *rootFlags) *cobra.Co
 		Use:   "api-create-for-accounts <account_id> <id>",
 		Aliases: []string{"create"},
 		Short: "Creates a new empty subgroup under the outcome group with the given title and description.",
-		Example: "  canvas-pp-cli accounts outcome-groups api-create-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --title example-resource",
+		Example: "  canvas-cli accounts outcome-groups api-create-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --title example-resource",
 		Annotations: map[string]string{"pp:endpoint": "outcome-groups.api-create-for-accounts", "pp:method": "POST", "pp:path": "/accounts/{account_id}/outcome_groups/{id}/subgroups"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

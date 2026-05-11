@@ -17,7 +17,7 @@ func newGroupsContentMigrationsAvailableMigratorsForGroupsCmd(flags *rootFlags) 
 		Use:   "available-migrators-for-groups <group_id>",
 		Aliases: []string{"get"},
 		Short: "Lists the currently available migration types. These values may change.",
-		Example: "  canvas-pp-cli groups content-migrations available-migrators-for-groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups content-migrations available-migrators-for-groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-migrations.available-migrators-for-groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/content_migrations/migrators", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

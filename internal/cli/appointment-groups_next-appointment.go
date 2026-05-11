@@ -17,7 +17,7 @@ func newAppointmentGroupsNextAppointmentCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "next-appointment",
 		Short: "Return the next appointment available to sign up for. The appointment is returned in a one-element array. If no...",
-		Example: "  canvas-pp-cli appointment-groups next-appointment",
+		Example: "  canvas-cli appointment-groups next-appointment",
 		Annotations: map[string]string{"pp:endpoint": "appointment-groups.next-appointment", "pp:method": "GET", "pp:path": "/appointment_groups/next_appointment", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

@@ -19,7 +19,7 @@ func newCoursesFilesCoursesCreateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "courses-create <course_id>",
 		Aliases: []string{"create"},
 		Short: "Upload a file to the course. This API endpoint is the first step in uploading a file to a course. See the...",
-		Example: "  canvas-pp-cli courses files courses-create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses files courses-create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "files.courses-create", "pp:method": "POST", "pp:path": "/courses/{course_id}/files"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -18,7 +18,7 @@ func newCoursesCoursePacingCoursePacesApiShowCmd(flags *rootFlags) *cobra.Comman
 		Use:   "course-paces-api-show <course_id> <id>",
 		Aliases: []string{"get"},
 		Short: "Returns a course pace for the course and pace id provided",
-		Example: "  canvas-pp-cli courses course-pacing course-paces-api-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --course-pace-id 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses course-pacing course-paces-api-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --course-pace-id 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "course-pacing.course-paces-api-show", "pp:method": "GET", "pp:path": "/courses/{course_id}/course_pacing/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

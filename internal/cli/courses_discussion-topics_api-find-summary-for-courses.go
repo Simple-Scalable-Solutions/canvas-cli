@@ -16,7 +16,7 @@ func newCoursesDiscussionTopicsApiFindSummaryForCoursesCmd(flags *rootFlags) *co
 	cmd := &cobra.Command{
 		Use:   "api-find-summary-for-courses <course_id> <topic_id>",
 		Short: "Returns: (1) last userInput (what current user had keyed in to produce the last discussion summary), (2) last...",
-		Example: "  canvas-pp-cli courses discussion-topics api-find-summary-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses discussion-topics api-find-summary-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-find-summary-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/discussion_topics/{topic_id}/summaries", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

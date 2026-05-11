@@ -21,7 +21,7 @@ func newAuditAuthenticationApiForLoginCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "authentication-api-for-login <login_id>",
 		Short: "List authentication events for a given login.",
-		Example: "  canvas-pp-cli audit authentication-api-for-login 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli audit authentication-api-for-login 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "audit.authentication-api-for-login", "pp:method": "GET", "pp:path": "/audit/authentication/logins/{login_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

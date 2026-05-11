@@ -18,7 +18,7 @@ func newMediaAttachmentsMediaTracksIndexOther2Cmd(flags *rootFlags) *cobra.Comma
 		Use:   "index-other-2 <attachment_id>",
 		Aliases: []string{"get"},
 		Short: "List the media tracks associated with a media object or attachment",
-		Example: "  canvas-pp-cli media-attachments media-tracks index-other-2 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli media-attachments media-tracks index-other-2 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "media-tracks.index-other-2", "pp:method": "GET", "pp:path": "/media_attachments/{attachment_id}/media_tracks", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -23,7 +23,7 @@ func newGlobalOutcomeGroupsApiUpdateOtherCmd(flags *rootFlags) *cobra.Command {
 		Use:   "outcome-groups-api-update-other <id>",
 		Aliases: []string{"update"},
 		Short: "Modify an existing outcome group. Fields not provided are left as is; unrecognized fields are ignored. When changing...",
-		Example: "  canvas-pp-cli global outcome-groups-api-update-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli global outcome-groups-api-update-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "global.outcome-groups-api-update-other", "pp:method": "PUT", "pp:path": "/global/outcome_groups/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

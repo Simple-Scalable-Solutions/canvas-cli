@@ -21,7 +21,7 @@ func newSectionsAssignmentsSubmissionsApiIndexOtherCmd(flags *rootFlags) *cobra.
 	cmd := &cobra.Command{
 		Use:   "submissions-api-index-other <section_id> <assignment_id>",
 		Short: "A paginated list of all existing submissions for an assignment.",
-		Example: "  canvas-pp-cli sections assignments submissions-api-index-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections assignments submissions-api-index-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-index-other", "pp:method": "GET", "pp:path": "/sections/{section_id}/assignments/{assignment_id}/submissions", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

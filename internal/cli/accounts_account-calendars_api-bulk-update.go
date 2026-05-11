@@ -19,7 +19,7 @@ func newAccountsAccountCalendarsApiBulkUpdateCmd(flags *rootFlags) *cobra.Comman
 		Use:   "api-bulk-update <account_id>",
 		Aliases: []string{"update"},
 		Short: "Set visibility and/or auto_subscribe on many calendars simultaneously. Requires the...",
-		Example: "  canvas-pp-cli accounts account-calendars api-bulk-update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts account-calendars api-bulk-update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "account-calendars.api-bulk-update", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/account_calendars"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

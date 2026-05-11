@@ -28,7 +28,7 @@ func newGlobalOutcomeGroupsApiLinkOther2Cmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "outcome-groups-api-link-other-2 <outcome_id> <id>",
 		Short: "Link an outcome into the outcome group. The outcome to link can either be specified by a PUT to the link URL for a...",
-		Example: "  canvas-pp-cli global outcome-groups-api-link-other-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --title example-resource",
+		Example: "  canvas-cli global outcome-groups-api-link-other-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --title example-resource",
 		Annotations: map[string]string{"pp:endpoint": "global.outcome-groups-api-link-other-2", "pp:method": "POST", "pp:path": "/global/outcome_groups/{id}/outcomes/{outcome_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

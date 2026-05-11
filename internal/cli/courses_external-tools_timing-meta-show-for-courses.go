@@ -16,7 +16,7 @@ func newCoursesExternalToolsTimingMetaShowForCoursesCmd(flags *rootFlags) *cobra
 	cmd := &cobra.Command{
 		Use:   "timing-meta-show-for-courses <course_id> <external_tool_id>",
 		Short: "Returns the specified external tool.",
-		Example: "  canvas-pp-cli courses external-tools timing-meta-show-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses external-tools timing-meta-show-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-show-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/external_tools/{external_tool_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

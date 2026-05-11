@@ -22,7 +22,7 @@ func newGlobalOutcomeGroupsApiCreateOtherCmd(flags *rootFlags) *cobra.Command {
 		Use:   "outcome-groups-api-create-other <id>",
 		Aliases: []string{"create"},
 		Short: "Creates a new empty subgroup under the outcome group with the given title and description.",
-		Example: "  canvas-pp-cli global outcome-groups-api-create-other 550e8400-e29b-41d4-a716-446655440000 --title example-resource",
+		Example: "  canvas-cli global outcome-groups-api-create-other 550e8400-e29b-41d4-a716-446655440000 --title example-resource",
 		Annotations: map[string]string{"pp:endpoint": "global.outcome-groups-api-create-other", "pp:method": "POST", "pp:path": "/global/outcome_groups/{id}/subgroups"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

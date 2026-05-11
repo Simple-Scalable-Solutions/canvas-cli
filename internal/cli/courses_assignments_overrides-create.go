@@ -19,7 +19,7 @@ func newCoursesAssignmentsOverridesCreateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "overrides-create <assignment_id> <course_id>",
 		Short: "One of student_ids, group_id, or course_section_id must be present. At most one should be present; if multiple are...",
-		Example: "  canvas-pp-cli courses assignments overrides-create 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments overrides-create 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.overrides-create", "pp:method": "POST", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/overrides"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

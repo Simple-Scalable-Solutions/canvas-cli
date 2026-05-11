@@ -20,7 +20,7 @@ func newEportfoliosPagesEportfoliosApiCmd(flags *rootFlags) *cobra.Command {
 		Use:   "eportfolios-api <eportfolio_id>",
 		Aliases: []string{"get"},
 		Short: "Get details for the pages of an ePortfolio",
-		Example: "  canvas-pp-cli eportfolios pages eportfolios-api 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli eportfolios pages eportfolios-api 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "pages.eportfolios-api", "pp:method": "GET", "pp:path": "/eportfolios/{eportfolio_id}/pages", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

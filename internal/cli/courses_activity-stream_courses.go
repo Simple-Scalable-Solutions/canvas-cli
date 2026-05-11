@@ -17,7 +17,7 @@ func newCoursesActivityStreamCoursesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the current user's course-specific activity stream, paginated. For full documentation, see the API...",
-		Example: "  canvas-pp-cli courses activity-stream courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses activity-stream courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "activity-stream.courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/activity_stream", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

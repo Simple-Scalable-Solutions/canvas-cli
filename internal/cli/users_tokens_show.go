@@ -17,7 +17,7 @@ func newUsersTokensShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "show <id> <user_id>",
 		Aliases: []string{"get"},
 		Short: "The ID can be the actual database ID of the token, or the 'token_hint' value.",
-		Example: "  canvas-pp-cli users tokens show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users tokens show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "tokens.show", "pp:method": "GET", "pp:path": "/users/{user_id}/tokens/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -19,7 +19,7 @@ func newCalendarEventsApiDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-destroy <id>",
 		Aliases: []string{"delete"},
 		Short: "Delete an event from the calendar and return the deleted event",
-		Example: "  canvas-pp-cli calendar-events api-destroy 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli calendar-events api-destroy 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "calendar-events.api-destroy", "pp:method": "DELETE", "pp:path": "/calendar_events/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

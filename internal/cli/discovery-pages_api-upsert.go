@@ -20,7 +20,7 @@ func newDiscoveryPagesApiUpsertCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-upsert",
 		Aliases: []string{"update"},
 		Short: "Update or create the discovery page configuration for the domain root account. This is a full replacement - provide...",
-		Example: "  canvas-pp-cli discovery-pages api-upsert",
+		Example: "  canvas-cli discovery-pages api-upsert",
 		Annotations: map[string]string{"pp:endpoint": "discovery-pages.api-upsert", "pp:method": "PUT", "pp:path": "/discovery_pages"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

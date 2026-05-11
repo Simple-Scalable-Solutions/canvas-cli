@@ -23,7 +23,7 @@ func newUsersObserveesUserCreateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "user-create <user_id>",
 		Aliases: []string{"create"},
 		Short: "Register the given user to observe another user, given the observee's credentials. *Note:* all users are allowed to...",
-		Example: "  canvas-pp-cli users observees user-create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users observees user-create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "observees.user-create", "pp:method": "POST", "pp:path": "/users/{user_id}/observees"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newCoursesPagesWikiApiCreateForCoursesCmd(flags *rootFlags) *cobra.Command 
 		Use:   "wiki-api-create-for-courses <course_id>",
 		Aliases: []string{"create"},
 		Short: "Create a new wiki page",
-		Example: "  canvas-pp-cli courses pages wiki-api-create-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses pages wiki-api-create-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "pages.wiki-api-create-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/pages"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

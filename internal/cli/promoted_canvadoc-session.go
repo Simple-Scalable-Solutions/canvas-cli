@@ -17,7 +17,7 @@ func newCanvadocSessionPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "canvadoc-session",
 		Short: "This API can only be accessed when another endpoint provides a signed URL. It will simply redirect you to the 3rd...",
 		Long:  "Shortcut for 'canvadoc-session show'. This API can only be accessed when another endpoint provides a signed URL. It will simply redirect you to the 3rd...",
-		Example: "  canvas-pp-cli canvadoc-session",
+		Example: "  canvas-cli canvadoc-session",
 		Annotations: map[string]string{"pp:endpoint": "canvadoc-session.show", "pp:method": "GET", "pp:path": "/canvadoc_session", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

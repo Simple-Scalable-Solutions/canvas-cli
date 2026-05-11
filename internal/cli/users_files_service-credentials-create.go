@@ -19,7 +19,7 @@ func newUsersFilesServiceCredentialsCreateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "service-credentials-create <user_id>",
 		Aliases: []string{"create"},
 		Short: "Upload a file to the user's personal files section. This API endpoint is the first step in uploading a file to a...",
-		Example: "  canvas-pp-cli users files service-credentials-create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users files service-credentials-create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "files.service-credentials-create", "pp:method": "POST", "pp:path": "/users/{user_id}/files"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -19,7 +19,7 @@ func newCareerExperienceSwitchRoleCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "experience-switch-role",
 		Short: "Switch the current user's role within the current experience.",
-		Example: "  canvas-pp-cli career experience-switch-role --role example-value",
+		Example: "  canvas-cli career experience-switch-role --role example-value",
 		Annotations: map[string]string{"pp:endpoint": "career.experience-switch-role", "pp:method": "POST", "pp:path": "/career/switch_role"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

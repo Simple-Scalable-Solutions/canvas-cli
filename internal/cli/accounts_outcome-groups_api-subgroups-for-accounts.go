@@ -19,7 +19,7 @@ func newAccountsOutcomeGroupsApiSubgroupsForAccountsCmd(flags *rootFlags) *cobra
 	cmd := &cobra.Command{
 		Use:   "api-subgroups-for-accounts <account_id> <id>",
 		Short: "A paginated list of the immediate OutcomeGroup children of the outcome group.",
-		Example: "  canvas-pp-cli accounts outcome-groups api-subgroups-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts outcome-groups api-subgroups-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-groups.api-subgroups-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/outcome_groups/{id}/subgroups", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

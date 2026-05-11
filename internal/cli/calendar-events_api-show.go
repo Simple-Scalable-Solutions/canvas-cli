@@ -17,7 +17,7 @@ func newCalendarEventsApiShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-show <id>",
 		Aliases: []string{"get"},
 		Short: "Returns detailed information about a specific calendar event or assignment.",
-		Example: "  canvas-pp-cli calendar-events api-show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli calendar-events api-show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "calendar-events.api-show", "pp:method": "GET", "pp:path": "/calendar_events/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

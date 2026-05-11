@@ -17,7 +17,7 @@ func newBrandVariablesPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "brand-variables",
 		Short: "Will redirect to a static json file that has all of the brand variables used by this account. Even though this is a...",
 		Long:  "Shortcut for 'brand-variables brand-configs-api-show'. Will redirect to a static json file that has all of the brand variables used by this account. Even though this is a...",
-		Example: "  canvas-pp-cli brand-variables",
+		Example: "  canvas-cli brand-variables",
 		Annotations: map[string]string{"pp:endpoint": "brand-variables.brand-configs-api-show", "pp:method": "GET", "pp:path": "/brand_variables", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

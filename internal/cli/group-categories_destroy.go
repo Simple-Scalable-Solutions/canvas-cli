@@ -17,7 +17,7 @@ func newGroupCategoriesDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "destroy <group_category_id>",
 		Aliases: []string{"delete"},
 		Short: "Deletes a group category and all groups under it. Protected group categories can not be deleted, i.e. 'communities'...",
-		Example: "  canvas-pp-cli group-categories destroy 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli group-categories destroy 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "group-categories.destroy", "pp:method": "DELETE", "pp:path": "/group_categories/{group_category_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

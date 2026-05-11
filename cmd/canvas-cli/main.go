@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"canvas-pp-cli/internal/cli"
+	"canvas-cli/internal/cli"
 )
 
 func main() {

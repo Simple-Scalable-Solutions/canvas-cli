@@ -17,7 +17,7 @@ func newCoursesExternalToolsTimingMetaDestroyForCoursesCmd(flags *rootFlags) *co
 		Use:   "timing-meta-destroy-for-courses <course_id> <external_tool_id>",
 		Aliases: []string{"delete"},
 		Short: "Remove the specified external tool",
-		Example: "  canvas-pp-cli courses external-tools timing-meta-destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses external-tools timing-meta-destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-destroy-for-courses", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/external_tools/{external_tool_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

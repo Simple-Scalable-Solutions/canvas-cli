@@ -19,7 +19,7 @@ func newAccountsCspSettingsAddMultipleDomainsCmd(flags *rootFlags) *cobra.Comman
 	cmd := &cobra.Command{
 		Use:   "add-multiple-domains <account_id>",
 		Short: "Adds multiple allowed domains for the current account. Note: this will not take effect unless CSP is explicitly...",
-		Example: "  canvas-pp-cli accounts csp-settings add-multiple-domains 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts csp-settings add-multiple-domains 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "csp-settings.add-multiple-domains", "pp:method": "POST", "pp:path": "/accounts/{account_id}/csp_settings/domains/batch_create"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -18,7 +18,7 @@ func newAccountsReportsAccountAvailableCmd(flags *rootFlags) *cobra.Command {
 		Use:   "account-available <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a paginated list of reports for the current context.",
-		Example: "  canvas-pp-cli accounts reports account-available 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts reports account-available 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "reports.account-available", "pp:method": "GET", "pp:path": "/accounts/{account_id}/reports", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

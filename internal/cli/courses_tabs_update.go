@@ -20,7 +20,7 @@ func newCoursesTabsUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update <course_id> <tab_id>",
 		Short: "Home and Settings tabs are not manageable, and can't be hidden or moved Returns a tab object",
-		Example: "  canvas-pp-cli courses tabs update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses tabs update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "tabs.update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/tabs/{tab_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

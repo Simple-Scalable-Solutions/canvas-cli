@@ -25,7 +25,7 @@ func newConversationsIndexCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "index",
 		Short: "Returns the paginated list of conversations for the current user, most recent ones first....",
-		Example: "  canvas-pp-cli conversations index",
+		Example: "  canvas-cli conversations index",
 		Annotations: map[string]string{"pp:endpoint": "conversations.index", "pp:method": "GET", "pp:path": "/conversations", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cmd.Flags().Changed("scope") {

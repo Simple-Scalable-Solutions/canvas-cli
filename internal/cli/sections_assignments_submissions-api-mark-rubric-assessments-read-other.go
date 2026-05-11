@@ -18,7 +18,7 @@ func newSectionsAssignmentsSubmissionsApiMarkRubricAssessmentsReadOtherCmd(flags
 	cmd := &cobra.Command{
 		Use:   "submissions-api-mark-rubric-assessments-read-other <section_id> <assignment_id> <user_id>",
 		Short: "Indicate that rubric comments/grading made on a submission have been read by the student being assessed. Only the...",
-		Example: "  canvas-pp-cli sections assignments submissions-api-mark-rubric-assessments-read-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections assignments submissions-api-mark-rubric-assessments-read-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-mark-rubric-assessments-read-other", "pp:method": "PUT", "pp:path": "/sections/{section_id}/assignments/{assignment_id}/submissions/{user_id}/rubric_comments/read"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

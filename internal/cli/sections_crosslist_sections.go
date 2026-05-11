@@ -20,7 +20,7 @@ func newSectionsCrosslistSectionsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "sections <id> <new_course_id>",
 		Aliases: []string{"create"},
 		Short: "Move the Section to another course. The new course may be in a different account (department), but must belong to...",
-		Example: "  canvas-pp-cli sections crosslist sections 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections crosslist sections 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "crosslist.sections", "pp:method": "POST", "pp:path": "/sections/{id}/crosslist/{new_course_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

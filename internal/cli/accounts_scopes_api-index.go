@@ -18,7 +18,7 @@ func newAccountsScopesApiIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-index <account_id>",
 		Aliases: []string{"get"},
 		Short: "A list of scopes that can be applied to developer keys and access tokens.",
-		Example: "  canvas-pp-cli accounts scopes api-index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts scopes api-index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "scopes.api-index", "pp:method": "GET", "pp:path": "/accounts/{account_id}/scopes", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

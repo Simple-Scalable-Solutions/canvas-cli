@@ -27,7 +27,7 @@ func newAnnouncementsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "announcements",
 		Short: "Returns the paginated list of announcements for the given courses and date range. Note that a +context_code+ field...",
 		Long:  "Shortcut for 'announcements api-index'. Returns the paginated list of announcements for the given courses and date range. Note that a +context_code+ field...",
-		Example: "  canvas-pp-cli announcements --context-codes example-value",
+		Example: "  canvas-cli announcements --context-codes example-value",
 		Annotations: map[string]string{"pp:endpoint": "announcements.api-index", "pp:method": "GET", "pp:path": "/announcements", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !cmd.Flags().Changed("context-codes") && !flags.dryRun {

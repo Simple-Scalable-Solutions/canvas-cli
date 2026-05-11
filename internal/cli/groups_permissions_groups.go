@@ -18,7 +18,7 @@ func newGroupsPermissionsGroupsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "groups <group_id>",
 		Aliases: []string{"get"},
 		Short: "Returns permission information for the calling user in the given group. See also the...",
-		Example: "  canvas-pp-cli groups permissions groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups permissions groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "permissions.groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/permissions", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -16,7 +16,7 @@ func newCoursesAiExperiencesNewCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "new <course_id>",
 		Short: "Display the form for creating a new AI experience",
-		Example: "  canvas-pp-cli courses ai-experiences new 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses ai-experiences new 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "ai-experiences.new", "pp:method": "GET", "pp:path": "/courses/{course_id}/ai_experiences/new", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

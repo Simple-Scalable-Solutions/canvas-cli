@@ -19,7 +19,7 @@ func newAccountsExternalToolsTimingMetaUpdateForAccountsCmd(flags *rootFlags) *c
 		Use:   "timing-meta-update-for-accounts <account_id> <external_tool_id>",
 		Aliases: []string{"update"},
 		Short: "Update the specified external tool. Uses same parameters as create. Returns the updated tool. NOTE: Any updates made...",
-		Example: "  canvas-pp-cli accounts external-tools timing-meta-update-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts external-tools timing-meta-update-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-update-for-accounts", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/external_tools/{external_tool_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

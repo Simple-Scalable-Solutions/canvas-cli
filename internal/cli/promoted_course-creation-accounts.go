@@ -20,7 +20,7 @@ func newCourseCreationAccountsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "course-creation-accounts",
 		Short: "A paginated list of accounts where the current user has permission to create courses.",
 		Long:  "Shortcut for 'course-creation-accounts accounts'. A paginated list of accounts where the current user has permission to create courses.",
-		Example: "  canvas-pp-cli course-creation-accounts",
+		Example: "  canvas-cli course-creation-accounts",
 		Annotations: map[string]string{"pp:endpoint": "course-creation-accounts.accounts", "pp:method": "GET", "pp:path": "/course_creation_accounts", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

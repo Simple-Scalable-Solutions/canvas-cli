@@ -18,7 +18,7 @@ func newAccountsSisImportsApiAbortAllPendingCmd(flags *rootFlags) *cobra.Command
 	cmd := &cobra.Command{
 		Use:   "api-abort-all-pending <account_id>",
 		Short: "Abort already created but not processed or processing SIS imports.",
-		Example: "  canvas-pp-cli accounts sis-imports api-abort-all-pending 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts sis-imports api-abort-all-pending 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sis-imports.api-abort-all-pending", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/sis_imports/abort_all_pending"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

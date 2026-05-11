@@ -21,7 +21,7 @@ func newAccountsGroupCategoriesIndexForAccountsCmd(flags *rootFlags) *cobra.Comm
 		Use:   "index-for-accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a paginated list of group categories in a context. The list returned depends on the permissions of the...",
-		Example: "  canvas-pp-cli accounts group-categories index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts group-categories index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "group-categories.index-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/group_categories", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

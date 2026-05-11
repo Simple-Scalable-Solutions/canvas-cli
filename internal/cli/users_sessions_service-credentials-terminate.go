@@ -17,7 +17,7 @@ func newUsersSessionsServiceCredentialsTerminateCmd(flags *rootFlags) *cobra.Com
 		Use:   "service-credentials-terminate <id>",
 		Aliases: []string{"delete"},
 		Short: "Terminates all sessions for a user. This includes all browser-based sessions and all access tokens, including...",
-		Example: "  canvas-pp-cli users sessions service-credentials-terminate 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users sessions service-credentials-terminate 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sessions.service-credentials-terminate", "pp:method": "DELETE", "pp:path": "/users/{id}/sessions"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

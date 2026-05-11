@@ -20,7 +20,7 @@ func newAccountsCspSettingsAddDomainCmd(flags *rootFlags) *cobra.Command {
 		Use:   "add-domain <account_id>",
 		Aliases: []string{"create"},
 		Short: "Adds an allowed domain for the current account. Note: this will not take effect unless CSP is explicitly enabled on...",
-		Example: "  canvas-pp-cli accounts csp-settings add-domain 550e8400-e29b-41d4-a716-446655440000 --domain example-value",
+		Example: "  canvas-cli accounts csp-settings add-domain 550e8400-e29b-41d4-a716-446655440000 --domain example-value",
 		Annotations: map[string]string{"pp:endpoint": "csp-settings.add-domain", "pp:method": "POST", "pp:path": "/accounts/{account_id}/csp_settings/domains"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

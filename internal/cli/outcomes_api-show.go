@@ -18,7 +18,7 @@ func newOutcomesApiShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-show <id>",
 		Aliases: []string{"get"},
 		Short: "Returns the details of the outcome with the given id.",
-		Example: "  canvas-pp-cli outcomes api-show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli outcomes api-show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcomes.api-show", "pp:method": "GET", "pp:path": "/outcomes/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

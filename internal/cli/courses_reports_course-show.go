@@ -16,7 +16,7 @@ func newCoursesReportsCourseShowCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "course-show <course_id> <id> <report_type>",
 		Short: "Returns the status of a report.",
-		Example: "  canvas-pp-cli courses reports course-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 example-value",
+		Example: "  canvas-cli courses reports course-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 example-value",
 		Annotations: map[string]string{"pp:endpoint": "reports.course-show", "pp:method": "GET", "pp:path": "/courses/{course_id}/reports/{report_type}/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

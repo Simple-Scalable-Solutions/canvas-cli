@@ -22,7 +22,7 @@ func newSectionsAssignmentsSubmissionsApiUpdateAnonymousOtherCmd(flags *rootFlag
 	cmd := &cobra.Command{
 		Use:   "submissions-api-update-anonymous-other <section_id> <anonymous_id> <assignment_id>",
 		Short: "Comment on and/or update the grading for a student's assignment submission, fetching the submission by anonymous id...",
-		Example: "  canvas-pp-cli sections assignments submissions-api-update-anonymous-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections assignments submissions-api-update-anonymous-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-update-anonymous-other", "pp:method": "PUT", "pp:path": "/sections/{section_id}/assignments/{assignment_id}/anonymous_submissions/{anonymous_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

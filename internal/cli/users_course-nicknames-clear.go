@@ -16,7 +16,7 @@ func newUsersCourseNicknamesClearCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "course-nicknames-clear",
 		Short: "Remove all stored course nicknames.",
-		Example: "  canvas-pp-cli users course-nicknames-clear",
+		Example: "  canvas-cli users course-nicknames-clear",
 		Annotations: map[string]string{"pp:endpoint": "users.course-nicknames-clear", "pp:method": "DELETE", "pp:path": "/users/self/course_nicknames"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

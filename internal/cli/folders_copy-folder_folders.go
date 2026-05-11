@@ -20,7 +20,7 @@ func newFoldersCopyFolderFoldersCmd(flags *rootFlags) *cobra.Command {
 		Use:   "folders <dest_folder_id>",
 		Aliases: []string{"create"},
 		Short: "Copy a folder (and its contents) from elsewhere in Canvas into a folder. Copying a folder across contexts (between...",
-		Example: "  canvas-pp-cli folders copy-folder folders 550e8400-e29b-41d4-a716-446655440000 --source-folder-id 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli folders copy-folder folders 550e8400-e29b-41d4-a716-446655440000 --source-folder-id 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "copy-folder.folders", "pp:method": "POST", "pp:path": "/folders/{dest_folder_id}/copy_folder"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

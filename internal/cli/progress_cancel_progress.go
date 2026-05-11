@@ -19,7 +19,7 @@ func newProgressCancelProgressCmd(flags *rootFlags) *cobra.Command {
 		Use:   "progress <id>",
 		Aliases: []string{"create"},
 		Short: "Cancel an asynchronous job associated with a Progress object If you include 'message' in the POSTed data, it will be...",
-		Example: "  canvas-pp-cli progress cancel progress 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli progress cancel progress 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "cancel.progress", "pp:method": "POST", "pp:path": "/progress/{id}/cancel"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

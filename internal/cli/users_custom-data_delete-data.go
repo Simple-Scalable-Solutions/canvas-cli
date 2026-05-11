@@ -18,7 +18,7 @@ func newUsersCustomDataDeleteDataCmd(flags *rootFlags) *cobra.Command {
 		Use:   "delete-data <user_id>",
 		Aliases: []string{"delete"},
 		Short: "Delete custom user data. Arbitrary JSON data can be stored for a User. This API call deletes that data for a given...",
-		Example: "  canvas-pp-cli users custom-data delete-data 550e8400-e29b-41d4-a716-446655440000 --ns example-value",
+		Example: "  canvas-cli users custom-data delete-data 550e8400-e29b-41d4-a716-446655440000 --ns example-value",
 		Annotations: map[string]string{"pp:endpoint": "custom-data.delete-data", "pp:method": "DELETE", "pp:path": "/users/{user_id}/custom_data(/*scope)"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

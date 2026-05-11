@@ -17,7 +17,7 @@ func newUsersServiceCredentialsActivityStreamForCmd(flags *rootFlags) *cobra.Com
 	cmd := &cobra.Command{
 		Use:   "service-credentials-activity-stream-for",
 		Short: "Returns the current user's global activity stream, paginated. There are many types of objects that can be returned...",
-		Example: "  canvas-pp-cli users service-credentials-activity-stream-for",
+		Example: "  canvas-cli users service-credentials-activity-stream-for",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-activity-stream-for", "pp:method": "GET", "pp:path": "/users/self/activity_stream", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

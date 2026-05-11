@@ -18,7 +18,7 @@ func newGroupsUsersGroupMembershipsDestroyBulkCmd(flags *rootFlags) *cobra.Comma
 		Use:   "group-memberships-destroy-bulk <group_id>",
 		Aliases: []string{"delete"},
 		Short: "Bulk deletes memberships by providing an array of user IDs.",
-		Example: "  canvas-pp-cli groups users group-memberships-destroy-bulk 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups users group-memberships-destroy-bulk 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.group-memberships-destroy-bulk", "pp:method": "DELETE", "pp:path": "/groups/{group_id}/users"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -17,7 +17,7 @@ func newCoursesLearningMasteryGradebookSettingsApiShowCmd(flags *rootFlags) *cob
 		Use:   "api-show <course_id>",
 		Aliases: []string{"get"},
 		Short: "Get the current user's Learning Mastery Gradebook settings for the current context.",
-		Example: "  canvas-pp-cli courses learning-mastery-gradebook-settings api-show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses learning-mastery-gradebook-settings api-show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "learning-mastery-gradebook-settings.api-show", "pp:method": "GET", "pp:path": "/courses/{course_id}/learning_mastery_gradebook_settings", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

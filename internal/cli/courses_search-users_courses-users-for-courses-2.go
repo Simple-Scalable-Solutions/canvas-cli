@@ -30,7 +30,7 @@ func newCoursesSearchUsersCoursesUsersForCourses2Cmd(flags *rootFlags) *cobra.Co
 		Use:   "courses-users-for-courses-2 <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of users in this course. And optionally the user's enrollments in the course.",
-		Example: "  canvas-pp-cli courses search-users courses-users-for-courses-2 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses search-users courses-users-for-courses-2 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "search-users.courses-users-for-courses-2", "pp:method": "GET", "pp:path": "/courses/{course_id}/search_users", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

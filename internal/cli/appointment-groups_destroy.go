@@ -18,7 +18,7 @@ func newAppointmentGroupsDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "destroy <id>",
 		Aliases: []string{"delete"},
 		Short: "Delete an appointment group (and associated time slots and reservations) and return the deleted group",
-		Example: "  canvas-pp-cli appointment-groups destroy 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli appointment-groups destroy 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "appointment-groups.destroy", "pp:method": "DELETE", "pp:path": "/appointment_groups/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

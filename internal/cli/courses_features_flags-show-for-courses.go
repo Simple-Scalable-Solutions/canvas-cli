@@ -16,7 +16,7 @@ func newCoursesFeaturesFlagsShowForCoursesCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "flags-show-for-courses <course_id> <feature>",
 		Short: "Get the feature flag that applies to a given Account, Course, or User. The flag may be defined on the object, or it...",
-		Example: "  canvas-pp-cli courses features flags-show-for-courses 550e8400-e29b-41d4-a716-446655440000 example-value",
+		Example: "  canvas-cli courses features flags-show-for-courses 550e8400-e29b-41d4-a716-446655440000 example-value",
 		Annotations: map[string]string{"pp:endpoint": "features.flags-show-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/features/flags/{feature}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

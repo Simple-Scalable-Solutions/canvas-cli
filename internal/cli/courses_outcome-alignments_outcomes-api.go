@@ -19,7 +19,7 @@ func newCoursesOutcomeAlignmentsOutcomesApiCmd(flags *rootFlags) *cobra.Command 
 		Use:   "outcomes-api <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns outcome alignments for a student or assignment in a course.",
-		Example: "  canvas-pp-cli courses outcome-alignments outcomes-api 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses outcome-alignments outcomes-api 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-alignments.outcomes-api", "pp:method": "GET", "pp:path": "/courses/{course_id}/outcome_alignments", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -19,7 +19,7 @@ func newGroupsDiscussionTopicsApiMarkEntryReadForGroupsCmd(flags *rootFlags) *co
 	cmd := &cobra.Command{
 		Use:   "api-mark-entry-read-for-groups <group_id> <entry_id> <topic_id>",
 		Short: "Mark a discussion entry as read. No request fields are necessary. On success, the response will be 204 No Content...",
-		Example: "  canvas-pp-cli groups discussion-topics api-mark-entry-read-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups discussion-topics api-mark-entry-read-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-mark-entry-read-for-groups", "pp:method": "PUT", "pp:path": "/groups/{group_id}/discussion_topics/{topic_id}/entries/{entry_id}/read"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

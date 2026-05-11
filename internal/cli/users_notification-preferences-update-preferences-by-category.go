@@ -19,7 +19,7 @@ func newUsersNotificationPreferencesUpdatePreferencesByCategoryCmd(flags *rootFl
 	cmd := &cobra.Command{
 		Use:   "notification-preferences-update-preferences-by-category <category> <communication_channel_id>",
 		Short: "Change the preferences for multiple notifications based on the category for a single communication channel",
-		Example: "  canvas-pp-cli users notification-preferences-update-preferences-by-category example-value 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users notification-preferences-update-preferences-by-category example-value 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.notification-preferences-update-preferences-by-category", "pp:method": "PUT", "pp:path": "/users/self/communication_channels/{communication_channel_id}/notification_preference_categories/{category}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

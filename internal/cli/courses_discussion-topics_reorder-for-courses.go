@@ -19,7 +19,7 @@ func newCoursesDiscussionTopicsReorderForCoursesCmd(flags *rootFlags) *cobra.Com
 	cmd := &cobra.Command{
 		Use:   "reorder-for-courses <course_id>",
 		Short: "Puts the pinned discussion topics in the specified order. All pinned topics should be included.",
-		Example: "  canvas-pp-cli courses discussion-topics reorder-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses discussion-topics reorder-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.reorder-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/discussion_topics/reorder"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

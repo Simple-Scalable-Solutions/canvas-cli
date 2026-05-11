@@ -17,7 +17,7 @@ func newSectionsAssignmentsSubmissionsApiShowAnonymousOtherCmd(flags *rootFlags)
 	cmd := &cobra.Command{
 		Use:   "submissions-api-show-anonymous-other <section_id> <anonymous_id> <assignment_id>",
 		Short: "Get a single submission, based on the submission's anonymous id.",
-		Example: "  canvas-pp-cli sections assignments submissions-api-show-anonymous-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections assignments submissions-api-show-anonymous-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-show-anonymous-other", "pp:method": "GET", "pp:path": "/sections/{section_id}/assignments/{assignment_id}/anonymous_submissions/{anonymous_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

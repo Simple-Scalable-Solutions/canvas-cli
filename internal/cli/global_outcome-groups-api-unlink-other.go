@@ -16,7 +16,7 @@ func newGlobalOutcomeGroupsApiUnlinkOtherCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "outcome-groups-api-unlink-other <id> <outcome_id>",
 		Short: "Unlinking an outcome only deletes the outcome itself if this was the last link to the outcome in any group in any...",
-		Example: "  canvas-pp-cli global outcome-groups-api-unlink-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli global outcome-groups-api-unlink-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "global.outcome-groups-api-unlink-other", "pp:method": "DELETE", "pp:path": "/global/outcome_groups/{id}/outcomes/{outcome_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

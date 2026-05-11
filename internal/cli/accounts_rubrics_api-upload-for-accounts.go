@@ -19,7 +19,7 @@ func newAccountsRubricsApiUploadForAccountsCmd(flags *rootFlags) *cobra.Command 
 		Use:   "api-upload-for-accounts <account_id>",
 		Aliases: []string{"create"},
 		Short: "Returns the rubric import object that was created",
-		Example: "  canvas-pp-cli accounts rubrics api-upload-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts rubrics api-upload-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "rubrics.api-upload-for-accounts", "pp:method": "POST", "pp:path": "/accounts/{account_id}/rubrics/upload"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

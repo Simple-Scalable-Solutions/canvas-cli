@@ -17,7 +17,7 @@ func newPlannerNotesShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "show <id>",
 		Aliases: []string{"get"},
 		Short: "Retrieve a planner note for the current user",
-		Example: "  canvas-pp-cli planner-notes show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli planner-notes show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "planner-notes.show", "pp:method": "GET", "pp:path": "/planner_notes/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

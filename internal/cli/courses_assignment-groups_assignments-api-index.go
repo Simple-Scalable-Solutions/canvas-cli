@@ -28,7 +28,7 @@ func newCoursesAssignmentGroupsAssignmentsApiIndexCmd(flags *rootFlags) *cobra.C
 	cmd := &cobra.Command{
 		Use:   "assignments-api-index <assignment_group_id> <course_id>",
 		Short: "Returns the paginated list of assignments for the current course or assignment group.",
-		Example: "  canvas-pp-cli courses assignment-groups assignments-api-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignment-groups assignments-api-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignment-groups.assignments-api-index", "pp:method": "GET", "pp:path": "/courses/{course_id}/assignment_groups/{assignment_group_id}/assignments", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

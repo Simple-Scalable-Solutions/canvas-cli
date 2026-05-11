@@ -19,7 +19,7 @@ func newCoursesAssignmentsOverridesBatchCreateCmd(flags *rootFlags) *cobra.Comma
 	cmd := &cobra.Command{
 		Use:   "overrides-batch-create <course_id>",
 		Short: "Creates the specified overrides for each assignment. Handles creation in a transaction, so all records are created...",
-		Example: "  canvas-pp-cli courses assignments overrides-batch-create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments overrides-batch-create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.overrides-batch-create", "pp:method": "POST", "pp:path": "/courses/{course_id}/assignments/overrides"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

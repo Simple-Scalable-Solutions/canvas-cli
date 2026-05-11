@@ -16,7 +16,7 @@ func newUsersPageViewsQueryResultsCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "query-results <query_id> <user_id>",
 		Short: "Retrieves the results of a completed page views query. Returns the data in the format specified when the query was...",
-		Example: "  canvas-pp-cli users page-views query-results 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users page-views query-results 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "page-views.query-results", "pp:method": "GET", "pp:path": "/users/{user_id}/page_views/query/{query_id}/results", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -19,7 +19,7 @@ func newAccountsTermsCreateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "create <account_id>",
 		Short: "Create a new enrollment term for the specified account.",
-		Example: "  canvas-pp-cli accounts terms create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts terms create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "terms.create", "pp:method": "POST", "pp:path": "/accounts/{account_id}/terms"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

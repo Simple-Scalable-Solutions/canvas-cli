@@ -20,7 +20,7 @@ func newUsersFoldersListAllForUsersCmd(flags *rootFlags) *cobra.Command {
 		Use:   "list-all-for-users <user_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of all folders for the given context. This will be returned as a flat list containing all...",
-		Example: "  canvas-pp-cli users folders list-all-for-users 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users folders list-all-for-users 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "folders.list-all-for-users", "pp:method": "GET", "pp:path": "/users/{user_id}/folders", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

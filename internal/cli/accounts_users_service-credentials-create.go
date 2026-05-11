@@ -27,7 +27,7 @@ func newAccountsUsersServiceCredentialsCreateCmd(flags *rootFlags) *cobra.Comman
 		Use:   "service-credentials-create <account_id>",
 		Aliases: []string{"create"},
 		Short: "Create and return a new user and pseudonym for an account. [DEPRECATED (for self-registration only)] If you don't...",
-		Example: "  canvas-pp-cli accounts users service-credentials-create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts users service-credentials-create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-create", "pp:method": "POST", "pp:path": "/accounts/{account_id}/users"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

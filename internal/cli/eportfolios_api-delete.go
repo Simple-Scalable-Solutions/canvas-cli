@@ -17,7 +17,7 @@ func newEportfoliosApiDeleteCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-delete <id>",
 		Aliases: []string{"delete"},
 		Short: "Mark an ePortfolio as deleted.",
-		Example: "  canvas-pp-cli eportfolios api-delete 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli eportfolios api-delete 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "eportfolios.api-delete", "pp:method": "DELETE", "pp:path": "/eportfolios/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

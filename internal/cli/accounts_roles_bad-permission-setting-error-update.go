@@ -21,7 +21,7 @@ func newAccountsRolesBadPermissionSettingErrorUpdateCmd(flags *rootFlags) *cobra
 		Use:   "bad-permission-setting-error-update <account_id> <id>",
 		Aliases: []string{"update"},
 		Short: "Update permissions for an existing role. Recognized roles are: * TeacherEnrollment * StudentEnrollment *...",
-		Example: "  canvas-pp-cli accounts roles bad-permission-setting-error-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts roles bad-permission-setting-error-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "roles.bad-permission-setting-error-update", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/roles/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

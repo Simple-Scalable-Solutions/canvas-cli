@@ -16,7 +16,7 @@ func newUsersServiceCredentialsUpcomingEventsCmd(flags *rootFlags) *cobra.Comman
 	cmd := &cobra.Command{
 		Use:   "service-credentials-upcoming-events",
 		Short: "A paginated list of the current user's upcoming events.",
-		Example: "  canvas-pp-cli users service-credentials-upcoming-events",
+		Example: "  canvas-cli users service-credentials-upcoming-events",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-upcoming-events", "pp:method": "GET", "pp:path": "/users/self/upcoming_events", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

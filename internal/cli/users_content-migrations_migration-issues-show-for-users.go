@@ -16,7 +16,7 @@ func newUsersContentMigrationsMigrationIssuesShowForUsersCmd(flags *rootFlags) *
 	cmd := &cobra.Command{
 		Use:   "migration-issues-show-for-users <user_id> <content_migration_id> <id>",
 		Short: "Returns data on an individual migration issue",
-		Example: "  canvas-pp-cli users content-migrations migration-issues-show-for-users 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users content-migrations migration-issues-show-for-users 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-migrations.migration-issues-show-for-users", "pp:method": "GET", "pp:path": "/users/{user_id}/content_migrations/{content_migration_id}/migration_issues/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -17,7 +17,7 @@ func newServicesApiShowKalturaConfigCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-show-kaltura-config",
 		Aliases: []string{"list"},
 		Short: "Return the config information for the Kaltura plugin in json format.",
-		Example: "  canvas-pp-cli services api-show-kaltura-config",
+		Example: "  canvas-cli services api-show-kaltura-config",
 		Annotations: map[string]string{"pp:endpoint": "services.api-show-kaltura-config", "pp:method": "GET", "pp:path": "/services/kaltura", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

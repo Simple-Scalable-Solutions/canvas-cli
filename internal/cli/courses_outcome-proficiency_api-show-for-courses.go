@@ -17,7 +17,7 @@ func newCoursesOutcomeProficiencyApiShowForCoursesCmd(flags *rootFlags) *cobra.C
 		Use:   "api-show-for-courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "Get account-level proficiency ratings. If not defined for this account, it will return proficiency ratings for the...",
-		Example: "  canvas-pp-cli courses outcome-proficiency api-show-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses outcome-proficiency api-show-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-proficiency.api-show-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/outcome_proficiency", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

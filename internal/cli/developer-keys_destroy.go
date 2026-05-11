@@ -17,7 +17,7 @@ func newDeveloperKeysDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "destroy <id>",
 		Aliases: []string{"delete"},
 		Short: "Delete an existing Canvas API key. Deleting an LTI 1.3 registration should be done via the LTI Registration API.",
-		Example: "  canvas-pp-cli developer-keys destroy 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli developer-keys destroy 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "developer-keys.destroy", "pp:method": "DELETE", "pp:path": "/developer_keys/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -18,7 +18,7 @@ func newUsersCustomDataGetDataCmd(flags *rootFlags) *cobra.Command {
 		Use:   "get-data <user_id>",
 		Aliases: []string{"get"},
 		Short: "Load custom user data. Arbitrary JSON data can be stored for a User. This API call retrieves that data for a...",
-		Example: "  canvas-pp-cli users custom-data get-data 550e8400-e29b-41d4-a716-446655440000 --ns example-value",
+		Example: "  canvas-cli users custom-data get-data 550e8400-e29b-41d4-a716-446655440000 --ns example-value",
 		Annotations: map[string]string{"pp:endpoint": "custom-data.get-data", "pp:method": "GET", "pp:path": "/users/{user_id}/custom_data(/*scope)", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -25,7 +25,7 @@ func newCoursesApplyScoreToUngradedSubmissionsGradebooksCmd(flags *rootFlags) *c
 		Use:   "gradebooks <course_id>",
 		Aliases: []string{"update"},
 		Short: "Perform a bulk scoring of ungraded submissions for a course, or mark ungraded submissions as excused. The course's...",
-		Example: "  canvas-pp-cli courses apply-score-to-ungraded-submissions gradebooks 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses apply-score-to-ungraded-submissions gradebooks 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "apply-score-to-ungraded-submissions.gradebooks", "pp:method": "PUT", "pp:path": "/courses/{course_id}/apply_score_to_ungraded_submissions"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -19,7 +19,7 @@ func newGroupsDiscussionTopicsDiscussionEntriesUpdateForGroupsCmd(flags *rootFla
 	cmd := &cobra.Command{
 		Use:   "discussion-entries-update-for-groups <group_id> <id> <topic_id>",
 		Short: "Update an existing discussion entry. The entry must have been created by the current user, or the current user must...",
-		Example: "  canvas-pp-cli groups discussion-topics discussion-entries-update-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups discussion-topics discussion-entries-update-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.discussion-entries-update-for-groups", "pp:method": "PUT", "pp:path": "/groups/{group_id}/discussion_topics/{topic_id}/entries/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

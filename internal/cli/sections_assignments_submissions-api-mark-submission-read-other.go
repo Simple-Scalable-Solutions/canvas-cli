@@ -18,7 +18,7 @@ func newSectionsAssignmentsSubmissionsApiMarkSubmissionReadOtherCmd(flags *rootF
 	cmd := &cobra.Command{
 		Use:   "submissions-api-mark-submission-read-other <section_id> <assignment_id> <user_id>",
 		Short: "No request fields are necessary. On success, the response will be 204 No Content with an empty body.",
-		Example: "  canvas-pp-cli sections assignments submissions-api-mark-submission-read-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections assignments submissions-api-mark-submission-read-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-mark-submission-read-other", "pp:method": "PUT", "pp:path": "/sections/{section_id}/assignments/{assignment_id}/submissions/{user_id}/read"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

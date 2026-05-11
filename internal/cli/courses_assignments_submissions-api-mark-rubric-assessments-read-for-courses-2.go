@@ -18,7 +18,7 @@ func newCoursesAssignmentsSubmissionsApiMarkRubricAssessmentsReadForCourses2Cmd(
 	cmd := &cobra.Command{
 		Use:   "submissions-api-mark-rubric-assessments-read-for-courses-2 <assignment_id> <course_id> <user_id>",
 		Short: "Indicate that rubric comments/grading made on a submission have been read by the student being assessed. Only the...",
-		Example: "  canvas-pp-cli courses assignments submissions-api-mark-rubric-assessments-read-for-courses-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments submissions-api-mark-rubric-assessments-read-for-courses-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-mark-rubric-assessments-read-for-courses-2", "pp:method": "PUT", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/submissions/{user_id}/rubric_assessments/read"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

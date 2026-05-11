@@ -17,7 +17,7 @@ func newUsersTokensDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "destroy <id> <user_id>",
 		Aliases: []string{"delete"},
 		Short: "The ID can be the actual database ID of the token, or the 'token_hint' value.",
-		Example: "  canvas-pp-cli users tokens destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users tokens destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "tokens.destroy", "pp:method": "DELETE", "pp:path": "/users/{user_id}/tokens/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -18,7 +18,7 @@ func newUsersPseudonymsForgotPasswordCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "pseudonyms-forgot-password",
 		Short: "Given a user email, generate a nonce and email it to the user",
-		Example: "  canvas-pp-cli users pseudonyms-forgot-password",
+		Example: "  canvas-cli users pseudonyms-forgot-password",
 		Annotations: map[string]string{"pp:endpoint": "users.pseudonyms-forgot-password", "pp:method": "POST", "pp:path": "/users/reset_password"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

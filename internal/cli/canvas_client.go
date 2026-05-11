@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"strings"
 
-	"canvas-pp-cli/internal/config"
+	"canvas-cli/internal/config"
 )
 
 var linkNextRe = regexp.MustCompile(`<([^>]+)>;\s*rel="next"`)
@@ -101,7 +101,7 @@ func newCanvasClientFromConfig(configPath string) (*canvasClient, error) {
 		return nil, err
 	}
 	if cfg.CanvasLmsToken == "" {
-		return nil, fmt.Errorf("no Canvas token configured: set CANVAS_LMS_TOKEN or run 'canvas-pp-cli auth set-token'")
+		return nil, fmt.Errorf("no Canvas token configured: set CANVAS_LMS_TOKEN or run 'canvas-cli auth set-token'")
 	}
 	return newCanvasClient(cfg.CanvasLmsToken, cfg.BaseURL), nil
 }

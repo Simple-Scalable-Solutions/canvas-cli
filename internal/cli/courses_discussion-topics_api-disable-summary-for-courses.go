@@ -19,7 +19,7 @@ func newCoursesDiscussionTopicsApiDisableSummaryForCoursesCmd(flags *rootFlags) 
 		Use:   "api-disable-summary-for-courses <course_id> <topic_id>",
 		Aliases: []string{"update"},
 		Short: "Deprecated, to remove after VICE-5047 gets merged Disables the summary for a discussion topic.",
-		Example: "  canvas-pp-cli courses discussion-topics api-disable-summary-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses discussion-topics api-disable-summary-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-disable-summary-for-courses", "pp:method": "PUT", "pp:path": "/courses/{course_id}/discussion_topics/{topic_id}/summaries/disable"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

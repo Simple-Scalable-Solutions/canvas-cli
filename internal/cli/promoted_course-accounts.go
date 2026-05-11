@@ -20,7 +20,7 @@ func newCourseAccountsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "course-accounts",
 		Short: "A paginated list of accounts that the current user can view through their admin course enrollments. (Teacher, TA, or...",
 		Long:  "Shortcut for 'course-accounts accounts'. A paginated list of accounts that the current user can view through their admin course enrollments. (Teacher, TA, or...",
-		Example: "  canvas-pp-cli course-accounts",
+		Example: "  canvas-cli course-accounts",
 		Annotations: map[string]string{"pp:endpoint": "course-accounts.accounts", "pp:method": "GET", "pp:path": "/course_accounts", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

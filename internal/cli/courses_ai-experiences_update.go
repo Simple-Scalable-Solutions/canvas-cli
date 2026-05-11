@@ -24,7 +24,7 @@ func newCoursesAiExperiencesUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update <course_id> <id>",
 		Short: "Update an existing AI experience",
-		Example: "  canvas-pp-cli courses ai-experiences update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --learning-objective example-value",
+		Example: "  canvas-cli courses ai-experiences update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --learning-objective example-value",
 		Annotations: map[string]string{"pp:endpoint": "ai-experiences.update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/ai_experiences/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -19,7 +19,7 @@ func newUsersContentSharesUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update <id> <user_id>",
 		Short: "Mark a content share read or unread",
-		Example: "  canvas-pp-cli users content-shares update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users content-shares update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-shares.update", "pp:method": "PUT", "pp:path": "/users/{user_id}/content_shares/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

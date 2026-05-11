@@ -19,7 +19,7 @@ func newCoursesPagesWikiApiUpdateForCoursesCmd(flags *rootFlags) *cobra.Command 
 	cmd := &cobra.Command{
 		Use:   "wiki-api-update-for-courses <course_id> <url_or_id>",
 		Short: "Update the title or contents of a wiki page NOTE: You cannot specify the ID when creating a page. If you pass a...",
-		Example: "  canvas-pp-cli courses pages wiki-api-update-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses pages wiki-api-update-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "pages.wiki-api-update-for-courses", "pp:method": "PUT", "pp:path": "/courses/{course_id}/pages/{url_or_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

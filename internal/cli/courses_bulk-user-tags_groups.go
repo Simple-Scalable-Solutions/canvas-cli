@@ -18,7 +18,7 @@ func newCoursesBulkUserTagsGroupsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "groups <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a mapping of user IDs to arrays of non-collaborative group (tag) IDs for each user in the given course.",
-		Example: "  canvas-pp-cli courses bulk-user-tags groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses bulk-user-tags groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "bulk-user-tags.groups", "pp:method": "GET", "pp:path": "/courses/{course_id}/bulk_user_tags", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

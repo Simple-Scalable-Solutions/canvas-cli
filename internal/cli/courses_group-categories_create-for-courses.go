@@ -26,7 +26,7 @@ func newCoursesGroupCategoriesCreateForCoursesCmd(flags *rootFlags) *cobra.Comma
 	cmd := &cobra.Command{
 		Use:   "create-for-courses <course_id>",
 		Short: "Create a new group category",
-		Example: "  canvas-pp-cli courses group-categories create-for-courses 550e8400-e29b-41d4-a716-446655440000 --name example-resource",
+		Example: "  canvas-cli courses group-categories create-for-courses 550e8400-e29b-41d4-a716-446655440000 --name example-resource",
 		Annotations: map[string]string{"pp:endpoint": "group-categories.create-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/group_categories"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

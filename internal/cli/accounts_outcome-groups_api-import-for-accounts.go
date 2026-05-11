@@ -20,7 +20,7 @@ func newAccountsOutcomeGroupsApiImportForAccountsCmd(flags *rootFlags) *cobra.Co
 	cmd := &cobra.Command{
 		Use:   "api-import-for-accounts <account_id> <id>",
 		Short: "Creates a new subgroup of the outcome group with the same title and description as the source group, then creates...",
-		Example: "  canvas-pp-cli accounts outcome-groups api-import-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts outcome-groups api-import-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-groups.api-import-for-accounts", "pp:method": "POST", "pp:path": "/accounts/{account_id}/outcome_groups/{id}/import"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

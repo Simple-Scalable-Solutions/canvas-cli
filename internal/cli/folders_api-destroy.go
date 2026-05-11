@@ -18,7 +18,7 @@ func newFoldersApiDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-destroy <id>",
 		Aliases: []string{"delete"},
 		Short: "Remove the specified folder. You can only delete empty folders unless you set the 'force' flag",
-		Example: "  canvas-pp-cli folders api-destroy 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli folders api-destroy 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "folders.api-destroy", "pp:method": "DELETE", "pp:path": "/folders/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

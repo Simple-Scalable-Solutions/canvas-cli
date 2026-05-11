@@ -18,7 +18,7 @@ func newCoursesRubricsApiUploadForCoursesCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "api-upload-for-courses <course_id>",
 		Short: "Returns the rubric import object that was created",
-		Example: "  canvas-pp-cli courses rubrics api-upload-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses rubrics api-upload-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "rubrics.api-upload-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/rubrics/upload"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

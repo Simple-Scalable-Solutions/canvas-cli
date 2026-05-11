@@ -39,7 +39,7 @@ func newCoursesSettingsCoursesUpdateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "courses-update <course_id>",
 		Aliases: []string{"update"},
 		Short: "Can update the following course settings:",
-		Example: "  canvas-pp-cli courses settings courses-update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses settings courses-update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "settings.courses-update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/settings"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

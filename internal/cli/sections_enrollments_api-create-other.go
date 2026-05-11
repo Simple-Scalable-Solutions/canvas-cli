@@ -21,7 +21,7 @@ func newSectionsEnrollmentsApiCreateOtherCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-create-other <section_id>",
 		Aliases: []string{"create"},
 		Short: "Create a new user enrollment for a course or section.",
-		Example: "  canvas-pp-cli sections enrollments api-create-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections enrollments api-create-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "enrollments.api-create-other", "pp:method": "POST", "pp:path": "/sections/{section_id}/enrollments"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

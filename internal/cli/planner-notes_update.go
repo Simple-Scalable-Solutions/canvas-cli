@@ -22,7 +22,7 @@ func newPlannerNotesUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "update <id>",
 		Short: "Update a planner note for the current user",
-		Example: "  canvas-pp-cli planner-notes update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli planner-notes update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "planner-notes.update", "pp:method": "PUT", "pp:path": "/planner_notes/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

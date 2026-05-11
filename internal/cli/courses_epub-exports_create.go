@@ -18,7 +18,7 @@ func newCoursesEpubExportsCreateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "create <course_id>",
 		Short: "Begin an ePub export for a course. You can use the {api:ProgressController#show Progress API} to track the progress...",
-		Example: "  canvas-pp-cli courses epub-exports create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses epub-exports create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "epub-exports.create", "pp:method": "POST", "pp:path": "/courses/{course_id}/epub_exports"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

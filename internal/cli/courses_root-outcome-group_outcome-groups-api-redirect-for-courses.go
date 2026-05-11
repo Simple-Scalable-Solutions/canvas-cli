@@ -17,7 +17,7 @@ func newCoursesRootOutcomeGroupOutcomeGroupsApiRedirectForCoursesCmd(flags *root
 		Use:   "outcome-groups-api-redirect-for-courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "Convenience redirect to find the root outcome group for a particular context. Will redirect to the appropriate...",
-		Example: "  canvas-pp-cli courses root-outcome-group outcome-groups-api-redirect-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses root-outcome-group outcome-groups-api-redirect-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "root-outcome-group.outcome-groups-api-redirect-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/root_outcome_group", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

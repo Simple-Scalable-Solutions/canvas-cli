@@ -21,7 +21,7 @@ func newAccountsCoursesBatchUpdateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "batch-update <account_id>",
 		Aliases: []string{"update"},
 		Short: "Update multiple courses in an account. Operates asynchronously; use the {api:ProgressController#show progress...",
-		Example: "  canvas-pp-cli accounts courses batch-update 550e8400-e29b-41d4-a716-446655440000 --event example-value",
+		Example: "  canvas-cli accounts courses batch-update 550e8400-e29b-41d4-a716-446655440000 --event example-value",
 		Annotations: map[string]string{"pp:endpoint": "courses.batch-update", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/courses"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

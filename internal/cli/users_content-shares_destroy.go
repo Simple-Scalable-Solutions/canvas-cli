@@ -17,7 +17,7 @@ func newUsersContentSharesDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "destroy <id> <user_id>",
 		Aliases: []string{"delete"},
 		Short: "Remove a content share from your list. Use +self+ as the user_id. Note that this endpoint does not delete other...",
-		Example: "  canvas-pp-cli users content-shares destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users content-shares destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-shares.destroy", "pp:method": "DELETE", "pp:path": "/users/{user_id}/content_shares/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

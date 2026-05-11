@@ -17,7 +17,7 @@ func newGroupsMembershipsGroupDestroyForGroupsCmd(flags *rootFlags) *cobra.Comma
 		Use:   "group-destroy-for-groups <group_id> <membership_id>",
 		Aliases: []string{"delete"},
 		Short: "Leave a group if you are allowed to leave (some groups, such as sets of course groups created by teachers, cannot be...",
-		Example: "  canvas-pp-cli groups memberships group-destroy-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups memberships group-destroy-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "memberships.group-destroy-for-groups", "pp:method": "DELETE", "pp:path": "/groups/{group_id}/memberships/{membership_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

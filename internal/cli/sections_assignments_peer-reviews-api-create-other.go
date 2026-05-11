@@ -20,7 +20,7 @@ func newSectionsAssignmentsPeerReviewsApiCreateOtherCmd(flags *rootFlags) *cobra
 		Use:   "peer-reviews-api-create-other <section_id> <assignment_id> <submission_id>",
 		Aliases: []string{"create"},
 		Short: "Create a peer review for the assignment",
-		Example: "  canvas-pp-cli sections assignments peer-reviews-api-create-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections assignments peer-reviews-api-create-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.peer-reviews-api-create-other", "pp:method": "POST", "pp:path": "/sections/{section_id}/assignments/{assignment_id}/submissions/{submission_id}/peer_reviews"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

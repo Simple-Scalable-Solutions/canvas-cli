@@ -20,7 +20,7 @@ func newCoursesAssignmentsSubmissionsApiMultipleGradeableStudentsCmd(flags *root
 	cmd := &cobra.Command{
 		Use:   "submissions-api-multiple-gradeable-students <course_id>",
 		Short: "A paginated list of students eligible to submit a list of assignments. The caller must have permission to view...",
-		Example: "  canvas-pp-cli courses assignments submissions-api-multiple-gradeable-students 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments submissions-api-multiple-gradeable-students 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-multiple-gradeable-students", "pp:method": "GET", "pp:path": "/courses/{course_id}/assignments/gradeable_students", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

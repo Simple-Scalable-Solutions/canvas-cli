@@ -21,7 +21,7 @@ func newCoursesGroupCategoriesBulkManageDifferentiationTagCmd(flags *rootFlags) 
 		Use:   "bulk-manage-differentiation-tag <course_id>",
 		Aliases: []string{"create"},
 		Short: "This API is only meant for Groups and GroupCategories where non_collaborative is true. Perform bulk operations on...",
-		Example: "  canvas-pp-cli courses group-categories bulk-manage-differentiation-tag 550e8400-e29b-41d4-a716-446655440000 --group-category example-value",
+		Example: "  canvas-cli courses group-categories bulk-manage-differentiation-tag 550e8400-e29b-41d4-a716-446655440000 --group-category example-value",
 		Annotations: map[string]string{"pp:endpoint": "group-categories.bulk-manage-differentiation-tag", "pp:method": "POST", "pp:path": "/courses/{course_id}/group_categories/bulk_manage_differentiation_tag"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -38,7 +38,7 @@ func newCoursesExternalToolsTimingMetaCreateForCoursesCmd(flags *rootFlags) *cob
 		Use:   "timing-meta-create-for-courses <course_id>",
 		Aliases: []string{"create"},
 		Short: "Create an external tool in the specified course/account. The created tool will be returned, see the 'show' endpoint...",
-		Example: "  canvas-pp-cli courses external-tools timing-meta-create-for-courses 550e8400-e29b-41d4-a716-446655440000 --client-id 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses external-tools timing-meta-create-for-courses 550e8400-e29b-41d4-a716-446655440000 --client-id 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-create-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/external_tools"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

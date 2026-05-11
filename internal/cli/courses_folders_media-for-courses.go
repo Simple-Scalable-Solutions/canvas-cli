@@ -16,7 +16,7 @@ func newCoursesFoldersMediaForCoursesCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "media-for-courses <course_id>",
 		Short: "Returns the details for a designated upload folder that the user has rights to upload to, and creates it if it...",
-		Example: "  canvas-pp-cli courses folders media-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses folders media-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "folders.media-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/folders/media", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

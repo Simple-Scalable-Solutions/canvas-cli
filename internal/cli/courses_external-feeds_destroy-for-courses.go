@@ -17,7 +17,7 @@ func newCoursesExternalFeedsDestroyForCoursesCmd(flags *rootFlags) *cobra.Comman
 		Use:   "destroy-for-courses <course_id> <external_feed_id>",
 		Aliases: []string{"delete"},
 		Short: "Deletes the external feed.",
-		Example: "  canvas-pp-cli courses external-feeds destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses external-feeds destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-feeds.destroy-for-courses", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/external_feeds/{external_feed_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

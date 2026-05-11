@@ -19,7 +19,7 @@ func newCoursesAssignOutcomeOrderOutcomeResultsOutcomeOrderCmd(flags *rootFlags)
 		Use:   "outcome-results-outcome-order <course_id>",
 		Aliases: []string{"create"},
 		Short: "Saves the ordering of outcomes in LMGB for a user",
-		Example: "  canvas-pp-cli courses assign-outcome-order outcome-results-outcome-order 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assign-outcome-order outcome-results-outcome-order 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assign-outcome-order.outcome-results-outcome-order", "pp:method": "POST", "pp:path": "/courses/{course_id}/assign_outcome_order"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

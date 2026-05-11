@@ -20,7 +20,7 @@ func newUsersHistoryIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index <user_id>",
 		Aliases: []string{"get"},
 		Short: "Return a paginated list of the user's recent history. History entries are returned in descending order, newest to...",
-		Example: "  canvas-pp-cli users history index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users history index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "history.index", "pp:method": "GET", "pp:path": "/users/{user_id}/history", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

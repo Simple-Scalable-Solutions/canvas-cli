@@ -23,7 +23,7 @@ func newAccountsSubAccountsAccountsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "List accounts that are sub-accounts of the given account.",
-		Example: "  canvas-pp-cli accounts sub-accounts accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts sub-accounts accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sub-accounts.accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/sub_accounts", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -22,7 +22,7 @@ func newCoursesOutcomeGroupsApiCreateForCoursesCmd(flags *rootFlags) *cobra.Comm
 		Use:   "api-create-for-courses <course_id> <id>",
 		Aliases: []string{"create"},
 		Short: "Creates a new empty subgroup under the outcome group with the given title and description.",
-		Example: "  canvas-pp-cli courses outcome-groups api-create-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --title example-resource",
+		Example: "  canvas-cli courses outcome-groups api-create-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 --title example-resource",
 		Annotations: map[string]string{"pp:endpoint": "outcome-groups.api-create-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/outcome_groups/{id}/subgroups"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

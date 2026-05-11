@@ -18,7 +18,7 @@ func newSectionsAssignmentsSubmissionsApiCreateFileOtherCmd(flags *rootFlags) *c
 	cmd := &cobra.Command{
 		Use:   "submissions-api-create-file-other <section_id> <assignment_id> <user_id>",
 		Short: "Upload a file to a submission. This API endpoint is the first step in uploading a file to a submission as a student....",
-		Example: "  canvas-pp-cli sections assignments submissions-api-create-file-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections assignments submissions-api-create-file-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.submissions-api-create-file-other", "pp:method": "POST", "pp:path": "/sections/{section_id}/assignments/{assignment_id}/submissions/{user_id}/files"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

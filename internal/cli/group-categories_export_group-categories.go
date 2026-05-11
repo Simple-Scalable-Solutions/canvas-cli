@@ -17,7 +17,7 @@ func newGroupCategoriesExportGroupCategoriesCmd(flags *rootFlags) *cobra.Command
 		Use:   "group-categories <group_category_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a csv file of users in format ready to import.",
-		Example: "  canvas-pp-cli group-categories export group-categories 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli group-categories export group-categories 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "export.group-categories", "pp:method": "GET", "pp:path": "/group_categories/{group_category_id}/export", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

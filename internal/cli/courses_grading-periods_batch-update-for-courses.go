@@ -25,7 +25,7 @@ func newCoursesGradingPeriodsBatchUpdateForCoursesCmd(flags *rootFlags) *cobra.C
 	cmd := &cobra.Command{
 		Use:   "batch-update-for-courses <course_id>",
 		Short: "Update multiple grading periods",
-		Example: "  canvas-pp-cli courses grading-periods batch-update-for-courses 550e8400-e29b-41d4-a716-446655440000 --grading-periods-close-date 2026-01-15",
+		Example: "  canvas-cli courses grading-periods batch-update-for-courses 550e8400-e29b-41d4-a716-446655440000 --grading-periods-close-date 2026-01-15",
 		Annotations: map[string]string{"pp:endpoint": "grading-periods.batch-update-for-courses", "pp:method": "PATCH", "pp:path": "/courses/{course_id}/grading_periods/batch_update"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

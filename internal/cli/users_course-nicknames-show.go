@@ -17,7 +17,7 @@ func newUsersCourseNicknamesShowCmd(flags *rootFlags) *cobra.Command {
 		Use:   "course-nicknames-show <course_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the nickname for a specific course.",
-		Example: "  canvas-pp-cli users course-nicknames-show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users course-nicknames-show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.course-nicknames-show", "pp:method": "GET", "pp:path": "/users/self/course_nicknames/{course_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

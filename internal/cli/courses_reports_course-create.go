@@ -21,7 +21,7 @@ func newCoursesReportsCourseCreateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "course-create <course_id> <report_type>",
 		Aliases: []string{"create"},
 		Short: "Generates a report instance for the account. Note that 'report' in the request must match one of the available...",
-		Example: "  canvas-pp-cli courses reports course-create 550e8400-e29b-41d4-a716-446655440000 example-value",
+		Example: "  canvas-cli courses reports course-create 550e8400-e29b-41d4-a716-446655440000 example-value",
 		Annotations: map[string]string{"pp:endpoint": "reports.course-create", "pp:method": "POST", "pp:path": "/courses/{course_id}/reports/{report_type}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

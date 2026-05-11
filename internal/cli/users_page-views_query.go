@@ -22,7 +22,7 @@ func newUsersPageViewsQueryCmd(flags *rootFlags) *cobra.Command {
 		Use:   "query <user_id>",
 		Aliases: []string{"create"},
 		Short: "Initiates an asynchronous query for user page views data within a specified date range. This method enqueues a...",
-		Example: "  canvas-pp-cli users page-views query 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users page-views query 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "page-views.query", "pp:method": "POST", "pp:path": "/users/{user_id}/page_views/query", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -22,7 +22,7 @@ func newAccountsBlackoutDatesCreateForAccountsCmd(flags *rootFlags) *cobra.Comma
 		Use:   "create-for-accounts <account_id>",
 		Aliases: []string{"create"},
 		Short: "Create a blackout date for the given context.",
-		Example: "  canvas-pp-cli accounts blackout-dates create-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts blackout-dates create-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "blackout-dates.create-for-accounts", "pp:method": "POST", "pp:path": "/accounts/{account_id}/blackout_dates"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

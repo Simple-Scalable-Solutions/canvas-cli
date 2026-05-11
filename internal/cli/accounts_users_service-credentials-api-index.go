@@ -26,7 +26,7 @@ func newAccountsUsersServiceCredentialsApiIndexCmd(flags *rootFlags) *cobra.Comm
 		Use:   "service-credentials-api-index <account_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of users associated with this account. @example_request curl...",
-		Example: "  canvas-pp-cli accounts users service-credentials-api-index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts users service-credentials-api-index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-api-index", "pp:method": "GET", "pp:path": "/accounts/{account_id}/users", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

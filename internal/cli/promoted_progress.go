@@ -17,7 +17,7 @@ func newProgressPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "progress <id>",
 		Short: "Return completion and status information about an asynchronous job",
 		Long:  "Shortcut for 'progress show'. Return completion and status information about an asynchronous job",
-		Example: "  canvas-pp-cli progress 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli progress 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "progress.show", "pp:method": "GET", "pp:path": "/progress/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

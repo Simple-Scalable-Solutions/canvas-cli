@@ -22,7 +22,7 @@ func newGroupsUsersGroupsCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "groups <group_id>",
 		Short: "Returns a paginated list of users in the group.",
-		Example: "  canvas-pp-cli groups users groups 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups users groups 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.groups", "pp:method": "GET", "pp:path": "/groups/{group_id}/users", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

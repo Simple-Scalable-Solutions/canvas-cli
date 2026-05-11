@@ -16,7 +16,7 @@ func newAccountsExternalToolsTimingMetaUnmarkRceFavoriteCmd(flags *rootFlags) *c
 	cmd := &cobra.Command{
 		Use:   "timing-meta-unmark-rce-favorite <account_id> <id>",
 		Short: "Unmark the specified external tool as a favorite in the RCE editor for the given account. The tool will remain...",
-		Example: "  canvas-pp-cli accounts external-tools timing-meta-unmark-rce-favorite 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts external-tools timing-meta-unmark-rce-favorite 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-unmark-rce-favorite", "pp:method": "DELETE", "pp:path": "/accounts/{account_id}/external_tools/rce_favorites/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

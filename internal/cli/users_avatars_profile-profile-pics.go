@@ -17,7 +17,7 @@ func newUsersAvatarsProfileProfilePicsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "profile-profile-pics <user_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of the possible user avatar options that can be set with the user update endpoint. The response...",
-		Example: "  canvas-pp-cli users avatars profile-profile-pics 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users avatars profile-profile-pics 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "avatars.profile-profile-pics", "pp:method": "GET", "pp:path": "/users/{user_id}/avatars", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

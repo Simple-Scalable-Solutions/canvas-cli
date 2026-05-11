@@ -9,7 +9,7 @@ import (
 	"os"
 	"sort"
 
-	"canvas-pp-cli/internal/store"
+	"canvas-cli/internal/store"
 	"github.com/spf13/cobra"
 )
 
@@ -26,21 +26,21 @@ func newAnalyticsCmd(flags *rootFlags) *cobra.Command {
 		Long: `Analyze locally synced data with count, group-by, and summary operations.
 Data must be synced first with the sync command.`,
 		Example: `  # Count records by type
-  canvas-pp-cli analytics --type messages
+  canvas-cli analytics --type messages
 
   # Group by a field
-  canvas-pp-cli analytics --type messages --group-by author_id
+  canvas-cli analytics --type messages --group-by author_id
 
   # Top 10 most frequent values
-  canvas-pp-cli analytics --type messages --group-by channel_id --limit 10 --json`,
+  canvas-cli analytics --type messages --group-by channel_id --limit 10 --json`,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if dbPath == "" {
-				dbPath = defaultDBPath("canvas-pp-cli")
+				dbPath = defaultDBPath("canvas-cli")
 			}
 
 			db, err := store.OpenWithContext(cmd.Context(), dbPath)
 			if err != nil {
-				return fmt.Errorf("opening local database: %w\nRun 'canvas-pp-cli sync' first.", err)
+				return fmt.Errorf("opening local database: %w\nRun 'canvas-cli sync' first.", err)
 			}
 			defer db.Close()
 

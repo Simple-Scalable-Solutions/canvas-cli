@@ -19,7 +19,7 @@ func newUsersDashboardPositionsServiceCredentialsSetCmd(flags *rootFlags) *cobra
 		Use:   "service-credentials-set <id>",
 		Aliases: []string{"update"},
 		Short: "Updates the dashboard positions for a user for a given context. This allows positions for the dashboard cards and...",
-		Example: "  canvas-pp-cli users dashboard-positions service-credentials-set 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users dashboard-positions service-credentials-set 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "dashboard-positions.service-credentials-set", "pp:method": "PUT", "pp:path": "/users/{id}/dashboard_positions"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

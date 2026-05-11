@@ -22,7 +22,7 @@ func newCoursesCourseCopyContentImportsCopyCourseContentCmd(flags *rootFlags) *c
 		Use:   "content-imports-copy-course-content <course_id>",
 		Aliases: []string{"create"},
 		Short: "DEPRECATED: Please use the {api:ContentMigrationsController#create Content Migrations API} Copies content from one...",
-		Example: "  canvas-pp-cli courses course-copy content-imports-copy-course-content 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses course-copy content-imports-copy-course-content 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "course-copy.content-imports-copy-course-content", "pp:method": "POST", "pp:path": "/courses/{course_id}/course_copy"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

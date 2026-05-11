@@ -19,7 +19,7 @@ func newSectionsSubmissionsApiClearUnreadOtherCmd(flags *rootFlags) *cobra.Comma
 		Use:   "api-clear-unread-other <section_id> <user_id>",
 		Aliases: []string{"update"},
 		Short: "Site-admin-only endpoint. No request fields are necessary. On success, the response will be 204 No Content with an...",
-		Example: "  canvas-pp-cli sections submissions api-clear-unread-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections submissions api-clear-unread-other 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "submissions.api-clear-unread-other", "pp:method": "PUT", "pp:path": "/sections/{section_id}/submissions/{user_id}/clear_unread"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

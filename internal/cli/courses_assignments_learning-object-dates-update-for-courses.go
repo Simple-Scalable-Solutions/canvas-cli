@@ -24,7 +24,7 @@ func newCoursesAssignmentsLearningObjectDatesUpdateForCoursesCmd(flags *rootFlag
 	cmd := &cobra.Command{
 		Use:   "learning-object-dates-update-for-courses <assignment_id> <course_id>",
 		Short: "Updates date-related information for learning objects, including due date, availability dates, override status, and...",
-		Example: "  canvas-pp-cli courses assignments learning-object-dates-update-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments learning-object-dates-update-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.learning-object-dates-update-for-courses", "pp:method": "PUT", "pp:path": "/courses/{course_id}/assignments/{assignment_id}/date_details"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

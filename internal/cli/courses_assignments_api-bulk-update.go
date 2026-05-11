@@ -19,7 +19,7 @@ func newCoursesAssignmentsApiBulkUpdateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-bulk-update <course_id>",
 		Aliases: []string{"update"},
 		Short: "Update due dates and availability dates for multiple assignments in a course. Accepts a JSON array of objects...",
-		Example: "  canvas-pp-cli courses assignments api-bulk-update 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses assignments api-bulk-update 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "assignments.api-bulk-update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/assignments/bulk_update"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

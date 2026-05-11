@@ -17,7 +17,7 @@ func newAccountsTermsOfServiceAccountsCmd(flags *rootFlags) *cobra.Command {
 		Use:   "accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the terms of service for that account",
-		Example: "  canvas-pp-cli accounts terms-of-service accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts terms-of-service accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "terms-of-service.accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/terms_of_service", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

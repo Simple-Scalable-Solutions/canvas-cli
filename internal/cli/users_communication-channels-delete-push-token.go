@@ -17,7 +17,7 @@ func newUsersCommunicationChannelsDeletePushTokenCmd(flags *rootFlags) *cobra.Co
 		Use:   "communication-channels-delete-push-token",
 		Aliases: []string{"delete"},
 		Short: "Delete a push notification endpoint",
-		Example: "  canvas-pp-cli users communication-channels-delete-push-token",
+		Example: "  canvas-cli users communication-channels-delete-push-token",
 		Annotations: map[string]string{"pp:endpoint": "users.communication-channels-delete-push-token", "pp:method": "DELETE", "pp:path": "/users/self/communication_channels/push"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

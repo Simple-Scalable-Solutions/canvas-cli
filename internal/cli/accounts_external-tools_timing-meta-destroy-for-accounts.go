@@ -17,7 +17,7 @@ func newAccountsExternalToolsTimingMetaDestroyForAccountsCmd(flags *rootFlags) *
 		Use:   "timing-meta-destroy-for-accounts <account_id> <external_tool_id>",
 		Aliases: []string{"delete"},
 		Short: "Remove the specified external tool",
-		Example: "  canvas-pp-cli accounts external-tools timing-meta-destroy-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts external-tools timing-meta-destroy-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-destroy-for-accounts", "pp:method": "DELETE", "pp:path": "/accounts/{account_id}/external_tools/{external_tool_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newUsersCoursesAssignmentsApiUserIndexCmd(flags *rootFlags) *cobra.Command 
 		Use:   "assignments-api-user-index <course_id> <user_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of assignments for the specified user if the current user has rights to view. See...",
-		Example: "  canvas-pp-cli users courses assignments-api-user-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users courses assignments-api-user-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "courses.assignments-api-user-index", "pp:method": "GET", "pp:path": "/users/{user_id}/courses/{course_id}/assignments", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

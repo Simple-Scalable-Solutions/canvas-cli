@@ -22,7 +22,7 @@ func newCoursesSectionsIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index <course_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of the list of sections for this course.",
-		Example: "  canvas-pp-cli courses sections index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses sections index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sections.index", "pp:method": "GET", "pp:path": "/courses/{course_id}/sections", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

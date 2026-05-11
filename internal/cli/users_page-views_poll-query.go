@@ -16,7 +16,7 @@ func newUsersPageViewsPollQueryCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "poll-query <query_id> <user_id>",
 		Short: "Checks the status of a previously initiated page views query. Returns the current processing status and provides a...",
-		Example: "  canvas-pp-cli users page-views poll-query 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users page-views poll-query 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "page-views.poll-query", "pp:method": "GET", "pp:path": "/users/{user_id}/page_views/query/{query_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

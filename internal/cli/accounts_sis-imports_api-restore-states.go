@@ -21,7 +21,7 @@ func newAccountsSisImportsApiRestoreStatesCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "api-restore-states <account_id> <id>",
 		Short: "This will restore the the workflow_state for all the items that changed their workflow_state during the import being...",
-		Example: "  canvas-pp-cli accounts sis-imports api-restore-states 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts sis-imports api-restore-states 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "sis-imports.api-restore-states", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/sis_imports/{id}/restore_states"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -19,7 +19,7 @@ func newFilesResetVerifierMetadataSaxDocCmd(flags *rootFlags) *cobra.Command {
 		Use:   "metadata-sax-doc <id>",
 		Aliases: []string{"create"},
 		Short: "Resets the link verifier. Any existing links to the file using the previous hard-coded 'verifier' parameter will no...",
-		Example: "  canvas-pp-cli files reset-verifier metadata-sax-doc 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli files reset-verifier metadata-sax-doc 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "reset-verifier.metadata-sax-doc", "pp:method": "POST", "pp:path": "/files/{id}/reset_verifier"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

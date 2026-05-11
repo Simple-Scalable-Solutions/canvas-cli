@@ -16,7 +16,7 @@ func newUsersObserversUserObserveesShowCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "user-observees-show <observer_id> <user_id>",
 		Short: "Gets information about an observer. *Note:* all users are allowed to view their own observers.",
-		Example: "  canvas-pp-cli users observers user-observees-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users observers user-observees-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "observers.user-observees-show", "pp:method": "GET", "pp:path": "/users/{user_id}/observers/{observer_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

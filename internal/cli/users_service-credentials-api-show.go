@@ -17,7 +17,7 @@ func newUsersServiceCredentialsApiShowCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "service-credentials-api-show <id>",
 		Short: "Shows details for user. Also includes an attribute 'permissions', a non-comprehensive list of permissions for the...",
-		Example: "  canvas-pp-cli users service-credentials-api-show 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users service-credentials-api-show 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.service-credentials-api-show", "pp:method": "GET", "pp:path": "/users/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

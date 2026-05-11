@@ -16,7 +16,7 @@ func newCoursesAiExperiencesDestroyCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "destroy <course_id> <id>",
 		Short: "Delete an AI experience (soft delete - marks as deleted)",
-		Example: "  canvas-pp-cli courses ai-experiences destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses ai-experiences destroy 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "ai-experiences.destroy", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/ai_experiences/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

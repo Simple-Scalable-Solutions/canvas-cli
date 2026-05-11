@@ -20,7 +20,7 @@ func newCalendarEventsApiCreateCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-create",
 		Aliases: []string{"create"},
 		Short: "Create and return a new calendar event",
-		Example: "  canvas-pp-cli calendar-events api-create",
+		Example: "  canvas-cli calendar-events api-create",
 		Annotations: map[string]string{"pp:endpoint": "calendar-events.api-create", "pp:method": "POST", "pp:path": "/calendar_events"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

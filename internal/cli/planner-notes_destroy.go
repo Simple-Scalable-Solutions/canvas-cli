@@ -17,7 +17,7 @@ func newPlannerNotesDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "destroy <id>",
 		Aliases: []string{"delete"},
 		Short: "Delete a planner note for the current user",
-		Example: "  canvas-pp-cli planner-notes destroy 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli planner-notes destroy 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "planner-notes.destroy", "pp:method": "DELETE", "pp:path": "/planner_notes/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

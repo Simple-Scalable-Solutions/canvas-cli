@@ -18,7 +18,7 @@ func newUsersTabsIndexForUsersCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index-for-users <user_id>",
 		Aliases: []string{"get"},
 		Short: "Returns a paginated list of navigation tabs available in the current context.",
-		Example: "  canvas-pp-cli users tabs index-for-users 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users tabs index-for-users 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "tabs.index-for-users", "pp:method": "GET", "pp:path": "/users/{user_id}/tabs", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

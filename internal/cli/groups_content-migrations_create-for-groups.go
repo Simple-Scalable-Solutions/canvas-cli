@@ -25,7 +25,7 @@ func newGroupsContentMigrationsCreateForGroupsCmd(flags *rootFlags) *cobra.Comma
 		Use:   "create-for-groups <group_id>",
 		Aliases: []string{"create"},
 		Short: "Create a content migration. If the migration requires a file to be uploaded the actual processing of the file will...",
-		Example: "  canvas-pp-cli groups content-migrations create-for-groups 550e8400-e29b-41d4-a716-446655440000 --migration-type example-value",
+		Example: "  canvas-cli groups content-migrations create-for-groups 550e8400-e29b-41d4-a716-446655440000 --migration-type example-value",
 		Annotations: map[string]string{"pp:endpoint": "content-migrations.create-for-groups", "pp:method": "POST", "pp:path": "/groups/{group_id}/content_migrations"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

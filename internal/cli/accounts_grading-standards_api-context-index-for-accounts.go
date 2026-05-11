@@ -17,7 +17,7 @@ func newAccountsGradingStandardsApiContextIndexForAccountsCmd(flags *rootFlags) 
 		Use:   "api-context-index-for-accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of grading standards for the given context that are visible to the user.",
-		Example: "  canvas-pp-cli accounts grading-standards api-context-index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts grading-standards api-context-index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "grading-standards.api-context-index-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/grading_standards", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

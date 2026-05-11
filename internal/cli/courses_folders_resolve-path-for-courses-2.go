@@ -16,7 +16,7 @@ func newCoursesFoldersResolvePathForCourses2Cmd(flags *rootFlags) *cobra.Command
 	cmd := &cobra.Command{
 		Use:   "resolve-path-for-courses-2 <course_id>",
 		Short: "Given the full path to a folder, returns a list of all Folders in the path hierarchy, starting at the root folder,...",
-		Example: "  canvas-pp-cli courses folders resolve-path-for-courses-2 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses folders resolve-path-for-courses-2 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "folders.resolve-path-for-courses-2", "pp:method": "GET", "pp:path": "/courses/{course_id}/folders/by_path", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

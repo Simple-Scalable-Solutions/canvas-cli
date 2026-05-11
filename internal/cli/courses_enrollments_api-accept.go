@@ -19,7 +19,7 @@ func newCoursesEnrollmentsApiAcceptCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-accept <course_id> <id>",
 		Aliases: []string{"create"},
 		Short: "accepts a pending course invitation for the current user",
-		Example: "  canvas-pp-cli courses enrollments api-accept 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses enrollments api-accept 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "enrollments.api-accept", "pp:method": "POST", "pp:path": "/courses/{course_id}/enrollments/{id}/accept"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

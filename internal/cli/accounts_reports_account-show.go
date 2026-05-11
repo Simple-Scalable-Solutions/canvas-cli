@@ -16,7 +16,7 @@ func newAccountsReportsAccountShowCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "account-show <account_id> <id> <report>",
 		Short: "Returns the status of a report.",
-		Example: "  canvas-pp-cli accounts reports account-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 example-value",
+		Example: "  canvas-cli accounts reports account-show 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 example-value",
 		Annotations: map[string]string{"pp:endpoint": "reports.account-show", "pp:method": "GET", "pp:path": "/accounts/{account_id}/reports/{report}/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

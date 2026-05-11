@@ -17,7 +17,7 @@ func newPlannerOverridesDestroyCmd(flags *rootFlags) *cobra.Command {
 		Use:   "overrides-destroy <id>",
 		Aliases: []string{"delete"},
 		Short: "Delete a planner override for the current user",
-		Example: "  canvas-pp-cli planner overrides-destroy 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli planner overrides-destroy 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "planner.overrides-destroy", "pp:method": "DELETE", "pp:path": "/planner/overrides/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

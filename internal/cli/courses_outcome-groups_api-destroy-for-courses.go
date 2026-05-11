@@ -17,7 +17,7 @@ func newCoursesOutcomeGroupsApiDestroyForCoursesCmd(flags *rootFlags) *cobra.Com
 		Use:   "api-destroy-for-courses <course_id> <id>",
 		Aliases: []string{"delete"},
 		Short: "Deleting an outcome group deletes descendant outcome groups and outcome links. The linked outcomes themselves are...",
-		Example: "  canvas-pp-cli courses outcome-groups api-destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses outcome-groups api-destroy-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "outcome-groups.api-destroy-for-courses", "pp:method": "DELETE", "pp:path": "/courses/{course_id}/outcome_groups/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -17,7 +17,7 @@ func newAccountsBlackoutDatesIndexForAccountsCmd(flags *rootFlags) *cobra.Comman
 		Use:   "index-for-accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the list of blackout dates for the current context.",
-		Example: "  canvas-pp-cli accounts blackout-dates index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts blackout-dates index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "blackout-dates.index-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/blackout_dates", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

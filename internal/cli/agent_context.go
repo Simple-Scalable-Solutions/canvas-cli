@@ -123,7 +123,7 @@ func buildAgentContext(rootCmd *cobra.Command) agentContext {
 	return agentContext{
 		SchemaVersion: agentContextSchemaVersion,
 		CLI: agentContextCLI{
-			Name:        "canvas-pp-cli",
+			Name:        "canvas-cli",
 			Description: "Canvas LMS REST API - Generated from YARD documentation",
 			Version:     rootCmd.Version,
 		},

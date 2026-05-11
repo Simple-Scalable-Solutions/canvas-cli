@@ -19,7 +19,7 @@ func newAccountsExternalToolsTimingMetaAddTopNavFavoriteCmd(flags *rootFlags) *c
 		Use:   "timing-meta-add-top-nav-favorite <account_id> <id>",
 		Aliases: []string{"create"},
 		Short: "Adds a dedicated button in Top Navigation for the specified tool for the given account. Cannot set more than 2...",
-		Example: "  canvas-pp-cli accounts external-tools timing-meta-add-top-nav-favorite 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts external-tools timing-meta-add-top-nav-favorite 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-add-top-nav-favorite", "pp:method": "POST", "pp:path": "/accounts/{account_id}/external_tools/top_nav_favorites/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

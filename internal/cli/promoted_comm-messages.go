@@ -23,7 +23,7 @@ func newCommMessagesPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "comm-messages",
 		Short: "Retrieve a paginated list of messages sent to a user.",
 		Long:  "Shortcut for 'comm-messages api-index'. Retrieve a paginated list of messages sent to a user.",
-		Example: "  canvas-pp-cli comm-messages --user-id 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli comm-messages --user-id 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "comm-messages.api-index", "pp:method": "GET", "pp:path": "/comm_messages", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !cmd.Flags().Changed("user-id") && !flags.dryRun {

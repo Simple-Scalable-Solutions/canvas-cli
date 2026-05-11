@@ -20,7 +20,7 @@ func newQuestionBanksQuestionsAssessmentBanksCmd(flags *rootFlags) *cobra.Comman
 		Use:   "assessment-banks <id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of assessment questions in this bank.",
-		Example: "  canvas-pp-cli question-banks questions assessment-banks 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli question-banks questions assessment-banks 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "questions.assessment-banks", "pp:method": "GET", "pp:path": "/question_banks/{id}/questions", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

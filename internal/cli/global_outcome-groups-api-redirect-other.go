@@ -17,7 +17,7 @@ func newGlobalOutcomeGroupsApiRedirectOtherCmd(flags *rootFlags) *cobra.Command 
 		Use:   "outcome-groups-api-redirect-other",
 		Aliases: []string{"list"},
 		Short: "Convenience redirect to find the root outcome group for a particular context. Will redirect to the appropriate...",
-		Example: "  canvas-pp-cli global outcome-groups-api-redirect-other",
+		Example: "  canvas-cli global outcome-groups-api-redirect-other",
 		Annotations: map[string]string{"pp:endpoint": "global.outcome-groups-api-redirect-other", "pp:method": "GET", "pp:path": "/global/root_outcome_group", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

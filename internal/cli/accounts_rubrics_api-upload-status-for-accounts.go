@@ -16,7 +16,7 @@ func newAccountsRubricsApiUploadStatusForAccountsCmd(flags *rootFlags) *cobra.Co
 	cmd := &cobra.Command{
 		Use:   "api-upload-status-for-accounts <account_id> <id>",
 		Short: "Can return the latest rubric import for an account or course, or a specific import by id",
-		Example: "  canvas-pp-cli accounts rubrics api-upload-status-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts rubrics api-upload-status-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "rubrics.api-upload-status-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/rubrics/upload/{id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

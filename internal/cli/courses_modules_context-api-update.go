@@ -19,7 +19,7 @@ func newCoursesModulesContextApiUpdateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "context-api-update <course_id> <id>",
 		Short: "Update and return an existing module",
-		Example: "  canvas-pp-cli courses modules context-api-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses modules context-api-update 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "modules.context-api-update", "pp:method": "PUT", "pp:path": "/courses/{course_id}/modules/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

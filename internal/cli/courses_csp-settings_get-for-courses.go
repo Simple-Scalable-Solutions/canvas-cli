@@ -17,7 +17,7 @@ func newCoursesCspSettingsGetForCoursesCmd(flags *rootFlags) *cobra.Command {
 		Use:   "get-for-courses <course_id>",
 		Aliases: []string{"get"},
 		Short: "Get current settings for account or course",
-		Example: "  canvas-pp-cli courses csp-settings get-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses csp-settings get-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "csp-settings.get-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/csp_settings", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -17,7 +17,7 @@ func newFeaturesPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "features",
 		Short: "Return a hash of global feature options that pertain to the Canvas user interface. This is the same information...",
 		Long:  "Shortcut for 'features flags-environment'. Return a hash of global feature options that pertain to the Canvas user interface. This is the same information...",
-		Example: "  canvas-pp-cli features",
+		Example: "  canvas-cli features",
 		Annotations: map[string]string{"pp:endpoint": "features.flags-environment", "pp:method": "GET", "pp:path": "/features/environment", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

@@ -33,7 +33,7 @@ func newSectionsStudentsSubmissionsApiForOtherCmd(flags *rootFlags) *cobra.Comma
 		Use:   "submissions-api-for-other <section_id>",
 		Aliases: []string{"get"},
 		Short: "A paginated list of all existing submissions for a given set of students and assignments.",
-		Example: "  canvas-pp-cli sections students submissions-api-for-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli sections students submissions-api-for-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "students.submissions-api-for-other", "pp:method": "GET", "pp:path": "/sections/{section_id}/students/submissions", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

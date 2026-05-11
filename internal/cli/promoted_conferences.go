@@ -21,7 +21,7 @@ func newConferencesPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "conferences",
 		Short: "Retrieve the paginated list of conferences for all courses and groups the current user belongs to This API returns a...",
 		Long:  "Shortcut for 'conferences for-user'. Retrieve the paginated list of conferences for all courses and groups the current user belongs to This API returns a...",
-		Example: "  canvas-pp-cli conferences",
+		Example: "  canvas-cli conferences",
 		Annotations: map[string]string{"pp:endpoint": "conferences.for-user", "pp:method": "GET", "pp:path": "/conferences", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

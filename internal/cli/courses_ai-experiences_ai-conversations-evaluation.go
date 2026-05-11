@@ -16,7 +16,7 @@ func newCoursesAiExperiencesAiConversationsEvaluationCmd(flags *rootFlags) *cobr
 	cmd := &cobra.Command{
 		Use:   "ai-conversations-evaluation <ai_experience_id> <course_id> <id>",
 		Short: "Fetch evaluation data for a conversation from the llm-conversation service",
-		Example: "  canvas-pp-cli courses ai-experiences ai-conversations-evaluation 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses ai-experiences ai-conversations-evaluation 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "ai-experiences.ai-conversations-evaluation", "pp:method": "GET", "pp:path": "/courses/{course_id}/ai_experiences/{ai_experience_id}/conversations/{id}/evaluation", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

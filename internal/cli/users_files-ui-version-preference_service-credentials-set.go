@@ -20,7 +20,7 @@ func newUsersFilesUiVersionPreferenceServiceCredentialsSetCmd(flags *rootFlags) 
 		Use:   "service-credentials-set <id>",
 		Aliases: []string{"update"},
 		Short: "Updates a user's default choice for files UI version. This allows the files UI to preload the user's preference.",
-		Example: "  canvas-pp-cli users files-ui-version-preference service-credentials-set 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users files-ui-version-preference service-credentials-set 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "files-ui-version-preference.service-credentials-set", "pp:method": "PUT", "pp:path": "/users/{id}/files_ui_version_preference"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

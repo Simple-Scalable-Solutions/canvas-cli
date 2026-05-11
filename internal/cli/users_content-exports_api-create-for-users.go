@@ -22,7 +22,7 @@ func newUsersContentExportsApiCreateForUsersCmd(flags *rootFlags) *cobra.Command
 		Use:   "api-create-for-users <user_id>",
 		Aliases: []string{"create"},
 		Short: "Begin a content export job for a course, group, or user. You can use the {api:ProgressController#show Progress API}...",
-		Example: "  canvas-pp-cli users content-exports api-create-for-users 550e8400-e29b-41d4-a716-446655440000 --export-type example-value",
+		Example: "  canvas-cli users content-exports api-create-for-users 550e8400-e29b-41d4-a716-446655440000 --export-type example-value",
 		Annotations: map[string]string{"pp:endpoint": "content-exports.api-create-for-users", "pp:method": "POST", "pp:path": "/users/{user_id}/content_exports"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

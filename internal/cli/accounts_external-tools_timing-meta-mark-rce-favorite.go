@@ -18,7 +18,7 @@ func newAccountsExternalToolsTimingMetaMarkRceFavoriteCmd(flags *rootFlags) *cob
 	cmd := &cobra.Command{
 		Use:   "timing-meta-mark-rce-favorite <account_id> <id>",
 		Short: "Mark the specified editor_button external tool as a favorite in the RCE editor for courses in the given account and...",
-		Example: "  canvas-pp-cli accounts external-tools timing-meta-mark-rce-favorite 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts external-tools timing-meta-mark-rce-favorite 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "external-tools.timing-meta-mark-rce-favorite", "pp:method": "POST", "pp:path": "/accounts/{account_id}/external_tools/rce_favorites/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

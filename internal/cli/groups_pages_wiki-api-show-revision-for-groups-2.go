@@ -17,7 +17,7 @@ func newGroupsPagesWikiApiShowRevisionForGroups2Cmd(flags *rootFlags) *cobra.Com
 	cmd := &cobra.Command{
 		Use:   "wiki-api-show-revision-for-groups-2 <revision_id> <group_id> <url_or_id>",
 		Short: "Retrieve the metadata and optionally content of a revision of the page. Note that retrieving historic versions of...",
-		Example: "  canvas-pp-cli groups pages wiki-api-show-revision-for-groups-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups pages wiki-api-show-revision-for-groups-2 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "pages.wiki-api-show-revision-for-groups-2", "pp:method": "GET", "pp:path": "/groups/{group_id}/pages/{url_or_id}/revisions/{revision_id}", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

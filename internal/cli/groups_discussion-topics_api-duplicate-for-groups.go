@@ -18,7 +18,7 @@ func newGroupsDiscussionTopicsApiDuplicateForGroupsCmd(flags *rootFlags) *cobra.
 	cmd := &cobra.Command{
 		Use:   "api-duplicate-for-groups <group_id> <topic_id>",
 		Short: "Duplicate a discussion topic according to context (Course/Group)",
-		Example: "  canvas-pp-cli groups discussion-topics api-duplicate-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli groups discussion-topics api-duplicate-for-groups 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "discussion-topics.api-duplicate-for-groups", "pp:method": "POST", "pp:path": "/groups/{group_id}/discussion_topics/{topic_id}/duplicate"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

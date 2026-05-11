@@ -30,7 +30,7 @@ func newCoursesCoursePacingCoursePacesCreateCmd(flags *rootFlags) *cobra.Command
 		Use:   "course-paces-create <course_id>",
 		Aliases: []string{"create"},
 		Short: "Creates a new course pace with specified parameters.",
-		Example: "  canvas-pp-cli courses course-pacing course-paces-create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses course-pacing course-paces-create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "course-pacing.course-paces-create", "pp:method": "POST", "pp:path": "/courses/{course_id}/course_pacing"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

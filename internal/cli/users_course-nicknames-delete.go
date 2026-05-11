@@ -16,7 +16,7 @@ func newUsersCourseNicknamesDeleteCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "course-nicknames-delete <course_id>",
 		Short: "Remove the nickname for the given course. Subsequent course API calls will return the actual name for the course.",
-		Example: "  canvas-pp-cli users course-nicknames-delete 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users course-nicknames-delete 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.course-nicknames-delete", "pp:method": "DELETE", "pp:path": "/users/self/course_nicknames/{course_id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

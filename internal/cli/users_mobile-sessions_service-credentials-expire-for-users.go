@@ -18,7 +18,7 @@ func newUsersMobileSessionsServiceCredentialsExpireForUsersCmd(flags *rootFlags)
 		Use:   "service-credentials-expire-for-users <id>",
 		Aliases: []string{"delete"},
 		Short: "Permanently expires any active mobile sessions, forcing them to re-authorize. The route that takes a user id will...",
-		Example: "  canvas-pp-cli users mobile-sessions service-credentials-expire-for-users 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users mobile-sessions service-credentials-expire-for-users 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "mobile-sessions.service-credentials-expire-for-users", "pp:method": "DELETE", "pp:path": "/users/{id}/mobile_sessions"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

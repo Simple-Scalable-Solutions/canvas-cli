@@ -17,7 +17,7 @@ func newFilesIconMetadataMetadataSaxDocCmd(flags *rootFlags) *cobra.Command {
 		Use:   "metadata-sax-doc <id>",
 		Aliases: []string{"get"},
 		Short: "Returns the icon maker file attachment metadata",
-		Example: "  canvas-pp-cli files icon-metadata metadata-sax-doc 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli files icon-metadata metadata-sax-doc 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "icon-metadata.metadata-sax-doc", "pp:method": "GET", "pp:path": "/files/{id}/icon_metadata", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

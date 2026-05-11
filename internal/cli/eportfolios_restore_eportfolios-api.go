@@ -19,7 +19,7 @@ func newEportfoliosRestoreEportfoliosApiCmd(flags *rootFlags) *cobra.Command {
 		Use:   "eportfolios-api <eportfolio_id>",
 		Aliases: []string{"update"},
 		Short: "Restore an ePortfolio back to active that was previously deleted. Only available to admins who can...",
-		Example: "  canvas-pp-cli eportfolios restore eportfolios-api 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli eportfolios restore eportfolios-api 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "restore.eportfolios-api", "pp:method": "PUT", "pp:path": "/eportfolios/{eportfolio_id}/restore"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

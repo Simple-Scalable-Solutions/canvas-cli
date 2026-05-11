@@ -20,7 +20,7 @@ func newCoursesCustomGradebookColumnsDataApiIndexCmd(flags *rootFlags) *cobra.Co
 	cmd := &cobra.Command{
 		Use:   "data-api-index <course_id> <id>",
 		Short: "This does not list entries for students without associated data.",
-		Example: "  canvas-pp-cli courses custom-gradebook-columns data-api-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses custom-gradebook-columns data-api-index 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "custom-gradebook-columns.data-api-index", "pp:method": "GET", "pp:path": "/courses/{course_id}/custom_gradebook_columns/{id}/data", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

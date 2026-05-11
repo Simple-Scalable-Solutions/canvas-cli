@@ -22,7 +22,7 @@ func newCoursesBlackoutDatesCreateForCoursesCmd(flags *rootFlags) *cobra.Command
 		Use:   "create-for-courses <course_id>",
 		Aliases: []string{"create"},
 		Short: "Create a blackout date for the given context.",
-		Example: "  canvas-pp-cli courses blackout-dates create-for-courses 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses blackout-dates create-for-courses 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "blackout-dates.create-for-courses", "pp:method": "POST", "pp:path": "/courses/{course_id}/blackout_dates"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

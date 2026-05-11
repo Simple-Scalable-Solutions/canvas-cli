@@ -18,7 +18,7 @@ func newAccountsContentMigrationsUpdateForAccountsCmd(flags *rootFlags) *cobra.C
 	cmd := &cobra.Command{
 		Use:   "update-for-accounts <account_id> <id>",
 		Short: "Update a content migration. Takes same arguments as {api:ContentMigrationsController#create create} except that you...",
-		Example: "  canvas-pp-cli accounts content-migrations update-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts content-migrations update-for-accounts 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "content-migrations.update-for-accounts", "pp:method": "PUT", "pp:path": "/accounts/{account_id}/content_migrations/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -21,7 +21,7 @@ func newAccountsDeveloperKeysIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "index <account_id>",
 		Aliases: []string{"get"},
 		Short: "List all developer keys created in the current account.",
-		Example: "  canvas-pp-cli accounts developer-keys index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts developer-keys index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "developer-keys.index", "pp:method": "GET", "pp:path": "/accounts/{account_id}/developer_keys", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

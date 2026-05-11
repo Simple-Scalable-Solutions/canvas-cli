@@ -18,7 +18,7 @@ func newAccountsCspSettingsRemoveDomainCmd(flags *rootFlags) *cobra.Command {
 		Use:   "remove-domain <account_id>",
 		Aliases: []string{"delete"},
 		Short: "Removes an allowed domain from the current account.",
-		Example: "  canvas-pp-cli accounts csp-settings remove-domain 550e8400-e29b-41d4-a716-446655440000 --domain example-value",
+		Example: "  canvas-cli accounts csp-settings remove-domain 550e8400-e29b-41d4-a716-446655440000 --domain example-value",
 		Annotations: map[string]string{"pp:endpoint": "csp-settings.remove-domain", "pp:method": "DELETE", "pp:path": "/accounts/{account_id}/csp_settings/domains"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

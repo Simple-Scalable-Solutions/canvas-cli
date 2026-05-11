@@ -19,7 +19,7 @@ func newUsersFavoritesAddFavoriteCourseCmd(flags *rootFlags) *cobra.Command {
 		Use:   "favorites-add-favorite-course <id>",
 		Aliases: []string{"create"},
 		Short: "Add a course to the current user's favorites. If the course is already in the user's favorites, nothing happens....",
-		Example: "  canvas-pp-cli users favorites-add-favorite-course 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users favorites-add-favorite-course 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.favorites-add-favorite-course", "pp:method": "POST", "pp:path": "/users/self/favorites/courses/{id}"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

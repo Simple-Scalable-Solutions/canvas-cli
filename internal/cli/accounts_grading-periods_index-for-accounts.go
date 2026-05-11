@@ -17,7 +17,7 @@ func newAccountsGradingPeriodsIndexForAccountsCmd(flags *rootFlags) *cobra.Comma
 		Use:   "index-for-accounts <account_id>",
 		Aliases: []string{"get"},
 		Short: "Returns the paginated list of grading periods for the current course.",
-		Example: "  canvas-pp-cli accounts grading-periods index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli accounts grading-periods index-for-accounts 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "grading-periods.index-for-accounts", "pp:method": "GET", "pp:path": "/accounts/{account_id}/grading_periods", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

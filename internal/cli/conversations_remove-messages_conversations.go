@@ -20,7 +20,7 @@ func newConversationsRemoveMessagesConversationsCmd(flags *rootFlags) *cobra.Com
 		Use:   "conversations <id>",
 		Aliases: []string{"create"},
 		Short: "Delete messages from this conversation. Note that this only affects this user's view of the conversation. If all...",
-		Example: "  canvas-pp-cli conversations remove-messages conversations 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli conversations remove-messages conversations 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "remove-messages.conversations", "pp:method": "POST", "pp:path": "/conversations/{id}/remove_messages"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

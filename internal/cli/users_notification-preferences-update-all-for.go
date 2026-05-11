@@ -19,7 +19,7 @@ func newUsersNotificationPreferencesUpdateAllForCmd(flags *rootFlags) *cobra.Com
 	cmd := &cobra.Command{
 		Use:   "notification-preferences-update-all-for <communication_channel_id>",
 		Short: "Change the preferences for multiple notifications for a single communication channel at once",
-		Example: "  canvas-pp-cli users notification-preferences-update-all-for 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users notification-preferences-update-all-for 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "users.notification-preferences-update-all-for", "pp:method": "PUT", "pp:path": "/users/self/communication_channels/{communication_channel_id}/notification_preferences"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

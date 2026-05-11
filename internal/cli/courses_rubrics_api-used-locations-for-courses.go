@@ -19,7 +19,7 @@ func newCoursesRubricsApiUsedLocationsForCoursesCmd(flags *rootFlags) *cobra.Com
 	cmd := &cobra.Command{
 		Use:   "api-used-locations-for-courses <course_id> <id>",
 		Short: "Returns the courses and assignments where a rubric is being used",
-		Example: "  canvas-pp-cli courses rubrics api-used-locations-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli courses rubrics api-used-locations-for-courses 550e8400-e29b-41d4-a716-446655440000 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "rubrics.api-used-locations-for-courses", "pp:method": "GET", "pp:path": "/courses/{course_id}/rubrics/{id}/used_locations", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

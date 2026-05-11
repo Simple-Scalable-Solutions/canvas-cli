@@ -32,7 +32,7 @@ func newConversationsCreateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "create",
 		Short: "Create a new conversation with one or more recipients. If there is already an existing private conversation with the...",
-		Example: "  canvas-pp-cli conversations create --body example-value",
+		Example: "  canvas-cli conversations create --body example-value",
 		Annotations: map[string]string{"pp:endpoint": "conversations.create", "pp:method": "POST", "pp:path": "/conversations"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if !stdinBody {

@@ -20,7 +20,7 @@ func newEportfoliosModerateEportfoliosApiCmd(flags *rootFlags) *cobra.Command {
 		Use:   "eportfolios-api <eportfolio_id>",
 		Aliases: []string{"update"},
 		Short: "Update the spam_status of an eportfolio. Only available to admins who can moderate_user_content.",
-		Example: "  canvas-pp-cli eportfolios moderate eportfolios-api 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli eportfolios moderate eportfolios-api 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "moderate.eportfolios-api", "pp:method": "PUT", "pp:path": "/eportfolios/{eportfolio_id}/moderate"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -17,7 +17,7 @@ func newSettingsPromotedCmd(flags *rootFlags) *cobra.Command {
 		Use:   "settings",
 		Short: "Return a hash of global settings for the root account This is the same information supplied to the web interface as...",
 		Long:  "Shortcut for 'settings accounts-environment'. Return a hash of global settings for the root account This is the same information supplied to the web interface as...",
-		Example: "  canvas-pp-cli settings",
+		Example: "  canvas-cli settings",
 		Annotations: map[string]string{"pp:endpoint": "settings.accounts-environment", "pp:method": "GET", "pp:path": "/settings/environment", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			c, err := flags.newClient()

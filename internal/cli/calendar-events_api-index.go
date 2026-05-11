@@ -30,7 +30,7 @@ func newCalendarEventsApiIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-index",
 		Aliases: []string{"list"},
 		Short: "Retrieve the paginated list of calendar events or assignments for the current user",
-		Example: "  canvas-pp-cli calendar-events api-index",
+		Example: "  canvas-cli calendar-events api-index",
 		Annotations: map[string]string{"pp:endpoint": "calendar-events.api-index", "pp:method": "GET", "pp:path": "/calendar_events", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cmd.Flags().Changed("type") {

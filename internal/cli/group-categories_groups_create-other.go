@@ -25,7 +25,7 @@ func newGroupCategoriesGroupsCreateOtherCmd(flags *rootFlags) *cobra.Command {
 		Use:   "create-other <group_category_id>",
 		Aliases: []string{"create"},
 		Short: "Creates a new group. Groups created using the '/api/v1/groups/' endpoint will be community groups.",
-		Example: "  canvas-pp-cli group-categories groups create-other 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli group-categories groups create-other 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "groups.create-other", "pp:method": "POST", "pp:path": "/group_categories/{group_category_id}/groups"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -32,7 +32,7 @@ func newUsersCalendarEventsApiUserIndexCmd(flags *rootFlags) *cobra.Command {
 		Use:   "api-user-index <user_id>",
 		Aliases: []string{"get"},
 		Short: "Retrieve the paginated list of calendar events or assignments for the specified user. To view calendar events for a...",
-		Example: "  canvas-pp-cli users calendar-events api-user-index 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users calendar-events api-user-index 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "calendar-events.api-user-index", "pp:method": "GET", "pp:path": "/users/{user_id}/calendar_events", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

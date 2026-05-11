@@ -18,7 +18,7 @@ func newCoursesAssignmentsOverridesBatchRetrieveCmd(flags *rootFlags) *cobra.Com
 	cmd := &cobra.Command{
 		Use:   "overrides-batch-retrieve <course_id>",
 		Short: "Returns a list of specified overrides in this course, providing they target sections/groups/students visible to the...",
-		Example: "  canvas-pp-cli courses assignments overrides-batch-retrieve 550e8400-e29b-41d4-a716-446655440000 --assignment-overrides-id example-value --assignment-overrides-assignment-id example-value",
+		Example: "  canvas-cli courses assignments overrides-batch-retrieve 550e8400-e29b-41d4-a716-446655440000 --assignment-overrides-id example-value --assignment-overrides-assignment-id example-value",
 		Annotations: map[string]string{"pp:endpoint": "assignments.overrides-batch-retrieve", "pp:method": "GET", "pp:path": "/courses/{course_id}/assignments/overrides", "mcp:read-only": "true"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {

@@ -20,7 +20,7 @@ func newUsersCommunicationChannelsCreateCmd(flags *rootFlags) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "create <user_id>",
 		Short: "Creates a new communication channel for the specified user.",
-		Example: "  canvas-pp-cli users communication-channels create 550e8400-e29b-41d4-a716-446655440000",
+		Example: "  canvas-cli users communication-channels create 550e8400-e29b-41d4-a716-446655440000",
 		Annotations: map[string]string{"pp:endpoint": "communication-channels.create", "pp:method": "POST", "pp:path": "/users/{user_id}/communication_channels"},
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if len(args) == 0 {
