@@ -78,7 +78,7 @@ func runActivityReport(cc *canvasClient, courseID string, w io.Writer) error {
 	// Print report header
 	fmt.Fprintf(w, "ACTIVITY REPORT — Course %s\n\n", courseID)
 	fmt.Fprintf(w, "%-30s %-10s %-15s %s\n", "Student", "PageViews", "Participations", "LastActivity")
-	fmt.Fprintf(w, "%-30s %-10s %-15s %s\n", strings.Repeat("-", 28), "----------", "---------------", "------------")
+	fmt.Fprintf(w, "%-30s %-10s %-15s %s\n", strings.Repeat("-", 30), "----------", "---------------", "------------")
 
 	// Print per-student rows
 	var atRisk []string

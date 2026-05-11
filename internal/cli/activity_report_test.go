@@ -82,8 +82,15 @@ func TestRunActivityReport_NoAnalytics(t *testing.T) {
 	if err != nil {
 		t.Fatalf("unexpected error: %v", err)
 	}
-	// Alice with no analytics data should appear in at-risk
-	if !strings.Contains(buf.String(), "Alice") {
+	out := buf.String()
+	if !strings.Contains(out, "Alice") {
 		t.Error("expected Alice in output even with no analytics")
+	}
+	// Alice has zero analytics — should be in at-risk section
+	atRiskIdx := strings.Index(out, "At-Risk")
+	if atRiskIdx < 0 {
+		t.Error("expected At-Risk section")
+	} else if !strings.Contains(out[atRiskIdx:], "Alice") {
+		t.Error("Alice with no analytics should appear in at-risk section")
 	}
 }
