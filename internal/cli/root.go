@@ -235,6 +235,8 @@ Run 'canvas-pp-cli doctor' to verify auth and connectivity.`,
 	rootCmd.AddCommand(newSharedBrandConfigsPromotedCmd(flags))
 	rootCmd.AddCommand(newVersionCliCmd())
 
+	registerTranscendenceCommands(rootCmd, flags)
+
 	return rootCmd
 }
 
