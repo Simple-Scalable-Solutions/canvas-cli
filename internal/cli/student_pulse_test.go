@@ -8,6 +8,7 @@ import (
 	"net/http/httptest"
 	"strings"
 	"testing"
+	"time"
 )
 
 func TestRunStudentPulse(t *testing.T) {
@@ -19,8 +20,8 @@ func TestRunStudentPulse(t *testing.T) {
 	}
 	// Only Alice has submitted recently; Bob submitted long ago; Carol and Dave never submitted
 	submissions := []map[string]interface{}{
-		{"user_id": 1, "submitted_at": "2026-05-10T10:00:00Z", "workflow_state": "submitted"},
-		{"user_id": 2, "submitted_at": "2026-04-01T10:00:00Z", "workflow_state": "submitted"},
+		{"user_id": 1, "submitted_at": time.Now().UTC().Format(time.RFC3339), "workflow_state": "submitted"},
+		{"user_id": 2, "submitted_at": time.Now().UTC().AddDate(0, -2, 0).Format(time.RFC3339), "workflow_state": "submitted"},
 	}
 
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -41,12 +42,13 @@ func TestRunStudentPulse(t *testing.T) {
 	}
 
 	out := buf.String()
-	// Grade distribution
-	if !strings.Contains(out, "A") {
-		t.Error("expected A bucket in output")
-	}
-	if !strings.Contains(out, "F") {
-		t.Error("expected F bucket in output")
+	// Grade distribution — verify exact counts
+	// Alice=A(95), Bob=B(82), Carol=F(55), Dave=Ungraded(nil)
+	// Format: "  %-8s %d students\n" with label b+":"
+	for _, want := range []string{"A:       1 students", "B:       1 students", "F:       1 students", "Ungraded: 1 students"} {
+		if !strings.Contains(out, want) {
+			t.Errorf("expected %q in grade distribution output", want)
+		}
 	}
 	// At-risk: Bob (submitted > 30 days ago), Carol and Dave (never submitted)
 	if !strings.Contains(out, "Bob") {
