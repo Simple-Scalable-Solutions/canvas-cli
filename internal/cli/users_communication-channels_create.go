@@ -128,7 +128,7 @@ func newUsersCommunicationChannelsCreateCmd(flags *rootFlags) *cobra.Command {
 		},
 	}
 	cmd.Flags().StringVar(&bodyCommunicationChannel, "communication-channel", "", "Communication channel")
-	cmd.Flags().BoolVar(&bodySkipConfirmation, "skip-confirmation", false, "Only valid for site admins and account admins making requests; If true, the channel is automatically validated and...")
+	cmd.Flags().BoolVar(&bodySkipConfirmation, "force", false, "Only valid for site admins and account admins making requests; If true, the channel is automatically validated and...")
 	cmd.Flags().BoolVar(&stdinBody, "stdin", false, "Read request body as JSON from stdin")
 
 	return cmd
