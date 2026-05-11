@@ -56,7 +56,7 @@ func TestRunCourseAudit(t *testing.T) {
 	}
 
 	out := buf.String()
-	// 4 findings: Essay (no_due_date + no_rubric), Quiz unpublished, Placeholder empty, Nil body empty
+	// 5 findings: Essay (no_due_date + no_rubric = 2), Quiz unpublished, Placeholder empty, Nil body empty
 	if !strings.Contains(out, "no_due_date") {
 		t.Error("expected no_due_date finding")
 	}
