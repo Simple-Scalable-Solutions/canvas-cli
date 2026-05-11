@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"net/url"
 	"os"
 	"strconv"
 
@@ -54,8 +55,8 @@ func newGradeExportCmd(flags *rootFlags) *cobra.Command {
 }
 
 func runGradeExport(cc *canvasClient, courseID string, w io.Writer) error {
-	// Fetch enrollments to get student list
-	enrollRaw, err := cc.getAll(fmt.Sprintf("/courses/%s/enrollments", courseID), nil)
+	// Fetch enrollments to get student list (students only)
+	enrollRaw, err := cc.getAll(fmt.Sprintf("/courses/%s/enrollments", courseID), url.Values{"type[]": {"StudentEnrollment"}})
 	if err != nil {
 		return fmt.Errorf("fetching enrollments: %w", err)
 	}

@@ -67,4 +67,8 @@ func TestRunGradeExport(t *testing.T) {
 	if !strings.Contains(out, "Alice,1001,Final,202,,100,") {
 		t.Errorf("missing Alice Final (no submission) row in:\n%s", out)
 	}
+	// Bob Final: no submission — score and submitted_at empty
+	if !strings.Contains(out, "Bob,1002,Final,202,,100,") {
+		t.Errorf("missing Bob Final (no submission) row in:\n%s", out)
+	}
 }
