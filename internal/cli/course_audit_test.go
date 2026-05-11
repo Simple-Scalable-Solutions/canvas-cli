@@ -35,15 +35,15 @@ func TestRunCourseAudit(t *testing.T) {
 		w.Header().Set("Content-Type", "application/json")
 		switch {
 		case strings.Contains(r.URL.Path, "assignments"):
-			json.NewEncoder(w).Encode(assignments)
+			_ = json.NewEncoder(w).Encode(assignments)
 		case strings.Contains(r.URL.Path, "modules"):
 			// Canvas returns modules without items inline by default;
 			// we ask for include[]=items
-			json.NewEncoder(w).Encode(modules)
+			_ = json.NewEncoder(w).Encode(modules)
 		case strings.Contains(r.URL.Path, "pages"):
-			json.NewEncoder(w).Encode(pages)
+			_ = json.NewEncoder(w).Encode(pages)
 		default:
-			json.NewEncoder(w).Encode([]interface{}{})
+			_ = json.NewEncoder(w).Encode([]interface{}{})
 		}
 	}))
 	defer srv.Close()
@@ -90,9 +90,9 @@ func TestRunCourseAudit_Clean(t *testing.T) {
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		if strings.Contains(r.URL.Path, "assignments") {
-			json.NewEncoder(w).Encode(assignments)
+			_ = json.NewEncoder(w).Encode(assignments)
 		} else {
-			json.NewEncoder(w).Encode([]interface{}{})
+			_ = json.NewEncoder(w).Encode([]interface{}{})
 		}
 	}))
 	defer srv.Close()

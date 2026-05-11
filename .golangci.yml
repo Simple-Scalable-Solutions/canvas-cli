@@ -1,4 +1,5 @@
 linters:
+  default: none
   enable:
     - errorlint
     - govet

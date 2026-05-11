@@ -28,11 +28,11 @@ func TestRunGradeExport(t *testing.T) {
 		w.Header().Set("Content-Type", "application/json")
 		switch {
 		case strings.Contains(r.URL.Path, "enrollments"):
-			json.NewEncoder(w).Encode(enrollments)
+			_ = json.NewEncoder(w).Encode(enrollments)
 		case strings.Contains(r.URL.Path, "assignments"):
-			json.NewEncoder(w).Encode(assignments)
+			_ = json.NewEncoder(w).Encode(assignments)
 		default:
-			json.NewEncoder(w).Encode(submissions)
+			_ = json.NewEncoder(w).Encode(submissions)
 		}
 	}))
 	defer srv.Close()

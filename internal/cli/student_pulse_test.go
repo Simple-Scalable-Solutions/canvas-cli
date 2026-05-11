@@ -27,9 +27,9 @@ func TestRunStudentPulse(t *testing.T) {
 	srv := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		if strings.Contains(r.URL.Path, "enrollments") {
-			json.NewEncoder(w).Encode(enrollments)
+			_ = json.NewEncoder(w).Encode(enrollments)
 		} else {
-			json.NewEncoder(w).Encode(submissions)
+			_ = json.NewEncoder(w).Encode(submissions)
 		}
 	}))
 	defer srv.Close()
