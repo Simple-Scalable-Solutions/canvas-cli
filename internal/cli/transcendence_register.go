@@ -6,5 +6,6 @@ import "github.com/spf13/cobra"
 // Called from newRootCmd in root.go.
 func registerTranscendenceCommands(root *cobra.Command, flags *rootFlags) {
 	root.AddCommand(newStudentPulseCmd(flags))
-	// Tasks 8-11 will add: newCourseAuditCmd, newGradeExportCmd, newBulkEnrollCmd, newActivityReportCmd
+	root.AddCommand(newCourseAuditCmd(flags))
+	// Tasks 9-11 will add: newGradeExportCmd, newBulkEnrollCmd, newActivityReportCmd
 }
