@@ -9,5 +9,5 @@ func registerTranscendenceCommands(root *cobra.Command, flags *rootFlags) {
 	root.AddCommand(newCourseAuditCmd(flags))
 	root.AddCommand(newGradeExportCmd(flags))
 	root.AddCommand(newBulkEnrollCmd(flags))
-	// Task 11 will add: newActivityReportCmd
+	root.AddCommand(newActivityReportCmd(flags))
 }
