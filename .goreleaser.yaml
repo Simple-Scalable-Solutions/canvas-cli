@@ -32,20 +32,11 @@ builds:
       - windows_amd64
       - windows_arm64
 archives:
-  - formats: [tar.gz]
+  - builds: [canvas-cli, canvas-mcp]
+    formats: [tar.gz]
     name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
     format_overrides:
       - goos: windows
         formats: [zip]
 checksum:
   name_template: checksums.txt
-brews:
-  - name: canvas-cli
-    repository:
-      owner: simple-scalable-solutions
-      name: homebrew-tap
-    homepage: "https://github.com/simple-scalable-solutions/canvas-cli"
-    description: "Canvas LMS REST API - Generated from YARD documentation"
-    install: |
-      bin.install "canvas-cli"
-      bin.install "canvas-mcp"
