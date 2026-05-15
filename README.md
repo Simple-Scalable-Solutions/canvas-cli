@@ -1,82 +1,45 @@
 # Canvas CLI
 
-Canvas LMS REST API - Generated from YARD documentation
+A full-featured CLI and MCP server for the Canvas LMS API, with built-in commands for every Canvas resource plus five compound intelligence commands.
 
 ## Install
 
-The recommended path installs both the `canvas-cli` binary and the `pp-canvas` agent skill in one shot:
+```bash
+curl -sSfL https://raw.githubusercontent.com/simple-scalable-solutions/canvas-cli/main/install.sh | sh
+```
+
+This installs both `canvas-cli` and `canvas-mcp` to `/usr/local/bin`. To install to a different directory:
 
 ```bash
-npx -y @mvanhorn/printing-press install canvas
-```
-
-For CLI only (no skill):
-
-```bash
-npx -y @mvanhorn/printing-press install canvas --cli-only
-```
-
-
-### Without Node
-
-The generated install path is category-agnostic until this CLI is published. If `npx` is not available before publish, install Node or use the category-specific Go fallback from the public-library entry after publish.
-
-### Pre-built binary
-
-Download a pre-built binary for your platform from the [latest release](https://github.com/mvanhorn/printing-press-library/releases/tag/canvas-current). On macOS, clear the Gatekeeper quarantine: `xattr -d com.apple.quarantine <binary>`. On Unix, mark it executable: `chmod +x <binary>`.
-
-<!-- pp-hermes-install-anchor -->
-## Install for Hermes
-
-From the Hermes CLI:
-
-```bash
-hermes skills install mvanhorn/printing-press-library/cli-skills/pp-canvas --force
-```
-
-Inside a Hermes chat session:
-
-```bash
-/skills install mvanhorn/printing-press-library/cli-skills/pp-canvas --force
-```
-
-## Install for OpenClaw
-
-Tell your OpenClaw agent (copy this):
-
-```
-Install the pp-canvas skill from https://github.com/mvanhorn/printing-press-library/tree/main/cli-skills/pp-canvas. The skill defines how its required CLI can be installed.
+INSTALL_DIR=~/.local/bin curl -sSfL https://raw.githubusercontent.com/simple-scalable-solutions/canvas-cli/main/install.sh | sh
 ```
 
 ## Quick Start
 
-### 1. Install
+### 1. Save your Canvas URL (self-hosted only)
 
-See [Install](#install) above.
+Skip this step if you use Canvas Cloud (`*.instructure.com`).
 
-### 2. Set Up Credentials
+```bash
+canvas-cli auth set-url https://canvas.myschool.edu/api/v1
+```
 
-Get your access token from your API provider's developer portal, then store it:
+### 2. Save your API token
+
+Get your token from Canvas: **Account → Settings → Approved Integrations → New Access Token**
 
 ```bash
 canvas-cli auth set-token YOUR_TOKEN_HERE
 ```
 
-Or set it via environment variable:
+### 3. Verify setup
 
 ```bash
-export CANVAS_LMS_TOKEN="your-token-here"
-```
-
-### 3. Verify Setup
-
-```bash
+canvas-cli auth status
 canvas-cli doctor
 ```
 
-This checks your configuration and credentials.
-
-### 4. Try Your First Command
+### 4. Try your first command
 
 ```bash
 canvas-cli account-calendars api-index
