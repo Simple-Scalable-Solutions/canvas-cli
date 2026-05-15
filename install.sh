@@ -29,7 +29,7 @@ if [ -z "$VERSION" ]; then
   exit 1
 fi
 
-TARBALL="canvas-cli_${VERSION}_${OS}_${ARCH}.tar.gz"
+TARBALL="canvas-cli_${VERSION#v}_${OS}_${ARCH}.tar.gz"
 URL="https://github.com/${REPO}/releases/download/${VERSION}/${TARBALL}"
 
 echo "Installing canvas-cli ${VERSION} (${OS}/${ARCH}) → ${INSTALL_DIR}"
