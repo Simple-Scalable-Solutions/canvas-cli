@@ -1,35 +1,40 @@
 ---
-name: pp-canvas
-description: "Printing Press CLI for Canvas. Canvas LMS REST API - Generated from YARD documentation"
+name: canvas-cli
+description: >
+  Use when the user wants to interact with Canvas LMS via the CLI — managing courses, assignments,
+  enrollments, users, grades, submissions, or any other Canvas resource. Trigger whenever the user
+  mentions "canvas-cli", asks to list/get/create/update/delete any Canvas resource, wants to run a
+  Canvas API operation, needs to set up auth, or asks what CLI commands are available. Also trigger
+  for the compound commands: student-pulse, course-audit, grade-export, bulk-enroll, activity-report.
 author: "simple-scalable-solutions"
 license: "Apache-2.0"
-argument-hint: "<command> [args] | install cli|mcp"
+argument-hint: "<command> [args]"
 allowed-tools: "Read Bash"
-metadata:
-  openclaw:
-    requires:
-      bins:
-        - canvas-cli
 ---
 
-# Canvas — Printing Press CLI
+# Canvas CLI
 
 ## Prerequisites: Install the CLI
 
-This skill drives the `canvas-cli` binary. **You must verify the CLI is installed before invoking any command from this skill.** If it is missing, install it first:
+This skill drives the `canvas-cli` binary. Verify it is installed before running any command:
 
-1. Install via the Printing Press installer:
-   ```bash
-   npx -y @mvanhorn/printing-press install canvas --cli-only
-   ```
-2. Verify: `canvas-cli --version`
-3. Ensure `$GOPATH/bin` (or `$HOME/go/bin`) is on `$PATH`.
+```bash
+canvas-cli --version
+```
 
-If the `npx` install fails before this CLI has a public-library category, install Node or use the category-specific Go fallback after publish.
+If missing, install it:
 
-If `--version` reports "command not found" after install, the install step did not put the binary on `$PATH`. Do not proceed with skill commands until verification succeeds.
+```bash
+curl -sSfL https://raw.githubusercontent.com/simple-scalable-solutions/canvas-cli/main/install.sh | sh
+```
 
-Canvas LMS REST API - Generated from YARD documentation
+Then set up credentials (one time only):
+
+```bash
+canvas-cli auth set-url https://canvas.myschool.edu/api/v1  # self-hosted only
+canvas-cli auth set-token YOUR_TOKEN_HERE
+canvas-cli doctor  # verify
+```
 
 ## Command Reference
 

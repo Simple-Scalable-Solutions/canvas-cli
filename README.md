@@ -14,6 +14,16 @@ This installs both `canvas-cli` and `canvas-mcp` to `/usr/local/bin`. To install
 INSTALL_DIR=~/.local/bin curl -sSfL https://raw.githubusercontent.com/simple-scalable-solutions/canvas-cli/main/install.sh | sh
 ```
 
+## Install Claude Code Skill
+
+To let Claude Code use canvas-cli on your behalf, install the skill:
+
+```bash
+curl -sSfL https://raw.githubusercontent.com/simple-scalable-solutions/canvas-cli/main/install-skill.sh | sh
+```
+
+Then restart Claude Code. Claude will automatically use `canvas-cli` when you ask it to interact with Canvas.
+
 ## Quick Start
 
 ### 1. Save your Canvas URL (self-hosted only)
