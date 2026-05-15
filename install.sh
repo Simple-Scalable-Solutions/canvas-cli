@@ -40,7 +40,7 @@ trap 'rm -rf "$TMP"' EXIT
 curl -sSfL "$URL" | tar -xz -C "$TMP"
 
 SUDO=""
-if [ ! -w "$INSTALL_DIR" ]; then
+if [ "$(id -u)" != "0" ]; then
   SUDO="sudo"
 fi
 
