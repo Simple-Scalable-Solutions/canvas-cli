@@ -38,7 +38,13 @@ TMP=$(mktemp -d)
 trap 'rm -rf "$TMP"' EXIT
 
 curl -sSfL "$URL" | tar -xz -C "$TMP"
-install -m755 "$TMP/canvas-cli" "${INSTALL_DIR}/canvas-cli"
-install -m755 "$TMP/canvas-mcp" "${INSTALL_DIR}/canvas-mcp"
+
+SUDO=""
+if [ ! -w "$INSTALL_DIR" ]; then
+  SUDO="sudo"
+fi
+
+$SUDO install -m755 "$TMP/canvas-cli" "${INSTALL_DIR}/canvas-cli"
+$SUDO install -m755 "$TMP/canvas-mcp" "${INSTALL_DIR}/canvas-mcp"
 
 echo "Done. Run: canvas-cli --version"
