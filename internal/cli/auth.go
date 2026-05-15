@@ -19,6 +19,7 @@ func newAuthCmd(flags *rootFlags) *cobra.Command {
 
 	cmd.AddCommand(newAuthStatusCmd(flags))
 	cmd.AddCommand(newAuthSetTokenCmd(flags))
+	cmd.AddCommand(newAuthSetURLCmd(flags))
 	cmd.AddCommand(newAuthLogoutCmd(flags))
 
 	return cmd
@@ -66,8 +67,9 @@ func newAuthStatusCmd(flags *rootFlags) *cobra.Command {
 			}
 
 			fmt.Fprintln(w, green("Credentials present (not verified)"))
-			fmt.Fprintf(w, "  Source: %s\n", cfg.AuthSource)
-			fmt.Fprintf(w, "  Config: %s\n", cfg.Path)
+			fmt.Fprintf(w, "  Source:   %s\n", cfg.AuthSource)
+			fmt.Fprintf(w, "  Base URL: %s\n", cfg.BaseURL)
+			fmt.Fprintf(w, "  Config:   %s\n", cfg.Path)
 			return nil
 		},
 	}
@@ -104,6 +106,33 @@ func newAuthSetTokenCmd(flags *rootFlags) *cobra.Command {
 				}, flags)
 			}
 			fmt.Fprintf(cmd.OutOrStdout(), "Token saved to %s\n", cfg.Path)
+			return nil
+		},
+	}
+}
+
+func newAuthSetURLCmd(flags *rootFlags) *cobra.Command {
+	return &cobra.Command{
+		Use:     "set-url <url>",
+		Short:   "Save the Canvas base URL to the config file",
+		Example: "  canvas-cli auth set-url https://canvas.myschool.edu/api/v1",
+		Args:    cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			cfg, err := config.Load(flags.configPath)
+			if err != nil {
+				return configErr(err)
+			}
+			if err := cfg.SaveBaseURL(args[0]); err != nil {
+				return configErr(fmt.Errorf("saving URL: %w", err))
+			}
+			if flags.asJSON {
+				return printJSONFiltered(cmd.OutOrStdout(), map[string]any{
+					"saved":       true,
+					"base_url":    args[0],
+					"config_path": cfg.Path,
+				}, flags)
+			}
+			fmt.Fprintf(cmd.OutOrStdout(), "Base URL saved to %s\n", cfg.Path)
 			return nil
 		},
 	}
